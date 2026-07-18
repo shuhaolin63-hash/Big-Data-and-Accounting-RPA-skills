@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="330" viewBox="0 0 900 330">
+  <rect width="900" height="330" fill="#f8f9fa" rx="8"/>
+  <text x="20" y="30" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="16" font-weight="bold" fill="#333">股票价格采集机器人 - 流程图预览</text>
+  <text x="20" y="60" font-family="Consolas, monospace" font-size="13" fill="#444">【开始】→ 【打开Excel】→ 【读取股票清单】→ 【打开行情网站】→</text>
+  <text x="20" y="84" font-family="Consolas, monospace" font-size="13" fill="#444">┌→ 【还有未查询股票?】 ──是──→ 【搜索股票代码】→</text>
+  <text x="20" y="108" font-family="Consolas, monospace" font-size="13" fill="#444">│                                      ↓</text>
+  <text x="20" y="132" font-family="Consolas, monospace" font-size="13" fill="#444">│                               【获取实时价格】</text>
+  <text x="20" y="156" font-family="Consolas, monospace" font-size="13" fill="#444">│                                      ↓</text>
+  <text x="20" y="180" font-family="Consolas, monospace" font-size="13" fill="#444">│                               【盈亏判断↑/↓】→ 【写回Excel】</text>
+  <text x="20" y="204" font-family="Consolas, monospace" font-size="13" fill="#444">│                                      ↓</text>
+  <text x="20" y="228" font-family="Consolas, monospace" font-size="13" fill="#444">└──────────────────────←──────────┘</text>
+  <text x="20" y="252" font-family="Consolas, monospace" font-size="13" fill="#444">【生成操作建议】→ 【结束】</text>
+</svg>

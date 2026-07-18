@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="270" viewBox="0 0 900 270">
+  <rect width="900" height="270" fill="#f8f9fa" rx="8"/>
+  <text x="20" y="30" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="16" font-weight="bold" fill="#333">发票开具机器人 - 流程图预览</text>
+  <text x="20" y="60" font-family="Consolas, monospace" font-size="13" fill="#444">【开始】→ 【登录税务局】→ 【打开Excel】→ 【读取数据】→</text>
+  <text x="20" y="84" font-family="Consolas, monospace" font-size="13" fill="#444">┌→ 【还有未开发票?】 ──是──→ 【填写发票信息】→ 【提交开具】</text>
+  <text x="20" y="108" font-family="Consolas, monospace" font-size="13" fill="#444">│                                      ↓</text>
+  <text x="20" y="132" font-family="Consolas, monospace" font-size="13" fill="#444">│                               【开具成功?】 ──否──→ 【重试】</text>
+  <text x="20" y="156" font-family="Consolas, monospace" font-size="13" fill="#444">│                                      ↓是</text>
+  <text x="20" y="180" font-family="Consolas, monospace" font-size="13" fill="#444">└──────────────────────────←──────────┘</text>
+  <text x="20" y="204" font-family="Consolas, monospace" font-size="13" fill="#444">【退出税务局】→ 【结束】</text>
+</svg>

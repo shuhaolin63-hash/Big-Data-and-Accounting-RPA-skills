@@ -1,0 +1,42 @@
+{
+  "tax_login": {
+    "name": "电子税务局平台登录机器人",
+    "nodes": 9,
+    "edges": 9
+  },
+  "invoice_open": {
+    "name": "发票开具机器人",
+    "nodes": 10,
+    "edges": 11
+  },
+  "invoice_check": {
+    "name": "发票查验机器人",
+    "nodes": 9,
+    "edges": 9
+  },
+  "invoice_certify": {
+    "name": "发票认证机器人",
+    "nodes": 9,
+    "edges": 9
+  },
+  "bank_pay": {
+    "name": "网银付款机器人",
+    "nodes": 11,
+    "edges": 12
+  },
+  "bank_corp_pay": {
+    "name": "网银对公付款机器人",
+    "nodes": 10,
+    "edges": 10
+  },
+  "bank_receive": {
+    "name": "网银收款查询机器人",
+    "nodes": 11,
+    "edges": 11
+  },
+  "stock_price": {
+    "name": "股票实时价格采集机器人",
+    "nodes": 11,
+    "edges": 12
+  }
+}

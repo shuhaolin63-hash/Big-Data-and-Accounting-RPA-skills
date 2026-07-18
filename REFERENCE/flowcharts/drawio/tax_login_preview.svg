@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="180" viewBox="0 0 900 180">
+  <rect width="900" height="180" fill="#f8f9fa" rx="8"/>
+  <text x="20" y="30" font-family="Microsoft YaHei, SimSun, sans-serif" font-size="16" font-weight="bold" fill="#333">电子税务局平台登录机器人 - 流程图预览</text>
+  <text x="20" y="60" font-family="Consolas, monospace" font-size="13" fill="#444">【开始】→ 【打开Chrome】→ 【点击登录头像】→</text>
+  <text x="20" y="84" font-family="Consolas, monospace" font-size="13" fill="#444">【填写用户名】→ 【填写密码】→ 【点击登录】→</text>
+  <text x="20" y="108" font-family="Consolas, monospace" font-size="13" fill="#444">┌→ 【登录成功?】 ──是──→ 【保存Cookie】→ 【结束】</text>
+  <text x="20" y="132" font-family="Consolas, monospace" font-size="13" fill="#444">└──失败重试──→ 【填写用户名】（循环）</text>
+</svg>
