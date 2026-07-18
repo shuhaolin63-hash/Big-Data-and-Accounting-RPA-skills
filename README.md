@@ -423,9 +423,10 @@ Big-Data-and-Accounting-RPA-skills/
 | 📊 业务数据表 | 8 张 | 每种机器人配套输入数据 |
 | 🖼️ UI截图素材 | 19 张 | 6 大业务场景分类索引 |
 | 📝 教学文档 | 4 篇 | 框选位置/功能/标准/扣分全面覆盖 |
-| 🐍 Python脚本 | 8 个 | ID清洗/风控/资产/路径/重试全套工具 |
+| 🔧 **风控应急手册** | `REFERENCE/risk_emergency_manual.md` | 风控等级判定、应急处理步骤、账号解封流程 |
+| 🐍 **环境初始化脚本** | `SCRIPTS/env_init.py` | 一键检测 Python/Pillow/资产/目录，自动安装依赖 |
 | 📋 SKILL文档 | 4 个 | 总控 + 三大子智能体 |
-| 📚 参考文档 | 3 篇 | 课程规则/报错汇总/UI元素库 |
+| 📚 参考文档 | 4 篇 | 课程规则/报错汇总/UI元素库/风控应急手册 |
 
 
 Asset Base: `f:\RPA(1)\` · Skills: `.trae/skills/` · 引擎: SOLO AI Agent · License: MIT
