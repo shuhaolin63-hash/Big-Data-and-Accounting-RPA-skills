@@ -1,0 +1,51 @@
+{
+  "projectName": "Assess",
+  "projectDescription": "",
+  "developType": "ProjectCode",
+  "projectMenuStructure": null,
+  "entrance": "main.py",
+  "entrancePath": "",
+  "studioVersion": "4.0.0.0",
+  "projectVersion": "1.0",
+  "dependencies": [],
+  "fullDependencies": [],
+  "treeDependencies": [],
+  "version": 3,
+  "engineVersion": "4.0",
+  "runtimeOptions": {},
+  "designOptions": {
+    "isTriggerPanelHidden": false,
+    "isParamsPanelHidden": false,
+    "isDataTablePanelHidden": false,
+    "isBrowserPanelHidden": false,
+    "triggers": [
+      {
+        "appEventId": 0,
+        "name": "",
+        "function": "start",
+        "useTiming": false
+      }
+    ],
+    "params": [],
+    "columns": []
+  },
+  "appOptions": [
+    {
+      "uuid": null,
+      "name": "Assess",
+      "robotType": "SDK",
+      "version": "0.1",
+      "categoryId": "d296df85-70b2-11ea-933e-0242ac120004",
+      "codeId": 0,
+      "status": 0,
+      "contacts": "Mr.Liu",
+      "iconUrl": "",
+      "pictures": "",
+      "introduction": "通用云组件",
+      "instruction": "import Assess\r\nAssess('auto_auth').start()",
+      "updatedTime": "2023-02-15T23:21:52.6198015+08:00"
+    }
+  ],
+  "globalControls": [],
+  "globalVariables": []
+}

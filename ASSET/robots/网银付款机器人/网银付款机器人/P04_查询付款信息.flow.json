@@ -1,0 +1,1056 @@
+{
+  "id": "d55cf1e33f22429e8bda9cf63116420f",
+  "name": "P04_查询付款信息",
+  "displayName": "",
+  "version": "4.2.0.0",
+  "description": "",
+  "developType": "visual",
+  "parameters": {
+    "input": [],
+    "output": []
+  },
+  "content": {
+    "id": "canvas-doc-_kvkonlrf",
+    "props": {},
+    "root": {
+      "id": "canvas-node-_kvkonlrg",
+      "type": "FlowRoot",
+      "props": {
+        "collapsed": false,
+        "disabled": false,
+        "flowModel": {},
+        "processName": "P05_Bank_Inquire"
+      },
+      "children": [
+        {
+          "id": "canvas-node-_kvkonlrh",
+          "type": "StartEvent",
+          "props": {
+            "debug": true,
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_xs3dzdfs",
+          "type": "spshowsubtitle",
+          "props": {
+            "color": "255,0,0,255",
+            "fontsize": {
+              "type": "variable",
+              "inputValue": "f4bd9688344d44e2a7557e299a595e4a",
+              "varLabel": "size_changer",
+              "returnType": "Number",
+              "varGroup": "global"
+            },
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "出现字幕",
+            "collapsed": false,
+            "disabled": false,
+            "subtitle": {
+              "type": "text",
+              "inputValue": "机器人正在查询付款回单……",
+              "returnType": "Unknown"
+            },
+            "desc": "屏幕下方出现字幕 <a>\"机器人正在查询付款回单……\"</a>"
+          }
+        },
+        {
+          "id": "canvas-node-_pzjh3mu0",
+          "type": "belementclick",
+          "props": {
+            "clickType": "left_once",
+            "simulate": "True",
+            "ctrlIndex": {
+              "type": "number",
+              "inputValue": 1,
+              "returnType": "Unknown"
+            },
+            "timeout": {
+              "type": "number",
+              "inputValue": 10,
+              "returnType": "Unknown"
+            },
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "点击控件（网页）",
+            "openPage": {
+              "type": "variable",
+              "inputValue": "b9e8fd9c94d74f49845ff8025fdb6449",
+              "varLabel": "bank_web",
+              "returnType": "WebPage",
+              "varGroup": "global"
+            },
+            "element": {
+              "ctrlId": "6361c9a5cc0a471b8677cef14bbc9dfc",
+              "ctrlGroup": "",
+              "ctrlName": "账户管理",
+              "imgPath": null,
+              "type": "Chrome"
+            },
+            "desc": "在 <a>bank_web</a> 网页中，鼠标 <a>左键单击</a> <a>账户管理</a>",
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_eyq1j8wp",
+          "type": "belementclick",
+          "props": {
+            "clickType": "left_once",
+            "simulate": "True",
+            "ctrlIndex": {
+              "type": "number",
+              "inputValue": 1,
+              "returnType": "Unknown"
+            },
+            "timeout": {
+              "type": "number",
+              "inputValue": 10,
+              "returnType": "Unknown"
+            },
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "点击控件（网页）",
+            "openPage": {
+              "type": "variable",
+              "inputValue": "b9e8fd9c94d74f49845ff8025fdb6449",
+              "varLabel": "bank_web",
+              "returnType": "WebPage",
+              "varGroup": "global"
+            },
+            "element": {
+              "ctrlId": "a379d911390f4a599ca3fa840f659a3a",
+              "ctrlGroup": "",
+              "ctrlName": "明细查询",
+              "imgPath": null,
+              "type": "IE"
+            },
+            "desc": "在 <a>bank_web</a> 网页中，鼠标 <a>左键单击</a> <a>明细查询</a>",
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_kwd8cmvg",
+          "type": "stcurrenttime",
+          "props": {
+            "format": "%Y-%m-%d",
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "获取当前时间和日期",
+            "desc": "获取当前时间，将结果赋值给 <a>date</a>",
+            "output_time": {
+              "type": "variable",
+              "inputValue": "f02b9077b0504d3b836a01886874bbc2",
+              "varLabel": "date",
+              "returnType": "String",
+              "varGroup": "flowDefine"
+            },
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_l276bzu0",
+          "type": "buclip",
+          "props": {
+            "mode": "cover",
+            "ctrlIndex": {
+              "type": "number",
+              "inputValue": 1,
+              "returnType": "Unknown"
+            },
+            "inspect": "False",
+            "time": 1,
+            "timeout": {
+              "type": "number",
+              "inputValue": 10,
+              "returnType": "Unknown"
+            },
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": "0.5",
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "通过剪贴方式输入（网页）",
+            "collapsed": false,
+            "disabled": false,
+            "page": {
+              "type": "variable",
+              "inputValue": "b9e8fd9c94d74f49845ff8025fdb6449",
+              "varLabel": "bank_web",
+              "returnType": "WebPage",
+              "varGroup": "global"
+            },
+            "ctrl": {
+              "ctrlId": "8ea039757de2414aadb39a3fcffa7220",
+              "ctrlGroup": "",
+              "ctrlName": "交易日期起始值输入框",
+              "imgPath": null,
+              "type": "IE"
+            },
+            "content": {
+              "type": "variable",
+              "inputValue": "f02b9077b0504d3b836a01886874bbc2",
+              "varLabel": "date",
+              "returnType": "String",
+              "varGroup": "flowDefine"
+            },
+            "desc": "在 <a>bank_web</a> 网页中，通过剪贴方式在 <a>交易日期起始值输入框</a> 内填写 <a>date</a>"
+          }
+        },
+        {
+          "id": "canvas-node-_l276bzu1",
+          "type": "buclip",
+          "props": {
+            "mode": "cover",
+            "ctrlIndex": {
+              "type": "number",
+              "inputValue": 1,
+              "returnType": "Unknown"
+            },
+            "inspect": "False",
+            "time": 1,
+            "timeout": {
+              "type": "number",
+              "inputValue": 10,
+              "returnType": "Unknown"
+            },
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": "0.5",
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "通过剪贴方式输入（网页）",
+            "collapsed": false,
+            "disabled": false,
+            "page": {
+              "type": "variable",
+              "inputValue": "b9e8fd9c94d74f49845ff8025fdb6449",
+              "varLabel": "bank_web",
+              "returnType": "WebPage",
+              "varGroup": "global"
+            },
+            "ctrl": {
+              "ctrlId": "a6fd5d13b659461c87b723a3f71ccbde",
+              "ctrlGroup": "",
+              "ctrlName": "交易日期终止值输入框",
+              "imgPath": null,
+              "type": "IE"
+            },
+            "content": {
+              "type": "variable",
+              "inputValue": "f02b9077b0504d3b836a01886874bbc2",
+              "varLabel": "date",
+              "returnType": "String",
+              "varGroup": "flowDefine"
+            },
+            "desc": "在 <a>bank_web</a> 网页中，通过剪贴方式在 <a>交易日期终止值输入框</a> 内填写 <a>date</a>"
+          }
+        },
+        {
+          "id": "canvas-node-_b1nf31qd",
+          "type": "buinput",
+          "props": {
+            "type": "text",
+            "mode": "cover",
+            "ctrlIndex": {
+              "type": "number",
+              "inputValue": 1,
+              "returnType": "Unknown"
+            },
+            "inputOption": [
+              "sendRaw"
+            ],
+            "inspect": "False",
+            "time": {
+              "type": "number",
+              "inputValue": 1,
+              "returnType": "Unknown"
+            },
+            "timeout": {
+              "type": "number",
+              "inputValue": 10,
+              "returnType": "Unknown"
+            },
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "填写输入框（网页）",
+            "page": {
+              "type": "variable",
+              "inputValue": "b9e8fd9c94d74f49845ff8025fdb6449",
+              "varLabel": "bank_web",
+              "returnType": "WebPage",
+              "varGroup": "global"
+            },
+            "ctrl": {
+              "ctrlId": "bb63b09efb0a41af85009bec40a2aedb",
+              "ctrlGroup": "",
+              "ctrlName": "对方账号输入框",
+              "imgPath": null,
+              "type": "IE"
+            },
+            "content": {
+              "type": "express",
+              "inputValue": "data[4]",
+              "varLabel": "data[4]",
+              "returnType": "Unknown"
+            },
+            "desc": "在 <a>bank_web</a> 网页 中，在 <a>对方账号输入框</a> 内填写 <a>data[4]</a>",
+            "inputInterval": {
+              "type": "number",
+              "inputValue": "20",
+              "returnType": "Unknown"
+            },
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_zvh2ywuk",
+          "type": "buinput",
+          "props": {
+            "type": "text",
+            "mode": "add",
+            "ctrlIndex": {
+              "type": "number",
+              "inputValue": 1,
+              "returnType": "Unknown"
+            },
+            "inputOption": [
+              "sendRaw"
+            ],
+            "inspect": "False",
+            "time": {
+              "type": "number",
+              "inputValue": 1,
+              "returnType": "Unknown"
+            },
+            "timeout": {
+              "type": "number",
+              "inputValue": 10,
+              "returnType": "Unknown"
+            },
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "填写输入框（网页）",
+            "page": {
+              "type": "variable",
+              "inputValue": "b9e8fd9c94d74f49845ff8025fdb6449",
+              "varLabel": "bank_web",
+              "returnType": "WebPage",
+              "varGroup": "global"
+            },
+            "ctrl": {
+              "ctrlId": "4104be89d3074c3ca8e9b9c1dd2bebbe",
+              "ctrlGroup": "",
+              "ctrlName": "交易金额起始值输入框",
+              "imgPath": null,
+              "type": "IE"
+            },
+            "content": {
+              "type": "express",
+              "inputValue": "data[6]",
+              "varLabel": "data[6]",
+              "returnType": "Unknown"
+            },
+            "desc": "在 <a>bank_web</a> 网页 中，在 <a>交易金额起始值输入框</a> 内填写 <a>data[6]</a>",
+            "inputInterval": {
+              "type": "number",
+              "inputValue": "20",
+              "returnType": "Unknown"
+            },
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_qo0shg6i",
+          "type": "buinput",
+          "props": {
+            "type": "text",
+            "mode": "cover",
+            "ctrlIndex": {
+              "type": "number",
+              "inputValue": 1,
+              "returnType": "Unknown"
+            },
+            "inputOption": [
+              "sendRaw"
+            ],
+            "inspect": "False",
+            "time": {
+              "type": "number",
+              "inputValue": 1,
+              "returnType": "Unknown"
+            },
+            "timeout": {
+              "type": "number",
+              "inputValue": 10,
+              "returnType": "Unknown"
+            },
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "填写输入框（网页）",
+            "page": {
+              "type": "variable",
+              "inputValue": "b9e8fd9c94d74f49845ff8025fdb6449",
+              "varLabel": "bank_web",
+              "returnType": "WebPage",
+              "varGroup": "global"
+            },
+            "ctrl": {
+              "ctrlId": "445782dacbfd434bbb2ee4e9380b6df2",
+              "ctrlGroup": "",
+              "ctrlName": "交易金额终止值输入框",
+              "imgPath": null,
+              "type": "IE"
+            },
+            "content": {
+              "type": "express",
+              "inputValue": "data[6]",
+              "varLabel": "data[6]",
+              "returnType": "Unknown"
+            },
+            "desc": "在 <a>bank_web</a> 网页 中，在 <a>交易金额终止值输入框</a> 内填写 <a>data[6]</a>",
+            "inputInterval": {
+              "type": "number",
+              "inputValue": "20",
+              "returnType": "Unknown"
+            },
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_t7ykg0lg",
+          "type": "belementclick",
+          "props": {
+            "clickType": "left_once",
+            "simulate": "True",
+            "ctrlIndex": {
+              "type": "number",
+              "inputValue": 1,
+              "returnType": "Unknown"
+            },
+            "timeout": {
+              "type": "number",
+              "inputValue": 10,
+              "returnType": "Unknown"
+            },
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "点击控件（网页）",
+            "openPage": {
+              "type": "variable",
+              "inputValue": "b9e8fd9c94d74f49845ff8025fdb6449",
+              "varLabel": "bank_web",
+              "returnType": "WebPage",
+              "varGroup": "global"
+            },
+            "element": {
+              "ctrlId": "2e0015bcd41f4a98811a08625f433f61",
+              "ctrlGroup": "",
+              "ctrlName": "转出",
+              "imgPath": null,
+              "type": "Chrome"
+            },
+            "desc": "在 <a>bank_web</a> 网页中，鼠标 <a>左键单击</a> <a>转出</a>",
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_9948lu2v",
+          "type": "belementclick",
+          "props": {
+            "clickType": "left_once",
+            "simulate": "True",
+            "ctrlIndex": {
+              "type": "number",
+              "inputValue": 1,
+              "returnType": "Unknown"
+            },
+            "timeout": {
+              "type": "number",
+              "inputValue": 10,
+              "returnType": "Unknown"
+            },
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "点击控件（网页）",
+            "openPage": {
+              "type": "variable",
+              "inputValue": "b9e8fd9c94d74f49845ff8025fdb6449",
+              "varLabel": "bank_web",
+              "returnType": "WebPage",
+              "varGroup": "global"
+            },
+            "element": {
+              "ctrlId": "a73020741bb447c5a49568f2bffc536f",
+              "ctrlGroup": "",
+              "ctrlName": "查询",
+              "imgPath": null,
+              "type": "Chrome"
+            },
+            "desc": "在 <a>bank_web</a> 网页中，鼠标 <a>左键单击</a> <a>查询</a>",
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_m7g0cjud",
+          "type": "belementclick",
+          "props": {
+            "clickType": "left_once",
+            "simulate": "True",
+            "ctrlIndex": {
+              "type": "number",
+              "inputValue": 1,
+              "returnType": "Unknown"
+            },
+            "timeout": {
+              "type": "number",
+              "inputValue": 10,
+              "returnType": "Unknown"
+            },
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "点击控件（网页）",
+            "openPage": {
+              "type": "variable",
+              "inputValue": "b9e8fd9c94d74f49845ff8025fdb6449",
+              "varLabel": "bank_web",
+              "returnType": "WebPage",
+              "varGroup": "global"
+            },
+            "element": {
+              "ctrlId": "b7c864dd3c9f444dab51927c438c1e25",
+              "ctrlGroup": "",
+              "ctrlName": "回单",
+              "imgPath": null,
+              "type": "Chrome"
+            },
+            "desc": "在 <a>bank_web</a> 网页中，鼠标 <a>左键单击</a> <a>回单</a>",
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_d6tshi6w",
+          "type": "trycatch",
+          "props": {
+            "needRetry": false,
+            "tryTimes": 3,
+            "sleepTime": 10,
+            "name": "捕获异常和重试",
+            "collapsed": false,
+            "disabled": false,
+            "desc": "执行并捕获异常 "
+          },
+          "children": [
+            {
+              "id": "canvas-node-_x5mor33b",
+              "type": "TryNormalRouter",
+              "props": {
+                "collapsed": false,
+                "disabled": false
+              },
+              "children": [
+                {
+                  "id": "canvas-node-_or4k3ht8",
+                  "type": "wcatchwin",
+                  "props": {
+                    "model": "substr",
+                    "type": "judge",
+                    "timeout": {
+                      "type": "number",
+                      "inputValue": "10",
+                      "returnType": "Unknown"
+                    },
+                    "gs_pre_timeout": {
+                      "type": "number",
+                      "inputValue": 0,
+                      "returnType": "Unknown"
+                    },
+                    "gs_lat_timeout": {
+                      "type": "number",
+                      "inputValue": 0,
+                      "returnType": "Unknown"
+                    },
+                    "generalSettings": {
+                      "log": {
+                        "value": true,
+                        "disabled": true
+                      },
+                      "exit": true,
+                      "msgbox": false
+                    },
+                    "name": "获取窗口",
+                    "desc": "根据 <a>\"另存为\"</a> 查找打开的窗口标题，将查找到的窗口对象赋值给 <a>save_as_dialog</a>",
+                    "output_window": {
+                      "type": "variable",
+                      "inputValue": "0c0902d5aa564466a8123cc2291cc894",
+                      "varLabel": "save_as_dialog",
+                      "returnType": "Window"
+                    },
+                    "title": {
+                      "type": "text",
+                      "inputValue": "另存为",
+                      "returnType": "Unknown"
+                    },
+                    "collapsed": false,
+                    "disabled": false
+                  }
+                },
+                {
+                  "id": "canvas-node-_gfkptq93",
+                  "type": "stcurrenttime",
+                  "props": {
+                    "format": "%H%M%S",
+                    "gs_pre_timeout": {
+                      "type": "number",
+                      "inputValue": 0,
+                      "returnType": "Unknown"
+                    },
+                    "gs_lat_timeout": {
+                      "type": "number",
+                      "inputValue": 0,
+                      "returnType": "Unknown"
+                    },
+                    "generalSettings": {
+                      "log": {
+                        "value": true,
+                        "disabled": true
+                      },
+                      "exit": true,
+                      "msgbox": false
+                    },
+                    "name": "获取当前时间&日期",
+                    "desc": "获取当前时间，将结果赋值给 <a>v_time</a>",
+                    "output_time": {
+                      "type": "variable",
+                      "inputValue": "f1e12da007ab4d37a6a820245fd5797c",
+                      "varLabel": "v_time",
+                      "returnType": "String"
+                    },
+                    "collapsed": false,
+                    "disabled": false
+                  }
+                },
+                {
+                  "id": "canvas-node-_lp0z4xtq",
+                  "type": "wuclip",
+                  "props": {
+                    "mode": "cover",
+                    "ctrlIndex": {
+                      "type": "number",
+                      "inputValue": 1,
+                      "returnType": "Unknown"
+                    },
+                    "inspect": "False",
+                    "time": {
+                      "type": "number",
+                      "inputValue": 2,
+                      "returnType": "Unknown"
+                    },
+                    "timeout": {
+                      "type": "number",
+                      "inputValue": "20",
+                      "returnType": "Unknown"
+                    },
+                    "gs_pre_timeout": {
+                      "type": "number",
+                      "inputValue": 0,
+                      "returnType": "Unknown"
+                    },
+                    "gs_lat_timeout": {
+                      "type": "number",
+                      "inputValue": "0.5",
+                      "returnType": "Unknown"
+                    },
+                    "generalSettings": {
+                      "log": {
+                        "value": true,
+                        "disabled": true
+                      },
+                      "exit": true,
+                      "msgbox": false
+                    },
+                    "name": "通过剪贴方式输入（窗口）",
+                    "collapsed": false,
+                    "disabled": false,
+                    "window": {
+                      "type": "variable",
+                      "inputValue": "0c0902d5aa564466a8123cc2291cc894",
+                      "varLabel": "save_as_dialog",
+                      "returnType": "Window"
+                    },
+                    "ctrl": {
+                      "ctrlId": "7213015455b0484ea04717b68192144b",
+                      "ctrlGroup": "",
+                      "ctrlName": "文件名输入框",
+                      "imgPath": null,
+                      "type": "WinUI"
+                    },
+                    "content": {
+                      "type": "express",
+                      "inputValue": "os.path.join(\"C:\\RPADATA\", (date+data[2]+'回单'+data[6]+'元'+str(v_time)+'.pdf'))",
+                      "varLabel": "os.path.join(\"C:\\RPADATA\", (date+data[2]+'回单'+data[6]+'元'+str(v_time)+'.pdf'))",
+                      "returnType": "Unknown"
+                    },
+                    "desc": "在 <a>save_as_dialog</a> 中，通过剪贴方式在 <a>文件名输入框</a> 内填写 <a>os.path.join(\"C:\\RPADATA\", (date+data[2]+'回单'+data[6]+'元'+str(v_time)+'.pdf'))</a>"
+                  }
+                },
+                {
+                  "id": "canvas-node-_d7h551i2",
+                  "type": "minputkeyboard",
+                  "props": {
+                    "gs_pre_timeout": {
+                      "type": "number",
+                      "inputValue": "1",
+                      "returnType": "Unknown"
+                    },
+                    "gs_lat_timeout": {
+                      "type": "number",
+                      "inputValue": 0,
+                      "returnType": "Unknown"
+                    },
+                    "generalSettings": {
+                      "log": {
+                        "value": true,
+                        "disabled": true
+                      },
+                      "exit": true,
+                      "msgbox": false
+                    },
+                    "name": "输入热键",
+                    "keyboard": {
+                      "type": "text",
+                      "inputValue": "!{s}",
+                      "returnType": "Unknown"
+                    },
+                    "desc": "执行快捷键 <a>\"!{s}\"</a>",
+                    "collapsed": false,
+                    "disabled": false
+                  }
+                },
+                {
+                  "id": "canvas-node-_r54mlq4y",
+                  "type": "belementclick",
+                  "props": {
+                    "clickType": "left_once",
+                    "simulate": "True",
+                    "ctrlIndex": {
+                      "type": "number",
+                      "inputValue": 1,
+                      "returnType": "Unknown"
+                    },
+                    "timeout": {
+                      "type": "number",
+                      "inputValue": 10,
+                      "returnType": "Unknown"
+                    },
+                    "gs_pre_timeout": {
+                      "type": "number",
+                      "inputValue": "1",
+                      "returnType": "Unknown"
+                    },
+                    "gs_lat_timeout": {
+                      "type": "number",
+                      "inputValue": 0,
+                      "returnType": "Unknown"
+                    },
+                    "generalSettings": {
+                      "log": {
+                        "value": true,
+                        "disabled": true
+                      },
+                      "exit": true,
+                      "msgbox": false
+                    },
+                    "name": "点击控件（网页）",
+                    "collapsed": false,
+                    "disabled": false,
+                    "openPage": {
+                      "type": "variable",
+                      "inputValue": "b9e8fd9c94d74f49845ff8025fdb6449",
+                      "varLabel": "bank_web",
+                      "returnType": "WebPage",
+                      "varGroup": "global"
+                    },
+                    "element": {
+                      "ctrlId": "b528bf3ded714b54a8fc8a729ae74e38",
+                      "ctrlGroup": "",
+                      "ctrlName": "欢迎页面",
+                      "imgPath": null,
+                      "type": "Chrome"
+                    },
+                    "desc": "在 <a>bank_web</a> 网页中，鼠标 <a>左键单击</a> <a>欢迎页面</a>"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "canvas-node-_nrqfp9a5",
+              "type": "TryCatchRouter",
+              "props": {
+                "collapsed": false,
+                "disabled": false
+              },
+              "children": [
+                {
+                  "id": "canvas-node-_kvkonlro",
+                  "type": "spshowsubtitle",
+                  "props": {
+                    "color": "255,255,0,0",
+                    "fontsize": {
+                      "type": "variable",
+                      "inputValue": "f4bd9688344d44e2a7557e299a595e4a",
+                      "varLabel": "size_changer",
+                      "returnType": "Number",
+                      "varGroup": "global"
+                    },
+                    "gs_pre_timeout": {
+                      "type": "number",
+                      "inputValue": 0,
+                      "returnType": "Unknown"
+                    },
+                    "gs_lat_timeout": {
+                      "type": "number",
+                      "inputValue": "3",
+                      "returnType": "Unknown"
+                    },
+                    "generalSettings": {
+                      "log": {
+                        "value": true,
+                        "disabled": true
+                      },
+                      "exit": true,
+                      "msgbox": false
+                    },
+                    "name": "出现字幕",
+                    "collapsed": false,
+                    "disabled": false,
+                    "subtitle": {
+                      "type": "text",
+                      "inputValue": "下载成功！如需下载至指定路径，请开启Chrome浏览器的“下载前询问每个文件的保存位置”功能！",
+                      "returnType": "Unknown"
+                    },
+                    "desc": "屏幕下方出现字幕 <a>\"下载成功！如需下载至指定路径，请开启Chrome浏览器的“下载前询问每个文件的保存位置”功能！\"</a>"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "canvas-node-_5zu79gu3",
+              "type": "TryFinallyRouter",
+              "props": {
+                "collapsed": false,
+                "disabled": false
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "canvas-node-_kvkonlri",
+          "type": "EndEvent",
+          "props": {
+            "collapsed": false,
+            "disabled": false
+          }
+        }
+      ]
+    },
+    "edges": []
+  }
+}

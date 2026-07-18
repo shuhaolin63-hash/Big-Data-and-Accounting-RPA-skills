@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0.0",
+  "varList": [
+    {
+      "varId": "0330916534f140b08c105616e73ae9ad",
+      "varName": "v_win_obj_1",
+      "varGroup": "public",
+      "varType": "Window",
+      "defaultValue": ""
+    },
+    {
+      "varId": "9e62ed0ff7ef4d4985c9d762b8ee0c72",
+      "varName": "wyfk_win",
+      "varGroup": "flowDefine",
+      "varType": "Window",
+      "defaultValue": ""
+    }
+  ]
+}

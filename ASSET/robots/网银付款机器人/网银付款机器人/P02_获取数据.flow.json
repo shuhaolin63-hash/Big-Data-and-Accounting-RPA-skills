@@ -1,0 +1,100 @@
+{
+  "id": "e48de88913b446aea4b7ef1de0fddf47",
+  "name": "P02_获取数据",
+  "displayName": "",
+  "version": "4.2.0.0",
+  "description": "",
+  "developType": "visual",
+  "parameters": {
+    "input": [],
+    "output": []
+  },
+  "content": {
+    "id": "canvas-doc-_kvknouxj",
+    "props": {},
+    "root": {
+      "id": "canvas-node-_kvknouxk",
+      "type": "FlowRoot",
+      "props": {
+        "collapsed": false,
+        "disabled": false,
+        "flowModel": {},
+        "processName": "P03_Get_Data"
+      },
+      "children": [
+        {
+          "id": "canvas-node-_kvknouxl",
+          "type": "StartEvent",
+          "props": {
+            "debug": true,
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_0qg3b9s1",
+          "type": "ecgetsheetrowvalue",
+          "props": {
+            "rowindex": {
+              "type": "variable",
+              "inputValue": "c20bea26f862415a96cb73fc613d1ec6",
+              "varLabel": "i",
+              "returnType": "Number",
+              "varGroup": "global"
+            },
+            "maxcellnumber": {
+              "type": "number",
+              "inputValue": 1000,
+              "returnType": "Unknown"
+            },
+            "readonlyvisible": "True",
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "获取Excel行的值",
+            "desc": "获取 <a>wyfk_sheet</a> Sheet页的 <a>i</a> 行的值，并将结果赋值给 <a>data</a>",
+            "output_valuelist": {
+              "type": "variable",
+              "inputValue": "7a560b78f4764818a3a9a0806d644f14",
+              "varLabel": "data",
+              "returnType": "List"
+            },
+            "sheetpage": {
+              "type": "variable",
+              "inputValue": "aef19e1a61a94b5a9f5b7f2be37f0afa",
+              "varLabel": "wyfk_sheet",
+              "returnType": "Sheet",
+              "varGroup": "global"
+            },
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_kvknouxm",
+          "type": "EndEvent",
+          "props": {
+            "collapsed": false,
+            "disabled": false
+          }
+        }
+      ]
+    },
+    "edges": []
+  }
+}

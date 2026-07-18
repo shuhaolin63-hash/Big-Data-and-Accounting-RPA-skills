@@ -1,0 +1,201 @@
+{
+  "id": "acc96447efeb45058a9f3eda01ca7e08",
+  "name": "START",
+  "displayName": "",
+  "version": "4.2.0.0",
+  "description": "",
+  "developType": "visual",
+  "parameters": {
+    "input": [],
+    "output": []
+  },
+  "content": {
+    "id": "canvas-doc-_l4m1ucje",
+    "props": {},
+    "root": {
+      "id": "canvas-node-_l4m1ucjf",
+      "type": "FlowRoot",
+      "props": {
+        "collapsed": false,
+        "disabled": false,
+        "flowModel": {},
+        "processName": "START"
+      },
+      "children": [
+        {
+          "id": "canvas-node-_l4m1ucjg",
+          "type": "StartEvent",
+          "props": {
+            "debug": false,
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_l4m1ucji",
+          "type": "spshowsubtitle",
+          "props": {
+            "color": "255,0,0,255",
+            "fontsize": {
+              "type": "number",
+              "inputValue": "36",
+              "returnType": "Unknown"
+            },
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "出现字幕",
+            "collapsed": false,
+            "disabled": false,
+            "subtitle": {
+              "type": "text",
+              "inputValue": "机器人开始运行，请输入实践平台账号及密码！",
+              "returnType": "Unknown"
+            },
+            "desc": "屏幕下方出现字幕 <a>\"机器人开始运行，请输入实践平台账号及密码！\"</a>"
+          }
+        },
+        {
+          "id": "canvas-node-_l4m1ucjj",
+          "type": "pscript",
+          "props": {
+            "content": {
+              "type": "express",
+              "inputValue": "import Assess\r\ncookies, username, password = Assess.start('auto_auth')",
+              "varLabel": "import Assess\r\ncookies, username, password = Assess.start('auto_auth')",
+              "returnType": "Unknown"
+            },
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "调用自定义脚本",
+            "collapsed": false,
+            "disabled": false,
+            "desc": "调用自定义脚本"
+          }
+        },
+        {
+          "id": "canvas-node-_l4m1ucjk",
+          "type": "spshowsubtitle",
+          "props": {
+            "color": "255,0,0,255",
+            "fontsize": {
+              "type": "number",
+              "inputValue": "36",
+              "returnType": "Unknown"
+            },
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": "3",
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "出现字幕",
+            "collapsed": false,
+            "disabled": false,
+            "subtitle": {
+              "type": "text",
+              "inputValue": "机器人正在自动识别测评任务！",
+              "returnType": "Unknown"
+            },
+            "desc": "屏幕下方出现字幕 <a>\"机器人正在自动识别测评任务！\"</a>"
+          }
+        },
+        {
+          "id": "canvas-node-_l4m1ucjl",
+          "type": "pscript",
+          "props": {
+            "content": {
+              "type": "express",
+              "inputValue": "import Assess\r\nAssess.start('auto_start')",
+              "varLabel": "import Assess\r\nAssess.start('auto_start')",
+              "returnType": "Unknown"
+            },
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "调用自定义脚本",
+            "collapsed": false,
+            "disabled": false,
+            "desc": "调用自定义脚本"
+          }
+        },
+        {
+          "id": "canvas-node-_l4m1ucjm",
+          "type": "spsubtitledisappear",
+          "props": {
+            "name": "关闭字幕",
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_l4m1ucjh",
+          "type": "EndEvent",
+          "props": {
+            "collapsed": false,
+            "disabled": false
+          }
+        }
+      ]
+    },
+    "edges": []
+  }
+}

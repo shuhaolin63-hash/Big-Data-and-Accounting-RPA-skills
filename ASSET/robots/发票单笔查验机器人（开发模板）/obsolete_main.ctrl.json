@@ -1,0 +1,53 @@
+{
+  "version": "1.0.0.0",
+  "engineVersion": "4.0",
+  "controlList": [
+    {
+      "groupName": "",
+      "controls": [
+        {
+          "id": "f9dc121844e142b78ada0bfd413d5f96",
+          "name": "发票代码输入框",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"Window\",\"props\":[{\"name\":\"title\",\"value\":\"国家税务总局全国增值税发票查验仿真平台\",\"pattern\":\"Equal\"},{\"name\":\"app\",\"value\":\"iexplore\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"class\",\"value\":\"IEFrame\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"input\",\"props\":[{\"name\":\"id\",\"value\":\"fpdm\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"type\",\"value\":\"text\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": null
+        },
+        {
+          "id": "6091118e327e45e4aa6ac654dba98ef9",
+          "name": "发票号码输入框",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"Window\",\"props\":[{\"name\":\"title\",\"value\":\"国家税务总局全国增值税发票查验仿真平台\",\"pattern\":\"Equal\"},{\"name\":\"app\",\"value\":\"iexplore\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"class\",\"value\":\"IEFrame\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"input\",\"props\":[{\"name\":\"id\",\"value\":\"fphm\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"type\",\"value\":\"text\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": null
+        },
+        {
+          "id": "26e99bd8032b4059a8fff008a29bc526",
+          "name": "开票日期输入框",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"Window\",\"props\":[{\"name\":\"title\",\"value\":\"国家税务总局全国增值税发票查验仿真平台\",\"pattern\":\"Equal\"},{\"name\":\"app\",\"value\":\"iexplore\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"class\",\"value\":\"IEFrame\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"input\",\"props\":[{\"name\":\"id\",\"value\":\"kprq\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"type\",\"value\":\"text\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"form-control\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": null
+        },
+        {
+          "id": "30bbd5146cfc4bb39de27e162fed92be",
+          "name": "校验码输入框",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"Window\",\"props\":[{\"name\":\"title\",\"value\":\"国家税务总局全国增值税发票查验仿真平台\",\"pattern\":\"Equal\"},{\"name\":\"app\",\"value\":\"iexplore\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"class\",\"value\":\"IEFrame\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"input\",\"props\":[{\"name\":\"id\",\"value\":\"kjje\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"type\",\"value\":\"text\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": null
+        },
+        {
+          "id": "1b5f409b42c54592af4369e3e9d6c209",
+          "name": "验证码输入框",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"Window\",\"props\":[{\"name\":\"title\",\"value\":\"国家税务总局全国增值税发票查验仿真平台\",\"pattern\":\"Equal\"},{\"name\":\"app\",\"value\":\"iexplore\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"class\",\"value\":\"IEFrame\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"input\",\"props\":[{\"name\":\"id\",\"value\":\"yzm_new\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"type\",\"value\":\"text\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": null
+        },
+        {
+          "id": "9b14a7e403bb4778a52618385e52a076",
+          "name": "查验",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"Window\",\"props\":[{\"name\":\"title\",\"value\":\"国家税务总局全国增值税发票查验仿真平台\",\"pattern\":\"Equal\"},{\"name\":\"app\",\"value\":\"iexplore\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"class\",\"value\":\"IEFrame\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"id\",\"value\":\"pageshow\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"id\",\"value\":\"content2\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"pad_t_50 clearfix\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"table\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"comm_table2 fr\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"tbody\",\"props\":[],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"tr\",\"props\":[],\"optionProps\":[{\"name\":\"outertext\",\"value\":\"查 验       重 置\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"7\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"td\",\"props\":[],\"optionProps\":[{\"name\":\"outertext\",\"value\":\"查 验       重 置\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"comm_btn_div2 clearfix\",\"pattern\":\"Equal\"},{\"name\":\"outertext\",\"value\":\"查 验       重 置\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"button\",\"props\":[{\"name\":\"outertext\",\"value\":\"查 验\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"id\",\"value\":\"checkfp_1\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"green_button\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": null
+        }
+      ]
+    }
+  ]
+}

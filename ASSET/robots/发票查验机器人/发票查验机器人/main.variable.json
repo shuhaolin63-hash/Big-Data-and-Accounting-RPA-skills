@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0.0",
+  "varList": [
+    {
+      "varId": "be675c6507dc415bac111ad5ba11877b",
+      "varName": "Running_state",
+      "varGroup": "public",
+      "varType": "String",
+      "defaultValue": ""
+    }
+  ]
+}

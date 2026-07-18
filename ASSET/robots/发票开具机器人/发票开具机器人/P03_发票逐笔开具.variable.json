@@ -1,0 +1,26 @@
+{
+  "version": "1.0.0.0",
+  "varList": [
+    {
+      "varId": "050fc8a14a6b42d2ab8123ea2810e26f",
+      "varName": "lcw_win",
+      "varGroup": "public",
+      "varType": "Window",
+      "defaultValue": ""
+    },
+    {
+      "varId": "0d947d475463441d8c9dc4b0ab03e4f4",
+      "varName": "v_time",
+      "varGroup": "flowDefine",
+      "varType": "String",
+      "defaultValue": ""
+    },
+    {
+      "varId": "fb994ab8d7d045c192bd978454b372ef",
+      "varName": "v_notice_alert_value_1",
+      "varGroup": "public",
+      "varType": "String",
+      "defaultValue": ""
+    }
+  ]
+}

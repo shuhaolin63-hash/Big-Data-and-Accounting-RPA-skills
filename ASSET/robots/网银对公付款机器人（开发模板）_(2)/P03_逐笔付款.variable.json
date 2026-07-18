@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0.0",
+  "varList": [
+    {
+      "varId": "05e09ccd1304456ab5ac2c6d1e0176ce",
+      "varName": "v_excel_obj_2",
+      "varGroup": "public",
+      "varType": "Excel",
+      "defaultValue": ""
+    },
+    {
+      "varId": "4d0c7547496f458ea28135ddf1d68d74",
+      "varName": "v_file_path_2",
+      "varGroup": "public",
+      "varType": "String",
+      "defaultValue": ""
+    }
+  ]
+}

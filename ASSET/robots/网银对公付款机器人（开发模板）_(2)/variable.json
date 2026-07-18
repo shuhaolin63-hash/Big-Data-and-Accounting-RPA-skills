@@ -1,0 +1,33 @@
+{
+  "version": "1.0.0.0",
+  "varList": [
+    {
+      "varId": "b5edbebbd91444f89f81ab9bfd9ef905",
+      "varName": "wyfk_sheet",
+      "varGroup": "global",
+      "varType": "Sheet",
+      "defaultValue": ""
+    },
+    {
+      "varId": "e400aa257bac4d2aaa212bf181f56344",
+      "varName": "data",
+      "varGroup": "global",
+      "varType": "List",
+      "defaultValue": "[]"
+    },
+    {
+      "varId": "8fa881cd0a444848995d8b22dc0ebd5f",
+      "varName": "bank_web",
+      "varGroup": "global",
+      "varType": "WebPage",
+      "defaultValue": ""
+    },
+    {
+      "varId": "135dd8c430424daeb52bc6bf8db1d342",
+      "varName": "i",
+      "varGroup": "global",
+      "varType": "Number",
+      "defaultValue": ""
+    }
+  ]
+}

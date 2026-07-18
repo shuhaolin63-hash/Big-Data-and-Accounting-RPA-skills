@@ -1,0 +1,48 @@
+{
+  "projectName": "invoice_collect",
+  "projectDescription": "",
+  "developType": "ProjectCode",
+  "entrance": "main.py",
+  "entrancePath": "",
+  "studioVersion": "4.0.0.0",
+  "projectVersion": "1.0",
+  "dependencies": [],
+  "fullDependencies": [],
+  "treeDependencies": [],
+  "version": 3,
+  "engineVersion": "4.0",
+  "runtimeOptions": {},
+  "designOptions": {
+    "isTriggerPanelHidden": false,
+    "isParamsPanelHidden": false,
+    "isDataTablePanelHidden": false,
+    "isBrowserPanelHidden": false,
+    "triggers": [
+      {
+        "appEventId": 0,
+        "name": "",
+        "function": "start",
+        "useTiming": false
+      }
+    ],
+    "params": [],
+    "columns": []
+  },
+  "appOptions": [
+    {
+      "uuid": null,
+      "name": "invoice_collect",
+      "robotType": "SDK",
+      "version": "1.0",
+      "categoryId": "d296df85-70b2-11ea-933e-0242ac120004",
+      "codeId": 0,
+      "status": 0,
+      "contacts": "Mr.Liu",
+      "iconUrl": "",
+      "pictures": "",
+      "introduction": "分析发票查验结果，提取发票信息数据。",
+      "instruction": "仿真平台查验结果：\r\nimport invoice\r\ndata = invoice.start(html)\r\n\r\n国税平台查验结果：\r\nimport invoice\r\ndata = invoice.start(html,1)",
+      "updatedTime": "2021-09-18T11:17:47.7943091+08:00"
+    }
+  ]
+}

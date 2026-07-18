@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0.0",
+  "varList": [
+    {
+      "varId": "aa68c9ccdf5c45b89bbff21954491712",
+      "varName": "v_file_path_1",
+      "varGroup": "public",
+      "varType": "String",
+      "defaultValue": ""
+    }
+  ]
+}

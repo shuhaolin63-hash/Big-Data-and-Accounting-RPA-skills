@@ -1,0 +1,60 @@
+{
+  "version": "1.0.0.0",
+  "engineVersion": "4.0",
+  "controlList": [
+    {
+      "groupName": "",
+      "controls": [
+        {
+          "id": "f1af9f6c59814dce8696e292c7bc2d93",
+          "name": "发票号码输入框",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"国家税务总局全国增值税发票查验仿真平台\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"https://fz.chinaive.com/fpcy/\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"input\",\"props\":[{\"name\":\"id\",\"value\":\"fphm\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"type\",\"value\":\"text\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": "Mixed"
+        },
+        {
+          "id": "a32fafd4d2164e56a7fe8757c2a5810a",
+          "name": "发票代码输入框",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"国家税务总局全国增值税发票查验仿真平台\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"https://fz.chinaive.com/fpcy/\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"input\",\"props\":[{\"name\":\"id\",\"value\":\"fpdm\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"type\",\"value\":\"text\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": "Mixed"
+        },
+        {
+          "id": "b61f27824ca14cad8e2079301ac58e08",
+          "name": "开票日期输入框",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"国家税务总局全国增值税发票查验仿真平台\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"https://fz.chinaive.com/fpcy/\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"input\",\"props\":[{\"name\":\"id\",\"value\":\"kprq\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"type\",\"value\":\"text\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"form-control\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": "Mixed"
+        },
+        {
+          "id": "71c088ce8b484d509dac72861b87ca6a",
+          "name": "校验码输入框",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"国家税务总局全国增值税发票查验仿真平台\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"https://fz.chinaive.com/fpcy/\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"input\",\"props\":[{\"name\":\"id\",\"value\":\"kjje\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"type\",\"value\":\"text\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": "Mixed"
+        },
+        {
+          "id": "4eb3667c7b4f4accbfae7deaa23e81ae",
+          "name": "验证码输入框",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"国家税务总局全国增值税发票查验仿真平台\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"https://fz.chinaive.com/fpcy/\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"input\",\"props\":[{\"name\":\"id\",\"value\":\"yzm_new\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"type\",\"value\":\"text\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": "Mixed"
+        },
+        {
+          "id": "a446c228e3a24b47b24f35e65c71e783",
+          "name": "查验",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"国家税务总局全国增值税发票查验仿真平台\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"https://fz.chinaive.com/fpcy/\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[{\"name\":\"id\",\"value\":\"pageshow\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"id\",\"value\":\"content2\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"pad_t_50 clearfix\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"table\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"comm_table2 fr\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"tbody\",\"props\":[],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"tr\",\"props\":[],\"optionProps\":[{\"name\":\"outertext\",\"value\":\"查 验      重 置\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"7\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"td\",\"props\":[],\"optionProps\":[{\"name\":\"outertext\",\"value\":\"查 验      重 置\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"comm_btn_div2 clearfix\",\"pattern\":\"Equal\"},{\"name\":\"outertext\",\"value\":\"查 验      重 置\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"button\",\"props\":[{\"name\":\"outertext\",\"value\":\"查 验\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"id\",\"value\":\"checkfp_1\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"green_button\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": "Mixed"
+        },
+        {
+          "id": "67c3e1c0217a43f999bbbd19b398a30d",
+          "name": "发票代码输入框1",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"国家税务总局全国增值税发票查验仿真平台\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"https://fz.chinaive.com/fpcy/\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"input\",\"props\":[{\"name\":\"id\",\"value\":\"fpdm\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"type\",\"value\":\"text\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": "Mixed"
+        }
+      ]
+    }
+  ]
+}

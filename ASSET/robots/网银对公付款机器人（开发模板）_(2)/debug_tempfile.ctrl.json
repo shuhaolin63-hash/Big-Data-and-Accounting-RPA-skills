@@ -1,0 +1,186 @@
+{
+  "version": "1.0.0.0",
+  "engineVersion": "4.0",
+  "controlList": [
+    {
+      "groupName": "",
+      "controls": [
+        {
+          "id": "44f34a21697f4fadbc998eecae10e8dd",
+          "name": "企业网上银行登录",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"融智网上银行（仿真）\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"https://fz.chinaive.com/wsyh/\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"KV\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"login\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"login_center\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[{\"name\":\"nth-child\",\"value\":\"3\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"class\",\"value\":\"ee_login\",\"pattern\":\"Equal\"},{\"name\":\"outertext\",\"value\":\"企业网上银行登录\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"input\",\"props\":[{\"name\":\"type\",\"value\":\"button\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": "Mixed"
+        },
+        {
+          "id": "d9c55f9e4d234ad39a370d8238aacbbb",
+          "name": "U盾登录",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"https://fz.chinaive.com/wsyh/ee_login\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[{\"name\":\"id\",\"value\":\"usubmitkey\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"class\",\"value\":\"input-btn-wrapper1 clickable-btn\",\"pattern\":\"Equal\"},{\"name\":\"outertext\",\"value\":\"U 盾 登 录\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": "Mixed"
+        },
+        {
+          "id": "ea27ddc9383c4ab790b71f71c479a084",
+          "name": "U盾密码输入框",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"https://fz.chinaive.com/wsyh/ee_login\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"input\",\"props\":[{\"name\":\"id\",\"value\":\"u_password\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"type\",\"value\":\"password\",\"pattern\":\"Equal\"},{\"name\":\"name\",\"value\":\"u_password\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": "Mixed"
+        },
+        {
+          "id": "ae2c50ce38dc487296de218004033ef0",
+          "name": "确定",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"https://fz.chinaive.com/wsyh/ee_login\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"input\",\"props\":[{\"name\":\"id\",\"value\":\"assure\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"type\",\"value\":\"button\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": "Mixed"
+        },
+        {
+          "id": "1b7085dc482049a89f0e6c9d380d6b96",
+          "name": "网上汇款",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"https://fz.chinaive.com/wsyh/payment_business/\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"li\",\"props\":[{\"name\":\"id\",\"value\":\"online_remittance\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"class\",\"value\":\"menu\",\"pattern\":\"Equal\"},{\"name\":\"outertext\",\"value\":\"网上汇款\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": "Mixed"
+        },
+        {
+          "id": "161cdec1abd5451e88a5718a8d98b46d",
+          "name": "转账汇款",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"https://fz.chinaive.com/wsyh/payment_business/\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"li\",\"props\":[{\"name\":\"id\",\"value\":\"transfer_remittance\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"name\",\"value\":\"online_remi2\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"menu sub_menu\",\"pattern\":\"Equal\"},{\"name\":\"outertext\",\"value\":\"转账汇款\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": "Mixed"
+        },
+        {
+          "id": "a89a290255f94184a0b2316bf4ca86f8",
+          "name": "逐笔支付",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"https://fz.chinaive.com/wsyh/payment_business/\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"li\",\"props\":[{\"name\":\"id\",\"value\":\"onebyone_pay\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"name\",\"value\":\"online_remi_transfer\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"menu sub_menu\",\"pattern\":\"Equal\"},{\"name\":\"outertext\",\"value\":\"逐笔支付\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": "Mixed"
+        },
+        {
+          "id": "545341eb2a944480b00dd2778151ce37",
+          "name": "收款单位输入框",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"https://fz.chinaive.com/wsyh/payment_business/\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"input\",\"props\":[{\"name\":\"id\",\"value\":\"receive\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"type\",\"value\":\"text\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"input1\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": "Mixed"
+        },
+        {
+          "id": "c9731715d4574c318c2956b34893d274",
+          "name": "收款账号输入框",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"https://fz.chinaive.com/wsyh/payment_business/\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"input\",\"props\":[{\"name\":\"id\",\"value\":\"receive_account\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"type\",\"value\":\"text\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"input1\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": "Mixed"
+        },
+        {
+          "id": "284eee18fec94e0eacfe69dc01137054",
+          "name": "开户行输入框",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"https://fz.chinaive.com/wsyh/payment_business/\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"input\",\"props\":[{\"name\":\"id\",\"value\":\"receive_bank\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"type\",\"value\":\"text\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"input1\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": "Mixed"
+        },
+        {
+          "id": "c63db3e2b0fc47ebb76b9a2326d5832c",
+          "name": "汇款金额输入框",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"https://fz.chinaive.com/wsyh/payment_business/\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"input\",\"props\":[{\"name\":\"id\",\"value\":\"money\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"type\",\"value\":\"text\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"input1\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": "Mixed"
+        },
+        {
+          "id": "7322c5cebf4c4f3eb94cb25539a4f902",
+          "name": "汇款用途输入框",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"https://fz.chinaive.com/wsyh/payment_business/\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"input\",\"props\":[{\"name\":\"id\",\"value\":\"payPurpose\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"type\",\"value\":\"text\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"input1\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": "Mixed"
+        },
+        {
+          "id": "389e82ceea6549dabb5cdecc411e734d",
+          "name": "提交",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"https://fz.chinaive.com/wsyh/payment_business/\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"span\",\"props\":[{\"name\":\"id\",\"value\":\"detail_submit\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"outertext\",\"value\":\"提交\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": "Mixed"
+        },
+        {
+          "id": "4f176fdb5b094996bd8e56f8819a4f72",
+          "name": "账户管理",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"https://fz.chinaive.com/wsyh/payment_business/\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"nav\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"w-center2\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"ul\",\"props\":[],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"li\",\"props\":[{\"name\":\"outertext\",\"value\":\"账户管理\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"id\",\"value\":\"m-2\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": "Mixed"
+        },
+        {
+          "id": "b3d86611bd50476db7214d51c59f06ff",
+          "name": "明细查询",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"https://fz.chinaive.com/wsyh/account_manage/\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"li\",\"props\":[{\"name\":\"id\",\"value\":\"detail_query\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"class\",\"value\":\"menu\",\"pattern\":\"Equal\"},{\"name\":\"outertext\",\"value\":\"明细查询\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": "Mixed"
+        },
+        {
+          "id": "a0d039318075422cb90795a116c969e3",
+          "name": "交易日期起始值输入框",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"https://fz.chinaive.com/wsyh/account_manage/\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"bottom\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"w-center\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"bottom-right\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"mainbox\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"detail_body\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"asset_body_bottom\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"outertext\",\"value\":\"*交易日期：  至\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"input\",\"props\":[{\"name\":\"type\",\"value\":\"text\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"id\",\"value\":\"time1\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"input1\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": "Mixed"
+        },
+        {
+          "id": "884ecab6111b46ceb45205ec8b276c0e",
+          "name": "交易日期终止值输入框",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"https://fz.chinaive.com/wsyh/account_manage/\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"bottom\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"w-center\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"bottom-right\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"mainbox\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"detail_body\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"asset_body_bottom\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"outertext\",\"value\":\"*交易日期：  至\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"input\",\"props\":[{\"name\":\"type\",\"value\":\"text\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"3\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"id\",\"value\":\"time2\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"input1\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": "Mixed"
+        },
+        {
+          "id": "87c0b02a9548445491c329bb3f96a975",
+          "name": "对方账号输入框",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"https://fz.chinaive.com/wsyh/account_manage/\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"bottom\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"w-center\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"bottom-right\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"mainbox\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"detail_body\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"asset_body_bottom\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[{\"name\":\"nth-child\",\"value\":\"3\",\"pattern\":\"Equal\"}],\"optionProps\":[]},{\"type\":\"chrome\",\"name\":\"input\",\"props\":[{\"name\":\"type\",\"value\":\"text\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"id\",\"value\":\"time5\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"input1\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": "Mixed"
+        },
+        {
+          "id": "cad105b61e9c40b08e93b983cbf7511f",
+          "name": "交易金额起始值输入框",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"https://fz.chinaive.com/wsyh/account_manage/\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"bottom\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"w-center\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"bottom-right\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"mainbox\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"detail_body\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"asset_body_bottom\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"outertext\",\"value\":\"交易金额：  至\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"input\",\"props\":[{\"name\":\"type\",\"value\":\"text\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"id\",\"value\":\"time3\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"input1\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": "Mixed"
+        },
+        {
+          "id": "eb88c561d5c843f583b233935d32dc05",
+          "name": "交易金额终止值输入框",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"https://fz.chinaive.com/wsyh/account_manage/\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"bottom\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"w-center\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"bottom-right\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"mainbox\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"detail_body\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"asset_body_bottom\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"outertext\",\"value\":\"交易金额：  至\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"input\",\"props\":[{\"name\":\"type\",\"value\":\"text\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"3\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"id\",\"value\":\"time4\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"input1\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": "Mixed"
+        },
+        {
+          "id": "91bd9ce86d544ce9a6a157a040d34870",
+          "name": "转出",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"https://fz.chinaive.com/wsyh/account_manage/\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"bottom\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"w-center\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"bottom-right\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"mainbox\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"detail_body\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"asset_body_bottom\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"5\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"form\",\"props\":[],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"label\",\"props\":[{\"name\":\"outertext\",\"value\":\"转出\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": "Mixed"
+        },
+        {
+          "id": "ae711a768ecd4b18926fa1414db51fa3",
+          "name": "查询",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"https://fz.chinaive.com/wsyh/account_manage/\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"span\",\"props\":[{\"name\":\"id\",\"value\":\"detail-save\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"outertext\",\"value\":\"查询\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": "Mixed"
+        },
+        {
+          "id": "f48498d509854eb49de24b7a3165c919",
+          "name": "回单",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"https://fz.chinaive.com/wsyh/account_manage/\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[{\"name\":\"id\",\"value\":\"mainbody\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"class\",\"value\":\"mainbody\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"5\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"table\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"table\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"tbody\",\"props\":[],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"tr\",\"props\":[],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"td\",\"props\":[],\"optionProps\":[{\"name\":\"outertext\",\"value\":\"回单\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"11\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"span\",\"props\":[{\"name\":\"outertext\",\"value\":\"回单\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"id\",\"value\":\"huidan284\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"receipt\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": "Mixed"
+        },
+        {
+          "id": "8f2bf00c737a420982432a1926492018",
+          "name": "退出",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"https://fz.chinaive.com/wsyh/account_manage/\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"a\",\"props\":[{\"name\":\"id\",\"value\":\"logout\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"href\",\"value\":\"https://fz.chinaive.com/wsyh/logout/\",\"pattern\":\"Equal\"},{\"name\":\"outertext\",\"value\":\"退出\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": "Mixed"
+        },
+        {
+          "id": "ace4afca7b4d49ceac1923f0986e40f5",
+          "name": "付款业务",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"https://fz.chinaive.com/wsyh/payment_business/\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"nav\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"w-center2\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"ul\",\"props\":[],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"li\",\"props\":[{\"name\":\"outertext\",\"value\":\"付款业务\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"id\",\"value\":\"m-4\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"active1\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": "Mixed"
+        }
+      ]
+    }
+  ]
+}

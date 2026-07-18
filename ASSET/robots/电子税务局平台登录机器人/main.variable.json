@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0.0",
+  "varList": [
+    {
+      "varId": "6381ff7e82c1460cb8409ebd85376811",
+      "varName": "v_web_obj_1",
+      "varGroup": "public",
+      "varType": "WebPage",
+      "defaultValue": ""
+    }
+  ]
+}

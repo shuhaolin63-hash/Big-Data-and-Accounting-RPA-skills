@@ -1,0 +1,80 @@
+{
+  "id": "b69a1432ecfc4fcb979cbc9c8cf51a65",
+  "name": "END",
+  "displayName": "",
+  "version": "4.2.0.0",
+  "description": "",
+  "developType": "visual",
+  "parameters": {
+    "input": [],
+    "output": []
+  },
+  "content": {
+    "id": "canvas-doc-_l4m1ucjn",
+    "props": {},
+    "root": {
+      "id": "canvas-node-_l4m1ucjo",
+      "type": "FlowRoot",
+      "props": {
+        "collapsed": false,
+        "disabled": false,
+        "flowModel": {},
+        "processName": "END"
+      },
+      "children": [
+        {
+          "id": "canvas-node-_l4m1ucjp",
+          "type": "StartEvent",
+          "props": {
+            "debug": false,
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_l4m1ucjr",
+          "type": "pscript",
+          "props": {
+            "content": {
+              "type": "express",
+              "inputValue": " import Assess\r\nAssess.start('auto_end')",
+              "varLabel": " import Assess\r\nAssess.start('auto_end')",
+              "returnType": "Unknown"
+            },
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "调用自定义脚本",
+            "desc": "调用自定义脚本",
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_l4m1ucjq",
+          "type": "EndEvent",
+          "props": {
+            "collapsed": false,
+            "disabled": false
+          }
+        }
+      ]
+    },
+    "edges": []
+  }
+}

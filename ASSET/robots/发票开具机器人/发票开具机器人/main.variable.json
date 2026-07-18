@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0.0",
+  "varList": [
+    {
+      "varId": "dd880c8ace05488ba19b5c9a0b941f27",
+      "varName": "v_notice_alert_value_2",
+      "varGroup": "public",
+      "varType": "String",
+      "defaultValue": ""
+    }
+  ]
+}

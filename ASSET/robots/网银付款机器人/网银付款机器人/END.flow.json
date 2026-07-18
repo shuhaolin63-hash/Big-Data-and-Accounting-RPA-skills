@@ -1,0 +1,89 @@
+{
+  "id": "b7c3f2949cf747b1a86bf811e4859251",
+  "name": "END",
+  "displayName": "",
+  "version": "4.2.0.0",
+  "description": "",
+  "developType": "visual",
+  "parameters": {
+    "input": [],
+    "output": []
+  },
+  "content": {
+    "id": "canvas-doc-_kwvspekp",
+    "props": {},
+    "root": {
+      "id": "canvas-node-_kwvspekq",
+      "type": "FlowRoot",
+      "props": {
+        "collapsed": false,
+        "disabled": false,
+        "flowModel": {},
+        "processName": "END"
+      },
+      "children": [
+        {
+          "id": "canvas-node-_kwvspekr",
+          "type": "StartEvent",
+          "props": {
+            "debug": true,
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_kzxlgzab",
+          "type": "spsubtitledisappear",
+          "props": {
+            "name": "关闭字幕",
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_kxju1gdc",
+          "type": "pscript",
+          "props": {
+            "content": {
+              "type": "express",
+              "inputValue": "import Assess\r\nAssess.start('auto_end')",
+              "varLabel": "import Assess\r\nAssess.start('auto_end')",
+              "returnType": "Unknown"
+            },
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "调用自定义脚本",
+            "desc": "调用自定义脚本",
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_kwvspeks",
+          "type": "EndEvent",
+          "props": {
+            "collapsed": false,
+            "disabled": false
+          }
+        }
+      ]
+    },
+    "edges": []
+  }
+}

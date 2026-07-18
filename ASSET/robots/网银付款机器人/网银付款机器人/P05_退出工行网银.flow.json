@@ -1,0 +1,499 @@
+{
+  "id": "f15ee96cdc6a4b59a71c173ecd81f187",
+  "name": "P05_退出工行网银",
+  "displayName": "",
+  "version": "4.2.0.0",
+  "description": "",
+  "developType": "visual",
+  "parameters": {
+    "input": [],
+    "output": []
+  },
+  "content": {
+    "id": "canvas-doc-_kvkonlrk",
+    "props": {},
+    "root": {
+      "id": "canvas-node-_kvkonlrl",
+      "type": "FlowRoot",
+      "props": {
+        "collapsed": false,
+        "disabled": false,
+        "flowModel": {},
+        "processName": "P06_Bank_Quit"
+      },
+      "children": [
+        {
+          "id": "canvas-node-_kvkonlrm",
+          "type": "StartEvent",
+          "props": {
+            "debug": true,
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_vg03b12m",
+          "type": "spshowsubtitle",
+          "props": {
+            "color": "255,0,0,255",
+            "fontsize": {
+              "type": "variable",
+              "inputValue": "f4bd9688344d44e2a7557e299a595e4a",
+              "varLabel": "size_changer",
+              "returnType": "Number",
+              "varGroup": "global"
+            },
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": "1",
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "出现字幕",
+            "collapsed": false,
+            "disabled": false,
+            "subtitle": {
+              "type": "text",
+              "inputValue": "机器人已完成网银付款，自动退出工行网银仿真平台……",
+              "returnType": "Unknown"
+            },
+            "desc": "屏幕下方出现字幕 <a>\"机器人已完成网银付款，自动退出工行网银仿真平台……\"</a>"
+          }
+        },
+        {
+          "id": "canvas-node-_wdwjf67j",
+          "type": "bgetopen",
+          "props": {
+            "type": "chrome",
+            "mode": "title",
+            "rule": "contain",
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "获取已打开网页",
+            "desc": "在 <a>chrome</a> 中，根据 <a>标题</a> 查找打开的网页 ，将查找到的浏览器对象赋值给 <a>bank_web</a>",
+            "output_page": {
+              "type": "variable",
+              "inputValue": "b9e8fd9c94d74f49845ff8025fdb6449",
+              "varLabel": "bank_web",
+              "returnType": "WebPage",
+              "varGroup": "global"
+            },
+            "collapsed": false,
+            "disabled": false,
+            "content": {
+              "type": "text",
+              "inputValue": "中国工商银行",
+              "returnType": "Unknown"
+            }
+          }
+        },
+        {
+          "id": "canvas-node-_5la6tenu",
+          "type": "belementclick",
+          "props": {
+            "clickType": "left_once",
+            "simulate": "True",
+            "ctrlIndex": {
+              "type": "number",
+              "inputValue": 1,
+              "returnType": "Unknown"
+            },
+            "timeout": {
+              "type": "number",
+              "inputValue": "20",
+              "returnType": "Unknown"
+            },
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": "1",
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "点击控件（网页）",
+            "openPage": {
+              "type": "variable",
+              "inputValue": "b9e8fd9c94d74f49845ff8025fdb6449",
+              "varLabel": "bank_web",
+              "returnType": "WebPage",
+              "varGroup": "global"
+            },
+            "element": {
+              "ctrlId": "31c76508aa48488d94d6073e81f73099",
+              "ctrlGroup": "",
+              "ctrlName": "退出",
+              "imgPath": null,
+              "type": "Chrome"
+            },
+            "desc": "在 <a>bank_web</a> 网页中，鼠标 <a>左键单击</a> <a>退出</a>",
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_pedmf49g",
+          "type": "minputkeyboard",
+          "props": {
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": "2",
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "输入热键",
+            "keyboard": {
+              "type": "text",
+              "inputValue": "^{w}",
+              "returnType": "Unknown"
+            },
+            "desc": "执行快捷键 <a>\"^{w}\"</a>",
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_l347ge9q",
+          "type": "trycatch",
+          "props": {
+            "needRetry": false,
+            "tryTimes": 3,
+            "sleepTime": 10,
+            "name": "捕获异常和重试",
+            "collapsed": false,
+            "disabled": false,
+            "desc": "执行并捕获异常 "
+          },
+          "children": [
+            {
+              "id": "canvas-node-_l347ge9r",
+              "type": "TryNormalRouter",
+              "props": {
+                "collapsed": false,
+                "disabled": false
+              },
+              "children": [
+                {
+                  "id": "canvas-node-_7qup0zht",
+                  "type": "trycatch",
+                  "props": {
+                    "needRetry": false,
+                    "tryTimes": 3,
+                    "sleepTime": 10,
+                    "name": "捕获异常和重试",
+                    "collapsed": false,
+                    "disabled": false,
+                    "desc": "执行并捕获异常 "
+                  },
+                  "children": [
+                    {
+                      "id": "canvas-node-_i37yqozo",
+                      "type": "TryNormalRouter",
+                      "props": {
+                        "collapsed": false,
+                        "disabled": false
+                      },
+                      "children": [
+                        {
+                          "id": "canvas-node-_bqlfk34i",
+                          "type": "wcatchwin",
+                          "props": {
+                            "model": "substr",
+                            "type": "judge",
+                            "timeout": {
+                              "type": "number",
+                              "inputValue": "5",
+                              "returnType": "Unknown"
+                            },
+                            "gs_pre_timeout": {
+                              "type": "number",
+                              "inputValue": "0",
+                              "returnType": "Unknown"
+                            },
+                            "gs_lat_timeout": {
+                              "type": "number",
+                              "inputValue": 0,
+                              "returnType": "Unknown"
+                            },
+                            "generalSettings": {
+                              "log": {
+                                "value": true,
+                                "disabled": true
+                              },
+                              "exit": true,
+                              "msgbox": false
+                            },
+                            "name": "获取窗口",
+                            "desc": "根据 <a>os.path.basename(wy_excel_path).split('.')[0]</a> 查找打开的窗口标题，将查找到的窗口对象赋值给 <a>fp_win</a>",
+                            "output_window": {
+                              "type": "variable",
+                              "inputValue": "bfa08f07ff574be094ed9bd8534b806a",
+                              "varLabel": "fp_win",
+                              "returnType": "Window"
+                            },
+                            "title": {
+                              "type": "express",
+                              "inputValue": "os.path.basename(wy_excel_path).split('.')[0]",
+                              "varLabel": "os.path.basename(wy_excel_path).split('.')[0]",
+                              "returnType": "Unknown"
+                            },
+                            "collapsed": false,
+                            "disabled": false
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "canvas-node-_2ya3x914",
+                      "type": "TryCatchRouter",
+                      "props": {
+                        "collapsed": false,
+                        "disabled": false
+                      },
+                      "children": [
+                        {
+                          "id": "canvas-node-_i5x9yzct",
+                          "type": "wcatchwin",
+                          "props": {
+                            "model": "substr",
+                            "type": "judge",
+                            "timeout": {
+                              "type": "number",
+                              "inputValue": "5",
+                              "returnType": "Unknown"
+                            },
+                            "gs_pre_timeout": {
+                              "type": "number",
+                              "inputValue": "0",
+                              "returnType": "Unknown"
+                            },
+                            "gs_lat_timeout": {
+                              "type": "number",
+                              "inputValue": 0,
+                              "returnType": "Unknown"
+                            },
+                            "generalSettings": {
+                              "log": {
+                                "value": true,
+                                "disabled": true
+                              },
+                              "exit": true,
+                              "msgbox": false
+                            },
+                            "name": "获取窗口",
+                            "desc": "根据 <a>\"WPS\"</a> 查找打开的窗口标题，将查找到的窗口对象赋值给 <a>fp_win</a>",
+                            "output_window": {
+                              "type": "variable",
+                              "inputValue": "bfa08f07ff574be094ed9bd8534b806a",
+                              "varLabel": "fp_win",
+                              "returnType": "Window"
+                            },
+                            "title": {
+                              "type": "text",
+                              "inputValue": "WPS",
+                              "returnType": "Unknown"
+                            },
+                            "collapsed": false,
+                            "disabled": false
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "canvas-node-_v57m7prg",
+                      "type": "TryFinallyRouter",
+                      "props": {
+                        "collapsed": false,
+                        "disabled": false
+                      },
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "canvas-node-_2tga1z2w",
+                  "type": "wactivate",
+                  "props": {
+                    "gs_pre_timeout": {
+                      "type": "number",
+                      "inputValue": 0,
+                      "returnType": "Unknown"
+                    },
+                    "gs_lat_timeout": {
+                      "type": "number",
+                      "inputValue": 0,
+                      "returnType": "Unknown"
+                    },
+                    "generalSettings": {
+                      "log": {
+                        "value": true,
+                        "disabled": true
+                      },
+                      "exit": true,
+                      "msgbox": false
+                    },
+                    "name": "激活窗口",
+                    "collapsed": false,
+                    "disabled": false,
+                    "winObject": {
+                      "type": "variable",
+                      "inputValue": "bfa08f07ff574be094ed9bd8534b806a",
+                      "varLabel": "fp_win",
+                      "returnType": "Window"
+                    },
+                    "desc": "激活 <a>fp_win</a> 窗口"
+                  }
+                },
+                {
+                  "id": "canvas-node-_4qxjzn3x",
+                  "type": "minputkeyboard",
+                  "props": {
+                    "gs_pre_timeout": {
+                      "type": "number",
+                      "inputValue": 0,
+                      "returnType": "Unknown"
+                    },
+                    "gs_lat_timeout": {
+                      "type": "number",
+                      "inputValue": 0,
+                      "returnType": "Unknown"
+                    },
+                    "generalSettings": {
+                      "log": {
+                        "value": true,
+                        "disabled": true
+                      },
+                      "exit": true,
+                      "msgbox": false
+                    },
+                    "name": "输入热键",
+                    "keyboard": {
+                      "type": "text",
+                      "inputValue": "!{F4}",
+                      "returnType": "Unknown"
+                    },
+                    "desc": "执行快捷键 <a>\"!{F4}\"</a>",
+                    "collapsed": false,
+                    "disabled": false
+                  }
+                }
+              ]
+            },
+            {
+              "id": "canvas-node-_l347ge9s",
+              "type": "TryCatchRouter",
+              "props": {
+                "collapsed": false,
+                "disabled": false
+              },
+              "children": [
+                {
+                  "id": "canvas-node-_l347ge9u",
+                  "type": "plog",
+                  "props": {
+                    "option": "info",
+                    "gs_pre_timeout": {
+                      "type": "number",
+                      "inputValue": 0,
+                      "returnType": "Unknown"
+                    },
+                    "gs_lat_timeout": {
+                      "type": "number",
+                      "inputValue": 0,
+                      "returnType": "Unknown"
+                    },
+                    "generalSettings": {
+                      "log": {
+                        "value": true,
+                        "disabled": true
+                      },
+                      "exit": true,
+                      "msgbox": false
+                    },
+                    "name": "记录日志",
+                    "collapsed": false,
+                    "disabled": false,
+                    "content": {
+                      "type": "text",
+                      "inputValue": " ",
+                      "returnType": "Unknown"
+                    },
+                    "desc": "记录日志"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "canvas-node-_l347ge9t",
+              "type": "TryFinallyRouter",
+              "props": {
+                "collapsed": false,
+                "disabled": false
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "canvas-node-_kvkonlrn",
+          "type": "EndEvent",
+          "props": {
+            "collapsed": false,
+            "disabled": false
+          }
+        }
+      ]
+    },
+    "edges": []
+  }
+}

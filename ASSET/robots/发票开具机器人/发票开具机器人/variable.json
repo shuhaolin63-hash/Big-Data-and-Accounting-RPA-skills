@@ -1,0 +1,96 @@
+{
+  "version": "1.0.0.0",
+  "varList": [
+    {
+      "varId": "9cc192fd07404a5591a8ff8dc25402ea",
+      "varName": "size_changer",
+      "varGroup": "global",
+      "varType": "Number",
+      "defaultValue": "36"
+    },
+    {
+      "varId": "2f22b4cefe7849aeab9354737cd740ad",
+      "varName": "fpzbkj_excel",
+      "varGroup": "global",
+      "varType": "Excel",
+      "defaultValue": ""
+    },
+    {
+      "varId": "2b9aa97a514f477ca03e9b457f44ab09",
+      "varName": "fpkj_sheet",
+      "varGroup": "global",
+      "varType": "Sheet",
+      "defaultValue": ""
+    },
+    {
+      "varId": "82bac755ba404decb2172ef621b2ff4d",
+      "varName": "swj_web",
+      "varGroup": "global",
+      "varType": "WebPage",
+      "defaultValue": ""
+    },
+    {
+      "varId": "7b0a4ec47c504a44ab8c35b053ba3e9d",
+      "varName": "lines",
+      "varGroup": "global",
+      "varType": "Number",
+      "defaultValue": ""
+    },
+    {
+      "varId": "9e21330772044254a7ac8921bf6e8391",
+      "varName": "i",
+      "varGroup": "global",
+      "varType": "Number",
+      "defaultValue": ""
+    },
+    {
+      "varId": "e92213c6360c4df9b087213be9e3de98",
+      "varName": "data",
+      "varGroup": "global",
+      "varType": "List",
+      "defaultValue": "[]"
+    },
+    {
+      "varId": "f584400b9d06404fa9f21107e808ba7f",
+      "varName": "kp_web",
+      "varGroup": "global",
+      "varType": "WebPage",
+      "defaultValue": ""
+    },
+    {
+      "varId": "be491885a58144c8a4202eb184f4dddf",
+      "varName": "lzfp_web",
+      "varGroup": "global",
+      "varType": "WebPage",
+      "defaultValue": ""
+    },
+    {
+      "varId": "6da4b51cd6ec4286877d3a4e70fc7f39",
+      "varName": "fpzbkj_win",
+      "varGroup": "global",
+      "varType": "Window",
+      "defaultValue": ""
+    },
+    {
+      "varId": "1f1e49c108104d6fa7b47c469acf407a",
+      "varName": "username",
+      "varGroup": "global",
+      "varType": "String",
+      "defaultValue": ""
+    },
+    {
+      "varId": "ba5452c194b742189f7b08f82edb9f3f",
+      "varName": "password",
+      "varGroup": "global",
+      "varType": "String",
+      "defaultValue": ""
+    },
+    {
+      "varId": "4ef9894f2aef4235857cc8c2427c1a08",
+      "varName": "fpzbkj_excel_path",
+      "varGroup": "global",
+      "varType": "String",
+      "defaultValue": "C:\\RPADATA\\发票逐笔开具业务数据表.xls"
+    }
+  ]
+}

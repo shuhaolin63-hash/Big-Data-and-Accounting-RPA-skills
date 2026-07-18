@@ -1,0 +1,435 @@
+{
+  "id": "a49c94019173416f82b553e2b9508eb3",
+  "name": "P00_打开数据表格",
+  "displayName": "",
+  "version": "4.2.0.0",
+  "description": "",
+  "developType": "visual",
+  "parameters": {
+    "input": [],
+    "output": []
+  },
+  "content": {
+    "id": "canvas-doc-_kvm2uylc",
+    "props": {},
+    "root": {
+      "id": "canvas-node-_kvm2uyld",
+      "type": "FlowRoot",
+      "props": {
+        "collapsed": false,
+        "disabled": false,
+        "flowModel": {},
+        "processName": "P00_RAD_Authentication"
+      },
+      "children": [
+        {
+          "id": "canvas-node-_kvm2uyle",
+          "type": "StartEvent",
+          "props": {
+            "debug": true,
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_kwbwkd5y",
+          "type": "spshowsubtitle",
+          "props": {
+            "color": "255,0,0,255",
+            "fontsize": {
+              "type": "variable",
+              "inputValue": "8267960496134f50a2084e028f8d493a",
+              "varLabel": "size_changer",
+              "returnType": "Number",
+              "varGroup": "global"
+            },
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": "2",
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "出现字幕",
+            "desc": "屏幕下方出现字幕 <a>\"机器人正在打开数据文件……\"</a>",
+            "subtitle": {
+              "type": "text",
+              "inputValue": "机器人正在打开数据文件……",
+              "returnType": "Unknown"
+            },
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_3dlxumbg",
+          "type": "trycatch",
+          "props": {
+            "needRetry": false,
+            "tryTimes": 3,
+            "sleepTime": 10,
+            "name": "捕获异常和重试",
+            "collapsed": false,
+            "disabled": false,
+            "desc": "执行并捕获异常 "
+          },
+          "children": [
+            {
+              "id": "canvas-node-_dpni5x8f",
+              "type": "TryNormalRouter",
+              "props": {
+                "collapsed": false,
+                "disabled": false
+              },
+              "children": [
+                {
+                  "id": "canvas-node-_cb54n1ob",
+                  "type": "estart",
+                  "props": {
+                    "option": "open",
+                    "readonly": "False",
+                    "visible": "True",
+                    "gs_pre_timeout": {
+                      "type": "number",
+                      "inputValue": 0,
+                      "returnType": "Unknown"
+                    },
+                    "gs_lat_timeout": {
+                      "type": "number",
+                      "inputValue": 0,
+                      "returnType": "Unknown"
+                    },
+                    "generalSettings": {
+                      "log": {
+                        "value": true,
+                        "disabled": true
+                      },
+                      "exit": true,
+                      "msgbox": false
+                    },
+                    "name": "启动Excel",
+                    "desc": "根据<a></a>匹配<a></a>，查找已打开的Excel，将查找到的Excel对象赋值给 <a>fp_excel</a>",
+                    "output_returnval": {
+                      "type": "variable",
+                      "inputValue": "53a755e9f5db43739f8203e32c8fb068",
+                      "varLabel": "fp_excel",
+                      "returnType": "Excel"
+                    },
+                    "path": {
+                      "type": "variable",
+                      "inputValue": "9d710a691ae245f2a4dd4a1260695795",
+                      "varLabel": "fp_excel_path",
+                      "returnType": "String",
+                      "varGroup": "declare"
+                    },
+                    "output_path": {
+                      "type": "variable",
+                      "varLabel": "",
+                      "returnType": "String"
+                    },
+                    "collapsed": false,
+                    "disabled": false
+                  }
+                }
+              ]
+            },
+            {
+              "id": "canvas-node-_6c1vw67d",
+              "type": "TryCatchRouter",
+              "props": {
+                "collapsed": false,
+                "disabled": false
+              },
+              "children": [
+                {
+                  "id": "canvas-node-_a850w57v",
+                  "type": "spshowsubtitle",
+                  "props": {
+                    "color": "255,255,0,0",
+                    "fontsize": {
+                      "type": "variable",
+                      "inputValue": "8267960496134f50a2084e028f8d493a",
+                      "varLabel": "size_changer",
+                      "returnType": "Number",
+                      "varGroup": "global"
+                    },
+                    "gs_pre_timeout": {
+                      "type": "number",
+                      "inputValue": 0,
+                      "returnType": "Unknown"
+                    },
+                    "gs_lat_timeout": {
+                      "type": "number",
+                      "inputValue": 0,
+                      "returnType": "Unknown"
+                    },
+                    "generalSettings": {
+                      "log": {
+                        "value": true,
+                        "disabled": true
+                      },
+                      "exit": true,
+                      "msgbox": false
+                    },
+                    "name": "出现字幕",
+                    "desc": "屏幕下方出现字幕 <a>\"未找到数据文件，请手动选择！\"</a>",
+                    "subtitle": {
+                      "type": "text",
+                      "inputValue": "未找到数据文件，请手动选择！",
+                      "returnType": "Unknown"
+                    },
+                    "collapsed": false,
+                    "disabled": false
+                  }
+                },
+                {
+                  "id": "canvas-node-_8zl5wbpm",
+                  "type": "pscript",
+                  "props": {
+                    "content": {
+                      "type": "express",
+                      "inputValue": "# 弹出文件选择窗口\r\nimport Select_file\r\nfp_excel_path=Select_file.start()\r\n\r\nif fp_excel_path == '':\r\n     sys.exit()\r\n",
+                      "varLabel": "# 弹出文件选择窗口\r\nimport Select_file\r\nfp_excel_path=Select_file.start()\r\n\r\nif fp_excel_path == '':\r\n     sys.exit()\r\n",
+                      "returnType": "Unknown"
+                    },
+                    "gs_pre_timeout": {
+                      "type": "number",
+                      "inputValue": 0,
+                      "returnType": "Unknown"
+                    },
+                    "gs_lat_timeout": {
+                      "type": "number",
+                      "inputValue": 0,
+                      "returnType": "Unknown"
+                    },
+                    "generalSettings": {
+                      "log": {
+                        "value": true,
+                        "disabled": true
+                      },
+                      "exit": true,
+                      "msgbox": false
+                    },
+                    "name": "调用自定义脚本",
+                    "collapsed": false,
+                    "disabled": false,
+                    "desc": "调用自定义脚本"
+                  }
+                },
+                {
+                  "id": "canvas-node-_ngq3030s",
+                  "type": "estart",
+                  "props": {
+                    "option": "open",
+                    "addSuffix": "False",
+                    "suffixFormat": "datetime",
+                    "readonly": "False",
+                    "visible": "True",
+                    "gs_pre_timeout": {
+                      "type": "number",
+                      "inputValue": 0,
+                      "returnType": "Unknown"
+                    },
+                    "gs_lat_timeout": {
+                      "type": "number",
+                      "inputValue": 0,
+                      "returnType": "Unknown"
+                    },
+                    "generalSettings": {
+                      "log": {
+                        "value": true,
+                        "disabled": true
+                      },
+                      "exit": true,
+                      "msgbox": false
+                    },
+                    "name": "启动Excel",
+                    "desc": "根据<a></a>匹配<a></a>，查找已打开的Excel，将查找到的Excel对象赋值给 <a>fp_excel</a>",
+                    "output_returnval": {
+                      "type": "variable",
+                      "inputValue": "53a755e9f5db43739f8203e32c8fb068",
+                      "varLabel": "fp_excel",
+                      "returnType": "Excel"
+                    },
+                    "output_path": {
+                      "type": "variable",
+                      "varLabel": "",
+                      "returnType": "String"
+                    },
+                    "path": {
+                      "type": "variable",
+                      "inputValue": "9d710a691ae245f2a4dd4a1260695795",
+                      "varLabel": "fp_excel_path",
+                      "returnType": "String",
+                      "varGroup": "declare"
+                    },
+                    "collapsed": false,
+                    "disabled": false
+                  }
+                },
+                {
+                  "id": "canvas-node-_6q80m0me",
+                  "type": "spshowsubtitle",
+                  "props": {
+                    "color": "255,0,0,255",
+                    "fontsize": {
+                      "type": "variable",
+                      "inputValue": "8267960496134f50a2084e028f8d493a",
+                      "varLabel": "size_changer",
+                      "returnType": "Number",
+                      "varGroup": "global"
+                    },
+                    "gs_pre_timeout": {
+                      "type": "number",
+                      "inputValue": 0,
+                      "returnType": "Unknown"
+                    },
+                    "gs_lat_timeout": {
+                      "type": "number",
+                      "inputValue": 0,
+                      "returnType": "Unknown"
+                    },
+                    "generalSettings": {
+                      "log": {
+                        "value": true,
+                        "disabled": true
+                      },
+                      "exit": true,
+                      "msgbox": false
+                    },
+                    "name": "出现字幕",
+                    "desc": "屏幕下方出现字幕 <a>\"机器人开始进行发票查验……\"</a>",
+                    "subtitle": {
+                      "type": "text",
+                      "inputValue": "机器人开始进行发票查验……",
+                      "returnType": "Unknown"
+                    },
+                    "collapsed": false,
+                    "disabled": false
+                  }
+                }
+              ]
+            },
+            {
+              "id": "canvas-node-_kzf17590",
+              "type": "TryFinallyRouter",
+              "props": {
+                "collapsed": false,
+                "disabled": false
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "canvas-node-_uzrm2u31",
+          "type": "esactive",
+          "props": {
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": "0",
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "激活Sheet页",
+            "desc": "在 <a>fp_excel</a> Excel对象中激活Sheet页 <a>\"发票查验\"</a>，将对应的Sheet页对象赋值给 <a>fpcy_sheet</a>",
+            "output_sheet": {
+              "type": "variable",
+              "inputValue": "f588ae9bde4c460eab7370a905449863",
+              "varLabel": "fpcy_sheet",
+              "returnType": "Sheet",
+              "varGroup": "global"
+            },
+            "collapsed": false,
+            "disabled": false,
+            "excel": {
+              "type": "variable",
+              "inputValue": "53a755e9f5db43739f8203e32c8fb068",
+              "varLabel": "fp_excel",
+              "returnType": "Excel"
+            },
+            "sheetName": {
+              "type": "text",
+              "inputValue": "发票查验",
+              "returnType": "Unknown"
+            }
+          }
+        },
+        {
+          "id": "canvas-node-_wli3flgn",
+          "type": "ecgetsheetrownumber",
+          "props": {
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "获取Excel的行数",
+            "desc": "获取 <a>fpcy_sheet</a> Sheet页的行数",
+            "output_number": {
+              "type": "variable",
+              "inputValue": "d68da1e560264d7b9c238fca686ba69b",
+              "varLabel": "fpcy_lines",
+              "returnType": "Number",
+              "varGroup": "global"
+            },
+            "sheetpage": {
+              "type": "variable",
+              "inputValue": "f588ae9bde4c460eab7370a905449863",
+              "varLabel": "fpcy_sheet",
+              "returnType": "Sheet",
+              "varGroup": "global"
+            },
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_kvm2uylf",
+          "type": "EndEvent",
+          "props": {
+            "collapsed": false,
+            "disabled": false
+          }
+        }
+      ]
+    },
+    "edges": []
+  }
+}

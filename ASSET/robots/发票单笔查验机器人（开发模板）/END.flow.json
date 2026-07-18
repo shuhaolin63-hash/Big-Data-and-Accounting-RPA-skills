@@ -1,0 +1,80 @@
+{
+  "id": "bd06b2cb95244cd0a031f39ecfd0bd3d",
+  "name": "END",
+  "displayName": "",
+  "version": "4.2.0.0",
+  "description": "",
+  "developType": "visual",
+  "parameters": {
+    "input": [],
+    "output": []
+  },
+  "content": {
+    "id": "canvas-doc-_ky9uvfpb",
+    "props": {},
+    "root": {
+      "id": "canvas-node-_ky9uvfpc",
+      "type": "FlowRoot",
+      "props": {
+        "collapsed": false,
+        "disabled": false,
+        "flowModel": {},
+        "processName": "END"
+      },
+      "children": [
+        {
+          "id": "canvas-node-_ky9uvfpd",
+          "type": "StartEvent",
+          "props": {
+            "debug": true,
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_ky9uvfpf",
+          "type": "pscript",
+          "props": {
+            "content": {
+              "type": "express",
+              "inputValue": "import Assess\r\nAssess.start('auto_end')",
+              "varLabel": "import Assess\r\nAssess.start('auto_end')",
+              "returnType": "Unknown"
+            },
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "调用自定义脚本",
+            "collapsed": false,
+            "disabled": false,
+            "desc": "调用自定义脚本"
+          }
+        },
+        {
+          "id": "canvas-node-_ky9uvfpe",
+          "type": "EndEvent",
+          "props": {
+            "collapsed": false,
+            "disabled": false
+          }
+        }
+      ]
+    },
+    "edges": []
+  }
+}

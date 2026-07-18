@@ -1,0 +1,54 @@
+{
+  "version": "1.0.0.0",
+  "varList": [
+    {
+      "varId": "98e8c576beb14f0dbe88a6657424aa35",
+      "varName": "invoice_web",
+      "varGroup": "flowDefine",
+      "varType": "WebPage",
+      "defaultValue": ""
+    },
+    {
+      "varId": "bf272aebe965483db391fc47c41e67f3",
+      "varName": "fpcy_excel",
+      "varGroup": "flowDefine",
+      "varType": "Excel",
+      "defaultValue": ""
+    },
+    {
+      "varId": "d4d89f73ded843b490d09b61f66eaabd",
+      "varName": "v_file_path_1",
+      "varGroup": "public",
+      "varType": "String",
+      "defaultValue": ""
+    },
+    {
+      "varId": "f6b9d98eaa5040268336d5c131519e67",
+      "varName": "fpcy_sheet",
+      "varGroup": "flowDefine",
+      "varType": "Sheet",
+      "defaultValue": ""
+    },
+    {
+      "varId": "42ca771214f2419fb2418ee988f15e6a",
+      "varName": "data",
+      "varGroup": "flowDefine",
+      "varType": "List",
+      "defaultValue": ""
+    },
+    {
+      "varId": "b7e6262c7e1944efa69c89c45e8754b3",
+      "varName": "fpcy_win",
+      "varGroup": "flowDefine",
+      "varType": "Window",
+      "defaultValue": ""
+    },
+    {
+      "varId": "1a616153605e420091beccfdafc43e7a",
+      "varName": "verification_value",
+      "varGroup": "flowDefine",
+      "varType": "String",
+      "defaultValue": ""
+    }
+  ]
+}

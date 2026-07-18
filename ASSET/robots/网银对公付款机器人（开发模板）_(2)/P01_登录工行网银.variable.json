@@ -1,0 +1,40 @@
+{
+  "version": "1.0.0.0",
+  "varList": [
+    {
+      "varId": "855cc54093d94f7eb76eddb49dc11823",
+      "varName": "v_excel_obj_1",
+      "varGroup": "public",
+      "varType": "Excel",
+      "defaultValue": ""
+    },
+    {
+      "varId": "6ec4a0fcc7604b20a80948ac98c48aaf",
+      "varName": "v_file_path_1",
+      "varGroup": "public",
+      "varType": "String",
+      "defaultValue": ""
+    },
+    {
+      "varId": "ca67afa2e3c9480185882f0265562f3b",
+      "varName": "wyfk_excel",
+      "varGroup": "flowDefine",
+      "varType": "Excel",
+      "defaultValue": ""
+    },
+    {
+      "varId": "fef21bdfe1b54501af64cb2aea717656",
+      "varName": "v_sheet_obj_1",
+      "varGroup": "public",
+      "varType": "Sheet",
+      "defaultValue": ""
+    },
+    {
+      "varId": "57bed92b90df4610af3dea06a09a8385",
+      "varName": "bankkey",
+      "varGroup": "flowDefine",
+      "varType": "String",
+      "defaultValue": "123456"
+    }
+  ]
+}

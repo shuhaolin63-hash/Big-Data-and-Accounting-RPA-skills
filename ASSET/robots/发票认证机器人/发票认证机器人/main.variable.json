@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0.0",
+  "varList": [
+    {
+      "varId": "14ff0bb2e481447886cbc6874a6cce63",
+      "varName": "Running_state",
+      "varGroup": "flowDefine",
+      "varType": "String",
+      "defaultValue": ""
+    }
+  ]
+}

@@ -1,0 +1,482 @@
+{
+  "id": "db4488aca55748febb0213dd971b6ccb",
+  "name": "P01_登录工行网银",
+  "displayName": "",
+  "version": "4.2.0.0",
+  "description": "",
+  "developType": "visual",
+  "parameters": {
+    "input": [],
+    "output": []
+  },
+  "content": {
+    "id": "canvas-doc-_kvknouxf",
+    "props": {},
+    "root": {
+      "id": "canvas-node-_kvknouxg",
+      "type": "FlowRoot",
+      "props": {
+        "collapsed": false,
+        "disabled": false,
+        "flowModel": {},
+        "processName": "P02_Bank_Login"
+      },
+      "children": [
+        {
+          "id": "canvas-node-_kvknouxh",
+          "type": "StartEvent",
+          "props": {
+            "debug": true,
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_r2cpnglp",
+          "type": "spshowsubtitle",
+          "props": {
+            "color": "255,0,0,255",
+            "fontsize": {
+              "type": "variable",
+              "inputValue": "f4bd9688344d44e2a7557e299a595e4a",
+              "varLabel": "size_changer",
+              "returnType": "Number",
+              "varGroup": "global"
+            },
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "出现字幕",
+            "collapsed": false,
+            "disabled": false,
+            "subtitle": {
+              "type": "text",
+              "inputValue": "机器人正在登录工行网银仿真平台……",
+              "returnType": "Unknown"
+            },
+            "desc": "屏幕下方出现字幕 <a>\"机器人正在登录工行网银仿真平台……\"</a>"
+          }
+        },
+        {
+          "id": "canvas-node-_o4owr11f",
+          "type": "bopen",
+          "props": {
+            "type": "chrome",
+            "specificPath": "False",
+            "wait": "True",
+            "timeout": {
+              "type": "number",
+              "inputValue": "100",
+              "returnType": "Unknown"
+            },
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "打开新网页",
+            "desc": "在 <a>chrome</a> 中新建网页访问<a>'http://fz.chinaive.com/wsyh/?username='+username</a>，将浏览器对象赋值给 <a>bank_web</a>",
+            "output_webName": {
+              "type": "variable",
+              "inputValue": "b9e8fd9c94d74f49845ff8025fdb6449",
+              "varLabel": "bank_web",
+              "returnType": "WebPage",
+              "varGroup": "global"
+            },
+            "url": {
+              "type": "express",
+              "inputValue": "'http://fz.chinaive.com/wsyh/?username='+username",
+              "varLabel": "'http://fz.chinaive.com/wsyh/?username='+username",
+              "returnType": "Unknown"
+            },
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_koqski88",
+          "type": "bactive",
+          "props": {
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": "1",
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "激活网页",
+            "collapsed": false,
+            "disabled": false,
+            "page": {
+              "type": "variable",
+              "inputValue": "b9e8fd9c94d74f49845ff8025fdb6449",
+              "varLabel": "bank_web",
+              "returnType": "WebPage",
+              "varGroup": "global"
+            },
+            "desc": "将 <a>bank_web</a> 网页切换到窗口的最前面"
+          }
+        },
+        {
+          "id": "canvas-node-_6ga0yi9y",
+          "type": "minputkeyboard",
+          "props": {
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": "2",
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "输入热键",
+            "collapsed": false,
+            "disabled": false,
+            "keyboard": {
+              "type": "text",
+              "inputValue": "!{SPACE}",
+              "returnType": "Unknown"
+            },
+            "desc": "执行快捷键 <a>\"!{SPACE}\"</a>"
+          }
+        },
+        {
+          "id": "canvas-node-_2wgde6sy",
+          "type": "minputkeyboard",
+          "props": {
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": "0.5",
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "输入热键",
+            "collapsed": false,
+            "disabled": false,
+            "keyboard": {
+              "type": "text",
+              "inputValue": "x",
+              "returnType": "Unknown"
+            },
+            "desc": "执行快捷键 <a>\"x\"</a>"
+          }
+        },
+        {
+          "id": "canvas-node-_xvulc456",
+          "type": "belementclick",
+          "props": {
+            "clickType": "left_once",
+            "simulate": "True",
+            "ctrlIndex": {
+              "type": "number",
+              "inputValue": 1,
+              "returnType": "Unknown"
+            },
+            "timeout": {
+              "type": "number",
+              "inputValue": 10,
+              "returnType": "Unknown"
+            },
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "点击控件（网页）",
+            "openPage": {
+              "type": "variable",
+              "inputValue": "b9e8fd9c94d74f49845ff8025fdb6449",
+              "varLabel": "bank_web",
+              "returnType": "WebPage",
+              "varGroup": "global"
+            },
+            "element": {
+              "ctrlId": "510c0be4ece7489e9dab0f8850abdf6e",
+              "ctrlGroup": "",
+              "ctrlName": "企业网上银行登录",
+              "imgPath": null,
+              "type": "IE"
+            },
+            "desc": "在 <a>bank_web</a> 网页中，鼠标 <a>左键单击</a> <a>企业网上银行登录</a>",
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_o3eyf0wa",
+          "type": "belementclick",
+          "props": {
+            "clickType": "left_once",
+            "simulate": "True",
+            "ctrlIndex": {
+              "type": "number",
+              "inputValue": 1,
+              "returnType": "Unknown"
+            },
+            "timeout": {
+              "type": "number",
+              "inputValue": 10,
+              "returnType": "Unknown"
+            },
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "点击控件（网页）",
+            "openPage": {
+              "type": "variable",
+              "inputValue": "b9e8fd9c94d74f49845ff8025fdb6449",
+              "varLabel": "bank_web",
+              "returnType": "WebPage",
+              "varGroup": "global"
+            },
+            "element": {
+              "ctrlId": "04daddcbfa6443fcacc2582b1b0f78bb",
+              "ctrlGroup": "",
+              "ctrlName": "U盾登录",
+              "imgPath": null,
+              "type": "IE"
+            },
+            "desc": "在 <a>bank_web</a> 网页中，鼠标 <a>左键单击</a> <a>U盾登录</a>",
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_yto0it3h",
+          "type": "buinput",
+          "props": {
+            "type": "text",
+            "mode": "cover",
+            "ctrlIndex": {
+              "type": "number",
+              "inputValue": 1,
+              "returnType": "Unknown"
+            },
+            "inputOption": [
+              "sendRaw"
+            ],
+            "inspect": "False",
+            "time": {
+              "type": "number",
+              "inputValue": 1,
+              "returnType": "Unknown"
+            },
+            "timeout": {
+              "type": "number",
+              "inputValue": 10,
+              "returnType": "Unknown"
+            },
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "填写输入框（网页）",
+            "page": {
+              "type": "variable",
+              "inputValue": "b9e8fd9c94d74f49845ff8025fdb6449",
+              "varLabel": "bank_web",
+              "returnType": "WebPage",
+              "varGroup": "global"
+            },
+            "ctrl": {
+              "ctrlId": "209d36d566fd42db9698187e1456f183",
+              "ctrlGroup": "",
+              "ctrlName": "U盾密码输入框",
+              "imgPath": null,
+              "type": "IE"
+            },
+            "content": {
+              "type": "variable",
+              "inputValue": "7ac117ee6cd440f79a8a8e2af180200d",
+              "varLabel": "bankkey",
+              "returnType": "String"
+            },
+            "desc": "在 <a>bank_web</a> 网页 中，在 <a>U盾密码输入框</a> 内填写 <a>bankkey</a>",
+            "inputInterval": {
+              "type": "number",
+              "inputValue": "20",
+              "returnType": "Unknown"
+            },
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_gfyloi4r",
+          "type": "belementclick",
+          "props": {
+            "clickType": "left_once",
+            "simulate": "True",
+            "ctrlIndex": {
+              "type": "number",
+              "inputValue": 1,
+              "returnType": "Unknown"
+            },
+            "timeout": {
+              "type": "number",
+              "inputValue": 10,
+              "returnType": "Unknown"
+            },
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "点击控件（网页）",
+            "openPage": {
+              "type": "variable",
+              "inputValue": "b9e8fd9c94d74f49845ff8025fdb6449",
+              "varLabel": "bank_web",
+              "returnType": "WebPage",
+              "varGroup": "global"
+            },
+            "element": {
+              "ctrlId": "884d36cc72d84de68f063a24a7929074",
+              "ctrlGroup": "",
+              "ctrlName": "确定",
+              "imgPath": null,
+              "type": "IE"
+            },
+            "desc": "在 <a>bank_web</a> 网页中，鼠标 <a>左键单击</a> <a>确定</a>",
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_kwbymfq3",
+          "type": "spsubtitledisappear",
+          "props": {
+            "name": "关闭字幕",
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_kvknouxi",
+          "type": "EndEvent",
+          "props": {
+            "collapsed": false,
+            "disabled": false
+          }
+        }
+      ]
+    },
+    "edges": []
+  }
+}

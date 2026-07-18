@@ -1,0 +1,12 @@
+{
+  "version": "1.0.0.0",
+  "varList": [
+    {
+      "varId": "f02b9077b0504d3b836a01886874bbc2",
+      "varName": "date",
+      "varGroup": "flowDefine",
+      "varType": "String",
+      "defaultValue": ""
+    }
+  ]
+}

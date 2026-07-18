@@ -1,0 +1,337 @@
+{
+  "id": "aaaea977cf2b4421b4166b2be520220b",
+  "name": "START",
+  "displayName": "",
+  "version": "4.2.0.0",
+  "description": "",
+  "developType": "visual",
+  "parameters": {
+    "input": [],
+    "output": []
+  },
+  "content": {
+    "id": "canvas-doc-_kwby7iwz",
+    "props": {},
+    "root": {
+      "id": "canvas-node-_kwby7ix0",
+      "type": "FlowRoot",
+      "props": {
+        "collapsed": false,
+        "disabled": false,
+        "flowModel": {},
+        "processName": "START"
+      },
+      "children": [
+        {
+          "id": "canvas-node-_kwby7ix1",
+          "type": "StartEvent",
+          "props": {
+            "debug": true,
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_qc0q52xe",
+          "type": "spshowsubtitle",
+          "props": {
+            "color": "255,0,0,255",
+            "fontsize": {
+              "type": "variable",
+              "inputValue": "0374c34722ee46138c04a5f408b4cb6b",
+              "varLabel": "size_changer",
+              "returnType": "Number",
+              "varGroup": "global"
+            },
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "出现字幕",
+            "desc": "屏幕下方出现字幕 <a>\"机器人开始运行，请输入实践平台账号及密码！\"</a>",
+            "collapsed": false,
+            "disabled": false,
+            "subtitle": {
+              "type": "text",
+              "inputValue": "机器人开始运行，请输入实践平台账号及密码！",
+              "returnType": "Unknown"
+            }
+          }
+        },
+        {
+          "id": "canvas-node-_uofx33w1",
+          "type": "pscript",
+          "props": {
+            "content": {
+              "type": "express",
+              "inputValue": "import Assess\r\ncookies, username, password = Assess.start('auto_auth')",
+              "varLabel": "import Assess\r\ncookies, username, password = Assess.start('auto_auth')",
+              "returnType": "Unknown"
+            },
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "调用自定义脚本",
+            "collapsed": false,
+            "disabled": false,
+            "desc": "调用自定义脚本"
+          }
+        },
+        {
+          "id": "canvas-node-_wrng2q6e",
+          "type": "psetvariable",
+          "props": {
+            "value_d": "{}",
+            "value_l": "[]",
+            "value_b": "True",
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "设置变量值",
+            "collapsed": false,
+            "disabled": false,
+            "set_variable": {
+              "type": "variable",
+              "inputValue": "065a5b891e384c6fa6219bceefe08f36",
+              "varLabel": "username",
+              "returnType": "String",
+              "varGroup": "declare"
+            },
+            "value_s": {
+              "type": "express",
+              "inputValue": "username",
+              "varLabel": "username",
+              "returnType": "Unknown"
+            },
+            "desc": "设置变量 <a>username</a> 的值为 <a>username</a>"
+          }
+        },
+        {
+          "id": "canvas-node-_kxju05u4",
+          "type": "psetvariable",
+          "props": {
+            "value_d": "{}",
+            "value_l": "[]",
+            "value_b": "True",
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "设置变量值",
+            "collapsed": false,
+            "disabled": false,
+            "set_variable": {
+              "type": "variable",
+              "inputValue": "41153da8e6f848148f002448f448da03",
+              "varLabel": "password",
+              "returnType": "String",
+              "varGroup": "global"
+            },
+            "value_s": {
+              "type": "express",
+              "inputValue": "password",
+              "varLabel": "password",
+              "returnType": "Unknown"
+            },
+            "desc": "设置变量 <a>password</a> 的值为 <a>password</a>"
+          }
+        },
+        {
+          "id": "canvas-node-_kxjsnzcs",
+          "type": "spshowsubtitle",
+          "props": {
+            "color": "255,0,0,255",
+            "fontsize": {
+              "type": "variable",
+              "inputValue": "0374c34722ee46138c04a5f408b4cb6b",
+              "varLabel": "size_changer",
+              "returnType": "Number",
+              "varGroup": "global"
+            },
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": "3",
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "出现字幕",
+            "desc": "屏幕下方出现字幕 <a>\"机器人正在自动识别测评任务！\"</a>",
+            "collapsed": false,
+            "disabled": false,
+            "subtitle": {
+              "type": "text",
+              "inputValue": "机器人正在自动识别测评任务！",
+              "returnType": "Unknown"
+            }
+          }
+        },
+        {
+          "id": "canvas-node-_kxjsnzct",
+          "type": "pscript",
+          "props": {
+            "content": {
+              "type": "express",
+              "inputValue": "import Assess\r\npath = Assess.start('auto_start')",
+              "varLabel": "import Assess\r\npath = Assess.start('auto_start')",
+              "returnType": "Unknown"
+            },
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "调用自定义脚本",
+            "collapsed": false,
+            "disabled": false,
+            "desc": "调用自定义脚本"
+          }
+        },
+        {
+          "id": "canvas-node-_l2ygxh2z",
+          "type": "psetvariable",
+          "props": {
+            "value_d": "{}",
+            "value_l": "[]",
+            "value_b": "True",
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "设置变量值",
+            "desc": "设置变量 <a>fp_excel_path</a> 的值为 <a>path or fp_excel_path</a>",
+            "set_variable": {
+              "type": "variable",
+              "inputValue": "aa785bd899684426a53151aada5f33fd",
+              "varLabel": "fp_excel_path",
+              "returnType": "String",
+              "varGroup": "declare"
+            },
+            "value_s": {
+              "type": "express",
+              "inputValue": "path or fp_excel_path",
+              "varLabel": "path or fp_excel_path",
+              "returnType": "Unknown"
+            },
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_kxjsnzcu",
+          "type": "spsubtitledisappear",
+          "props": {
+            "name": "关闭字幕",
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_kwby7ix2",
+          "type": "EndEvent",
+          "props": {
+            "collapsed": false,
+            "disabled": false
+          }
+        }
+      ]
+    },
+    "edges": []
+  }
+}

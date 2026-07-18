@@ -1,0 +1,48 @@
+{
+  "projectName": "Select_file",
+  "projectDescription": "",
+  "developType": "ProjectCode",
+  "entrance": "main.py",
+  "entrancePath": "",
+  "studioVersion": "4.0.0.0",
+  "projectVersion": "1.0",
+  "dependencies": [],
+  "fullDependencies": [],
+  "treeDependencies": [],
+  "version": 3,
+  "engineVersion": "4.0",
+  "runtimeOptions": {},
+  "designOptions": {
+    "isTriggerPanelHidden": false,
+    "isParamsPanelHidden": false,
+    "isDataTablePanelHidden": false,
+    "isBrowserPanelHidden": false,
+    "triggers": [
+      {
+        "appEventId": 0,
+        "name": "",
+        "function": "start",
+        "useTiming": false
+      }
+    ],
+    "params": [],
+    "columns": []
+  },
+  "appOptions": [
+    {
+      "uuid": null,
+      "name": "Select_file",
+      "robotType": "SDK",
+      "version": "1.0",
+      "categoryId": "d296df85-70b2-11ea-933e-0242ac120004",
+      "codeId": 0,
+      "status": 0,
+      "contacts": "Mr.Liu",
+      "iconUrl": "",
+      "pictures": "",
+      "introduction": "弹出窗口选择文件，获得文件路径及文件名",
+      "instruction": "引用方法如下：\r\nimport Select_file\r\nFile_path = Select_file.start()",
+      "updatedTime": "2021-08-19T11:55:54.3654622+08:00"
+    }
+  ]
+}

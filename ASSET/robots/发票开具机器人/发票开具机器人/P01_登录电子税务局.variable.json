@@ -1,0 +1,19 @@
+{
+  "version": "1.0.0.0",
+  "varList": [
+    {
+      "varId": "a0fbe7f699b04bae93732fbbfad78a41",
+      "varName": "dltx_web_element",
+      "varGroup": "public",
+      "varType": "Bool",
+      "defaultValue": ""
+    },
+    {
+      "varId": "6af98e6a1c7f496dbb8fd85d9c0c9fe3",
+      "varName": "key",
+      "varGroup": "flowDefine",
+      "varType": "String",
+      "defaultValue": "123456"
+    }
+  ]
+}

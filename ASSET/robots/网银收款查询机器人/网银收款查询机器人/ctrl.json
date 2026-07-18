@@ -1,0 +1,193 @@
+{
+  "version": "1.0.0.0",
+  "engineVersion": "4.0",
+  "controlList": [
+    {
+      "groupName": "",
+      "controls": [
+        {
+          "id": "aab792f36bda40f6890af3614b89131b",
+          "name": "网上汇款",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"Window\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"},{\"name\":\"app\",\"value\":\"iexplore\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"class\",\"value\":\"IEFrame\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"li\",\"props\":[{\"name\":\"id\",\"value\":\"online_remittance\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"class\",\"value\":\"menu\",\"pattern\":\"Equal\"},{\"name\":\"outertext\",\"value\":\"网上汇款\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": null
+        },
+        {
+          "id": "7a1f4005effe48e0a9030ee5d3731f97",
+          "name": "转账汇款",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"Window\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"},{\"name\":\"app\",\"value\":\"iexplore\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"class\",\"value\":\"IEFrame\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"li\",\"props\":[{\"name\":\"id\",\"value\":\"transfer_remittance\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"name\",\"value\":\"online_remi2\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"menu sub_menu\",\"pattern\":\"Equal\"},{\"name\":\"outertext\",\"value\":\"转账汇款\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": null
+        },
+        {
+          "id": "6c452880a4974331b49da7e5c08bb85f",
+          "name": "逐笔支付",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"Window\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"},{\"name\":\"app\",\"value\":\"iexplore\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"class\",\"value\":\"IEFrame\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"li\",\"props\":[{\"name\":\"id\",\"value\":\"onebyone_pay\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"name\",\"value\":\"online_remi_transfer\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"menu sub_menu\",\"pattern\":\"Equal\"},{\"name\":\"outertext\",\"value\":\"逐笔支付\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": null
+        },
+        {
+          "id": "98272e19dd0c458f9312e29eab5d80d2",
+          "name": "收款单位输入框",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"Window\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"},{\"name\":\"app\",\"value\":\"iexplore\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"class\",\"value\":\"IEFrame\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"input\",\"props\":[{\"name\":\"id\",\"value\":\"receive\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"type\",\"value\":\"text\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"input1\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": null
+        },
+        {
+          "id": "2f717d40bc564146a25dbe0d199d627e",
+          "name": "收款账号输入框",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"Window\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"},{\"name\":\"app\",\"value\":\"iexplore\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"class\",\"value\":\"IEFrame\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"input\",\"props\":[{\"name\":\"id\",\"value\":\"receive_account\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"type\",\"value\":\"text\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"input1\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": null
+        },
+        {
+          "id": "5d6f754c0c9d4e3da109698856258d05",
+          "name": "开户行输入框",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"Window\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"},{\"name\":\"app\",\"value\":\"iexplore\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"class\",\"value\":\"IEFrame\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"input\",\"props\":[{\"name\":\"id\",\"value\":\"receive_bank\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"type\",\"value\":\"text\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"input1\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": null
+        },
+        {
+          "id": "e939bfb04b214c69a1887b66dbb7ccd9",
+          "name": "汇款金额输入框",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"Window\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"},{\"name\":\"app\",\"value\":\"iexplore\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"class\",\"value\":\"IEFrame\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"input\",\"props\":[{\"name\":\"id\",\"value\":\"money\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"type\",\"value\":\"text\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"input1\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": null
+        },
+        {
+          "id": "802622b27dc1469fb342714f34f1e011",
+          "name": "汇款用途输入框",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"Window\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"},{\"name\":\"app\",\"value\":\"iexplore\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"class\",\"value\":\"IEFrame\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"input\",\"props\":[{\"name\":\"id\",\"value\":\"payPurpose\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"type\",\"value\":\"text\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"input1\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": null
+        },
+        {
+          "id": "6c2a6de43882404b9aa7ed86a90844e5",
+          "name": "提交",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"Window\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"},{\"name\":\"app\",\"value\":\"iexplore\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"class\",\"value\":\"IEFrame\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"span\",\"props\":[{\"name\":\"id\",\"value\":\"detail_submit\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"outertext\",\"value\":\"提交\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": null
+        },
+        {
+          "id": "6361c9a5cc0a471b8677cef14bbc9dfc",
+          "name": "账户管理",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"http://fz.chinaive.com/wsyh/payment_business/\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"nav\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"w-center2\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"ul\",\"props\":[],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"li\",\"props\":[],\"optionProps\":[{\"name\":\"id\",\"value\":\"m-2\",\"pattern\":\"Equal\"},{\"name\":\"outertext\",\"value\":\"账户管理\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"a\",\"props\":[{\"name\":\"outertext\",\"value\":\"账户管理\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"href\",\"value\":\"http://fz.chinaive.com/wsyh/account_manage\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": null
+        },
+        {
+          "id": "a379d911390f4a599ca3fa840f659a3a",
+          "name": "明细查询",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"Window\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"},{\"name\":\"app\",\"value\":\"iexplore\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"class\",\"value\":\"IEFrame\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"li\",\"props\":[{\"name\":\"id\",\"value\":\"detail_query\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"class\",\"value\":\"menu\",\"pattern\":\"Equal\"},{\"name\":\"outertext\",\"value\":\"明细查询\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": null
+        },
+        {
+          "id": "8ea039757de2414aadb39a3fcffa7220",
+          "name": "交易日期起始值输入框",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"Window\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"},{\"name\":\"app\",\"value\":\"iexplore\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"class\",\"value\":\"IEFrame\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"bottom\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"w-center\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"bottom-right\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"mainbox\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"detail_body\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"asset_body_bottom\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"outertext\",\"value\":\"*交易日期：  至\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"input\",\"props\":[{\"name\":\"type\",\"value\":\"text\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"id\",\"value\":\"time1\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"input1\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": null
+        },
+        {
+          "id": "a6fd5d13b659461c87b723a3f71ccbde",
+          "name": "交易日期终止值输入框",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"Window\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"},{\"name\":\"app\",\"value\":\"iexplore\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"class\",\"value\":\"IEFrame\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"bottom\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"w-center\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"bottom-right\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"mainbox\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"detail_body\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"asset_body_bottom\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"outertext\",\"value\":\"*交易日期：  至\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"input\",\"props\":[{\"name\":\"type\",\"value\":\"text\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"3\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"id\",\"value\":\"time2\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"input1\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": null
+        },
+        {
+          "id": "bb63b09efb0a41af85009bec40a2aedb",
+          "name": "对方账号输入框",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"Window\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"},{\"name\":\"app\",\"value\":\"iexplore\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"class\",\"value\":\"IEFrame\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"bottom\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"w-center\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"bottom-right\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"mainbox\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"detail_body\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"asset_body_bottom\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"nth-child\",\"value\":\"3\",\"pattern\":\"Equal\"}],\"optionProps\":[]},{\"type\":\"ie\",\"name\":\"input\",\"props\":[{\"name\":\"type\",\"value\":\"text\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"id\",\"value\":\"time5\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"input1\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": null
+        },
+        {
+          "id": "4104be89d3074c3ca8e9b9c1dd2bebbe",
+          "name": "交易金额起始值输入框",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"Window\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"},{\"name\":\"app\",\"value\":\"iexplore\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"class\",\"value\":\"IEFrame\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"bottom\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"w-center\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"bottom-right\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"mainbox\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"detail_body\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"asset_body_bottom\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"outertext\",\"value\":\"交易金额：  至\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"input\",\"props\":[{\"name\":\"type\",\"value\":\"text\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"id\",\"value\":\"time3\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"input1\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": null
+        },
+        {
+          "id": "445782dacbfd434bbb2ee4e9380b6df2",
+          "name": "交易金额终止值输入框",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"Window\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"},{\"name\":\"app\",\"value\":\"iexplore\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"class\",\"value\":\"IEFrame\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"bottom\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"w-center\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"bottom-right\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"mainbox\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"detail_body\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"asset_body_bottom\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"outertext\",\"value\":\"交易金额：  至\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"input\",\"props\":[{\"name\":\"type\",\"value\":\"text\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"3\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"id\",\"value\":\"time4\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"input1\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": null
+        },
+        {
+          "id": "a73020741bb447c5a49568f2bffc536f",
+          "name": "查询",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"Window\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"},{\"name\":\"app\",\"value\":\"iexplore\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"class\",\"value\":\"IEFrame\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"span\",\"props\":[{\"name\":\"id\",\"value\":\"detail-save\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"outertext\",\"value\":\"查询\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": null
+        },
+        {
+          "id": "b7c864dd3c9f444dab51927c438c1e25",
+          "name": "回单",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"http://fz.chinaive.com/wsyh/account_manage/\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[{\"name\":\"id\",\"value\":\"mainbody\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"mainbody\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"5\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"table\",\"props\":[{\"name\":\"class\",\"value\":\"table\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"tbody\",\"props\":[],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"tr\",\"props\":[{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}],\"optionProps\":[]},{\"type\":\"chrome\",\"name\":\"td\",\"props\":[],\"optionProps\":[{\"name\":\"outertext\",\"value\":\"回单\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"11\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"span\",\"props\":[{\"name\":\"outertext\",\"value\":\"回单\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"id\",\"value\":\"huidan32893\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"receipt\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": null
+        },
+        {
+          "id": "510c0be4ece7489e9dab0f8850abdf6e",
+          "name": "企业网上银行登录",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"Window\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行中国网站\",\"pattern\":\"Equal\"},{\"name\":\"app\",\"value\":\"iexplore\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"class\",\"value\":\"IEFrame\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"KV\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"login\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"login_center\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"ee_login\",\"pattern\":\"Equal\"},{\"name\":\"outertext\",\"value\":\"企业网上银行登录\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"3\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"p\",\"props\":[],\"optionProps\":[{\"name\":\"outertext\",\"value\":\"企业网上银行登录\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"3\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"a\",\"props\":[{\"name\":\"outertext\",\"value\":\"企业网上银行登录\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"href\",\"value\":\"http://fz.chinaive.com/wsyh/ee_login\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": null
+        },
+        {
+          "id": "04daddcbfa6443fcacc2582b1b0f78bb",
+          "name": "U盾登录",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"Window\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"},{\"name\":\"app\",\"value\":\"iexplore\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"class\",\"value\":\"IEFrame\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[{\"name\":\"id\",\"value\":\"usubmitkey\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"class\",\"value\":\"input-btn-wrapper1 clickable-btn\",\"pattern\":\"Equal\"},{\"name\":\"outertext\",\"value\":\"U 盾 登 录\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": null
+        },
+        {
+          "id": "209d36d566fd42db9698187e1456f183",
+          "name": "U盾密码输入框",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"Window\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"},{\"name\":\"app\",\"value\":\"iexplore\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"class\",\"value\":\"IEFrame\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"input\",\"props\":[{\"name\":\"id\",\"value\":\"u_password\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"type\",\"value\":\"password\",\"pattern\":\"Equal\"},{\"name\":\"name\",\"value\":\"u_password\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": null
+        },
+        {
+          "id": "884d36cc72d84de68f063a24a7929074",
+          "name": "确定",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"Window\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"},{\"name\":\"app\",\"value\":\"iexplore\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"class\",\"value\":\"IEFrame\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"input\",\"props\":[{\"name\":\"id\",\"value\":\"assure\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"type\",\"value\":\"submit\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": null
+        },
+        {
+          "id": "4713b5137fdc4ba6b8381ffe0b87536b",
+          "name": "付款业务",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"Window\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"},{\"name\":\"app\",\"value\":\"iexplore\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"class\",\"value\":\"IEFrame\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"nav\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"class\",\"value\":\"w-center2\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"ul\",\"props\":[],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"li\",\"props\":[],\"optionProps\":[{\"name\":\"id\",\"value\":\"m-4\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"active1\",\"pattern\":\"Equal\"},{\"name\":\"outertext\",\"value\":\"付款业务\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}]},{\"type\":\"ie\",\"name\":\"a\",\"props\":[{\"name\":\"outertext\",\"value\":\"付款业务\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"href\",\"value\":\"http://fz.chinaive.com/wsyh/payment_business\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": null
+        },
+        {
+          "id": "15ffc89bc7cf456e8553a90f93b10860",
+          "name": "退出",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"http://fz.chinaive.com/wsyh/account_manage/\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"a\",\"props\":[{\"name\":\"id\",\"value\":\"logout\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"href\",\"value\":\"http://fz.chinaive.com/wsyh/logout/\",\"pattern\":\"Equal\"},{\"name\":\"outertext\",\"value\":\"退出\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": null
+        },
+        {
+          "id": "afbda5d290034b71b47c8fd9c53cf4fb",
+          "name": "转入",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"tab\",\"props\":[{\"name\":\"title\",\"value\":\"中国工商银行企业网上银行\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"url\",\"value\":\"http://fz.chinaive.com/wsyh/account_manage/\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"bottom\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"w-center\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"bottom-right\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"mainbox\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"detail_body\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[{\"name\":\"class\",\"value\":\"asset_body_bottom\",\"pattern\":\"Contain\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"2\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"div\",\"props\":[],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"5\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"form\",\"props\":[],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"label\",\"props\":[{\"name\":\"nth-child\",\"value\":\"5\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"outertext\",\"value\":\"转入\",\"pattern\":\"Equal\"}]},{\"type\":\"chrome\",\"name\":\"input\",\"props\":[{\"name\":\"type\",\"value\":\"radio\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"name\",\"value\":\"aaa\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": "Mixed"
+        },
+        {
+          "id": "e544262505d34988ad12f079484231c2",
+          "name": "文件名输入框",
+          "selector": "[{\"type\":\"wnd\",\"name\":\"Window\",\"props\":[{\"name\":\"title\",\"value\":\"另存为\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"#32770\",\"pattern\":\"Equal\"},{\"name\":\"app\",\"value\":\"chrome\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"name\",\"value\":\"另存为\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"4\",\"pattern\":\"Equal\"}]},{\"type\":\"wnd\",\"name\":\"Pane\",\"props\":[{\"name\":\"title\",\"value\":\"\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"DUIViewWndClassName\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"wnd\",\"name\":\"Pane\",\"props\":[{\"name\":\"title\",\"value\":\"\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"DirectUIHWND\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"name\",\"value\":\"浏览器窗格\",\"pattern\":\"Equal\"},{\"name\":\"id\",\"value\":\"main\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"wnd\",\"name\":\"Pane\",\"props\":[{\"name\":\"title\",\"value\":\"\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"FloatNotifySink\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"wnd\",\"name\":\"ComboBox\",\"props\":[{\"name\":\"title\",\"value\":\"\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"ComboBox\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"name\",\"value\":\"文件名:\",\"pattern\":\"Equal\"},{\"name\":\"id\",\"value\":\"FileNameControlHost\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"wnd\",\"name\":\"Edit\",\"props\":[{\"name\":\"title\",\"value\":\"\",\"pattern\":\"Equal\"},{\"name\":\"class\",\"value\":\"Edit\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"name\",\"value\":\"文件名:\",\"pattern\":\"Equal\"},{\"name\":\"id\",\"value\":\"1001\",\"pattern\":\"Equal\"},{\"name\":\"nth-child\",\"value\":\"1\",\"pattern\":\"Equal\"}]},{\"type\":\"msaa\",\"name\":\"Text\",\"props\":[{\"name\":\"name\",\"value\":\"文件名:\",\"pattern\":\"Equal\"},{\"name\":\"role\",\"value\":\"Text\",\"pattern\":\"Equal\"}],\"optionProps\":[{\"name\":\"childId\",\"value\":\"0\",\"pattern\":\"Equal\"}]}]",
+          "screenshot": null,
+          "inspectMode": "Mixed"
+        }
+      ]
+    }
+  ]
+}

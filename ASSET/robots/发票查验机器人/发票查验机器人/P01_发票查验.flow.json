@@ -1,0 +1,3396 @@
+{
+  "id": "f04aeb7d7a5748248464417489eeeef2",
+  "name": "P01_发票查验",
+  "displayName": "",
+  "version": "4.2.0.0",
+  "description": "",
+  "developType": "visual",
+  "parameters": {
+    "input": [],
+    "output": []
+  },
+  "content": {
+    "id": "canvas-doc-_kvm6yo28",
+    "props": {},
+    "root": {
+      "id": "canvas-node-_kvm6yo29",
+      "type": "FlowRoot",
+      "props": {
+        "collapsed": false,
+        "disabled": false,
+        "flowModel": {},
+        "processName": "P02_Invoice_Check"
+      },
+      "children": [
+        {
+          "id": "canvas-node-_kvm6yo2a",
+          "type": "StartEvent",
+          "props": {
+            "debug": true,
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_kwbwkd5z",
+          "type": "spshowsubtitle",
+          "props": {
+            "color": "255,0,0,255",
+            "fontsize": {
+              "type": "variable",
+              "inputValue": "8267960496134f50a2084e028f8d493a",
+              "varLabel": "size_changer",
+              "returnType": "Number",
+              "varGroup": "global"
+            },
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "出现字幕",
+            "desc": "屏幕下方出现字幕 <a>\"机器人开始进行发票查验……\"</a>",
+            "subtitle": {
+              "type": "text",
+              "inputValue": "机器人开始进行发票查验……",
+              "returnType": "Unknown"
+            },
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_ims4anoi",
+          "type": "stcurrenttime",
+          "props": {
+            "format": "%Y年%m月%d日",
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "获取当前时间&日期",
+            "desc": "获取当前时间，将结果赋值给 <a>v_date</a>",
+            "output_time": {
+              "type": "variable",
+              "inputValue": "d5d0bed45c6843a491ef14ea369a938d",
+              "varLabel": "v_date",
+              "returnType": "String"
+            },
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_51lg6mvw",
+          "type": "stcurrenttime",
+          "props": {
+            "format": "%H%M%S",
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "获取当前时间&日期",
+            "desc": "获取当前时间，将结果赋值给 <a>v_time</a>",
+            "output_time": {
+              "type": "variable",
+              "inputValue": "709ac1fe7bba4155abd7a110098efe77",
+              "varLabel": "v_time",
+              "returnType": "String"
+            },
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_w57yy2up",
+          "type": "psetvariable",
+          "props": {
+            "value_d": "{}",
+            "value_l": "[]",
+            "value_b": "True",
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "设置变量值",
+            "collapsed": false,
+            "disabled": false,
+            "set_variable": {
+              "type": "variable",
+              "inputValue": "7ab887b146b944e88d5833d32d58e4bb",
+              "varLabel": "fpcy_excel_path",
+              "returnType": "String"
+            },
+            "value_s": {
+              "type": "express",
+              "inputValue": "str(os.path.dirname(fp_excel_path)+\"/【\"+v_date+\"】发票查验结果\"+v_time+\".xlsx\").replace('/','\\\\')",
+              "varLabel": "str(os.path.dirname(fp_excel_path)+\"/【\"+v_date+\"】发票查验结果\"+v_time+\".xlsx\").replace('/','\\\\')",
+              "returnType": "Unknown"
+            },
+            "desc": "设置变量 <a>fpcy_excel_path</a> 的值为 <a>str(os.path.dirname(fp_excel_path)+\"/【\"+v_date+\"】发票查验结果\"+v_time+\".xlsx\").replace('/','\\\\')</a>"
+          }
+        },
+        {
+          "id": "canvas-node-_7jyu1gnx",
+          "type": "estart",
+          "props": {
+            "option": "create",
+            "addSuffix": "False",
+            "suffixFormat": "datetime",
+            "readonly": "False",
+            "visible": "True",
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "启动Excel",
+            "desc": "根据<a></a>匹配<a></a>，查找已打开的Excel，将查找到的Excel对象赋值给 <a>fpcy_cyjg_excel</a>",
+            "output_returnval": {
+              "type": "variable",
+              "inputValue": "70987e5488074a388ab87ad7fc9bf1d2",
+              "varLabel": "fpcy_cyjg_excel",
+              "returnType": "Excel",
+              "varGroup": "declare"
+            },
+            "output_path": {
+              "type": "variable",
+              "varLabel": "",
+              "returnType": "String"
+            },
+            "creatpath": {
+              "type": "variable",
+              "inputValue": "7ab887b146b944e88d5833d32d58e4bb",
+              "varLabel": "fpcy_excel_path",
+              "returnType": "String",
+              "varGroup": "declare"
+            },
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_x0vi49rk",
+          "type": "escreatesheet",
+          "props": {
+            "position": "first",
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "创建Sheet页",
+            "desc": "在 <a>fpcy_cyjg_excel</a> Excel对象中创建Sheet页 <a>fpcyjg_sheet_name</a>，并将新建的Sheet页对象赋值给 <a>fpcy_cyjg_sheet</a>",
+            "output_returnval": {
+              "type": "variable",
+              "inputValue": "06337f6914984193833361f11115b2e0",
+              "varLabel": "fpcy_cyjg_sheet",
+              "returnType": "Sheet",
+              "varGroup": "declare"
+            },
+            "collapsed": false,
+            "disabled": false,
+            "excel": {
+              "type": "variable",
+              "inputValue": "70987e5488074a388ab87ad7fc9bf1d2",
+              "varLabel": "fpcy_cyjg_excel",
+              "returnType": "Excel"
+            },
+            "sheetName": {
+              "type": "variable",
+              "inputValue": "5f746bb84b6f4732b3c833df91e9f495",
+              "varLabel": "fpcyjg_sheet_name",
+              "returnType": "String",
+              "varGroup": "declare"
+            }
+          }
+        },
+        {
+          "id": "canvas-node-_nold9p2g",
+          "type": "esactive",
+          "props": {
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "激活Sheet页",
+            "desc": "在 <a>fpcy_cyjg_excel</a> Excel对象中激活Sheet页 <a>fpcyjg_sheet_name</a>，将对应的Sheet页对象赋值给 <a>fpcy_cyjg_sheet</a>",
+            "output_sheet": {
+              "type": "variable",
+              "inputValue": "06337f6914984193833361f11115b2e0",
+              "varLabel": "fpcy_cyjg_sheet",
+              "returnType": "Sheet"
+            },
+            "excel": {
+              "type": "variable",
+              "inputValue": "70987e5488074a388ab87ad7fc9bf1d2",
+              "varLabel": "fpcy_cyjg_excel",
+              "returnType": "Excel"
+            },
+            "collapsed": false,
+            "disabled": false,
+            "sheetName": {
+              "type": "variable",
+              "inputValue": "5f746bb84b6f4732b3c833df91e9f495",
+              "varLabel": "fpcyjg_sheet_name",
+              "returnType": "String",
+              "varGroup": "declare"
+            }
+          }
+        },
+        {
+          "id": "canvas-node-_j02u6zrf",
+          "type": "ecwriterow",
+          "props": {
+            "row": {
+              "type": "number",
+              "inputValue": 1,
+              "returnType": "Unknown"
+            },
+            "col": {
+              "type": "text",
+              "inputValue": "A",
+              "returnType": "Unknown"
+            },
+            "setNumberFormat": "False",
+            "numberFormat": "General",
+            "save": "True",
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "写入Excel行",
+            "collapsed": false,
+            "disabled": false,
+            "sheet": {
+              "type": "variable",
+              "inputValue": "06337f6914984193833361f11115b2e0",
+              "varLabel": "fpcy_cyjg_sheet",
+              "returnType": "Sheet"
+            },
+            "content": {
+              "type": "express",
+              "inputValue": "['序号','发票类型','发票代码','发票号码','开票日期','校验码','小写不含税金额','查验状态']",
+              "varLabel": "['序号','发票类型','发票代码','发票号码','开票日期','校验码','小写不含税金额','查验状态']",
+              "returnType": "Unknown"
+            },
+            "desc": "在 <a>fpcy_cyjg_sheet</a> Sheet页中，从 <a>A1</a> 开始写入行 <a>['序号','发票类型','发票代码','发票号码','开票日期','校验码','小写不含税金额','查验状态']</a>  并保存"
+          }
+        },
+        {
+          "id": "canvas-node-_n9u7wj7f",
+          "type": "esrenamesheet",
+          "props": {
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "重命名Sheet页",
+            "collapsed": false,
+            "disabled": false,
+            "excel": {
+              "type": "variable",
+              "inputValue": "70987e5488074a388ab87ad7fc9bf1d2",
+              "varLabel": "fpcy_cyjg_excel",
+              "returnType": "Excel"
+            },
+            "oldname": {
+              "type": "text",
+              "inputValue": "Sheet1",
+              "returnType": "Unknown"
+            },
+            "newname": {
+              "type": "variable",
+              "inputValue": "d9bd3fa6143543e99b32b78ad6de0c21",
+              "varLabel": "fpcyxx_sheet_name",
+              "returnType": "String"
+            },
+            "desc": "将 <a>fpcy_cyjg_excel</a> Excel对象中的 <a>\"Sheet1\"</a> 修改为 <a>fpcyxx_sheet_name</a>"
+          }
+        },
+        {
+          "id": "canvas-node-_hs1j7ide",
+          "type": "esactive",
+          "props": {
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "激活Sheet页",
+            "desc": "在 <a>fpcy_cyjg_excel</a> Excel对象中激活Sheet页 <a>fpcyxx_sheet_name</a>，将对应的Sheet页对象赋值给 <a>fpcy_cyxx_sheet</a>",
+            "output_sheet": {
+              "type": "variable",
+              "inputValue": "3fe5544484ac4ab8a234cbcb2124de8c",
+              "varLabel": "fpcy_cyxx_sheet",
+              "returnType": "Sheet",
+              "varGroup": "global"
+            },
+            "excel": {
+              "type": "variable",
+              "inputValue": "70987e5488074a388ab87ad7fc9bf1d2",
+              "varLabel": "fpcy_cyjg_excel",
+              "returnType": "Excel",
+              "varGroup": "declare"
+            },
+            "collapsed": false,
+            "disabled": false,
+            "sheetName": {
+              "type": "variable",
+              "inputValue": "d9bd3fa6143543e99b32b78ad6de0c21",
+              "varLabel": "fpcyxx_sheet_name",
+              "returnType": "String",
+              "varGroup": "declare"
+            }
+          }
+        },
+        {
+          "id": "canvas-node-_c39ql0yv",
+          "type": "ecwriterow",
+          "props": {
+            "row": {
+              "type": "number",
+              "inputValue": 1,
+              "returnType": "Unknown"
+            },
+            "col": {
+              "type": "text",
+              "inputValue": "A",
+              "returnType": "Unknown"
+            },
+            "setNumberFormat": "False",
+            "numberFormat": "General",
+            "save": "True",
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "写入Excel行",
+            "collapsed": false,
+            "disabled": false,
+            "sheet": {
+              "type": "variable",
+              "inputValue": "3fe5544484ac4ab8a234cbcb2124de8c",
+              "varLabel": "fpcy_cyxx_sheet",
+              "returnType": "Sheet",
+              "varGroup": "global"
+            },
+            "content": {
+              "type": "express",
+              "inputValue": "['序号','发票类型','发票代码','发票号码','开票日期','购买方名称','购买方纳税人识别号','购买方地址、电话','购买方开户行及账号','货物或应税劳务、服务名称','规格型号','单位','数量','单价','金额','税率','税额','金额合计','税额合计','价税合计（大写）','价税合计（小写）','销售方名称','销售方纳税人识别号','销售方地址、电话','开户行及账号']",
+              "varLabel": "['序号','发票类型','发票代码','发票号码','开票日期','购买方名称','购买方纳税人识别号','购买方地址、电话','购买方开户行及账号','货物或应税劳务、服务名称','规格型号','单位','数量','单价','金额','税率','税额','金额合计','税额合计','价税合计（大写）','价税合计（小写）','销售方名称','销售方纳税人识别号','销售方地址、电话','开户行及账号']",
+              "returnType": "Unknown"
+            },
+            "desc": "在 <a>fpcy_cyxx_sheet</a> Sheet页中，从 <a>A1</a> 开始写入行 <a>['序号','发票类型','发票代码','发票号码','开票日期','购买方名称','购买方纳税人识别号','购买方地址、电话','购买方开户行及账号','货物或应税劳务、服务名称','规格型号','单位','数量','单价','金额','税率','税额','金额合计','税额合计','价税合计（大写）','价税合计（小写）','销售方名称','销售方纳税人识别号','销售方地址、电话','开户行及账号']</a>  并保存"
+          }
+        },
+        {
+          "id": "canvas-node-_juyej5im",
+          "type": "bopen",
+          "props": {
+            "url": {
+              "type": "express",
+              "inputValue": "'http://fz.chinaive.com/fpcy/?username=' + username",
+              "varLabel": "'http://fz.chinaive.com/fpcy/?username=' + username",
+              "returnType": "Unknown"
+            },
+            "type": "chrome",
+            "specificPath": "False",
+            "wait": "True",
+            "timeout": {
+              "type": "number",
+              "inputValue": "100",
+              "returnType": "Unknown"
+            },
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "output_webName": {
+              "type": "variable",
+              "inputValue": "3a8df54d4a664a9880fa7c77b41c5bec",
+              "varLabel": "invoice_web",
+              "returnType": "WebPage",
+              "varGroup": "global"
+            },
+            "name": "打开新网页",
+            "desc": "在 <a>chrome</a> 中新建网页访问<a>'http://fz.chinaive.com/fpcy/?username=' + username</a>，将浏览器对象赋值给 <a>invoice_web</a>",
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_bxn98q1g",
+          "type": "bactive",
+          "props": {
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "激活网页",
+            "collapsed": false,
+            "disabled": false,
+            "page": {
+              "type": "variable",
+              "inputValue": "3a8df54d4a664a9880fa7c77b41c5bec",
+              "varLabel": "invoice_web",
+              "returnType": "WebPage",
+              "varGroup": "global"
+            },
+            "desc": "将 <a>invoice_web</a> 网页切换到窗口的最前面"
+          }
+        },
+        {
+          "id": "canvas-node-_imbebe44",
+          "type": "minputkeyboard",
+          "props": {
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": "3",
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "输入热键",
+            "collapsed": false,
+            "disabled": false,
+            "keyboard": {
+              "type": "text",
+              "inputValue": "!{space}",
+              "returnType": "Unknown"
+            },
+            "desc": "执行快捷键 <a>\"!{space}\"</a>"
+          }
+        },
+        {
+          "id": "canvas-node-_nn2hukzi",
+          "type": "minputkeyboard",
+          "props": {
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": "0.5",
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "输入热键",
+            "collapsed": false,
+            "disabled": false,
+            "keyboard": {
+              "type": "text",
+              "inputValue": "x",
+              "returnType": "Unknown"
+            },
+            "desc": "执行快捷键 <a>\"x\"</a>"
+          }
+        },
+        {
+          "id": "canvas-node-_n6d7444b",
+          "type": "loop_times",
+          "props": {
+            "conditions": [
+              {
+                "id": "loop_times_1625014981776_1",
+                "name": "按照次数循环"
+              }
+            ],
+            "time": 10,
+            "startNum": {
+              "type": "number",
+              "inputValue": "2",
+              "returnType": "Unknown"
+            },
+            "endNum": {
+              "type": "variable",
+              "inputValue": "d68da1e560264d7b9c238fca686ba69b",
+              "varLabel": "fpcy_lines",
+              "returnType": "Number",
+              "varGroup": "global"
+            },
+            "stepLenth": {
+              "type": "number",
+              "inputValue": 1,
+              "returnType": "Unknown"
+            },
+            "name": "按照次数循环",
+            "desc": "从 <a>2</a> 开始到 <a>fpcy_lines</a> 结束，步长 <a>1</a> ，每次循环的值赋值给 <a>i</a>",
+            "output_i": {
+              "type": "variable",
+              "inputValue": "aefbfeee5bf64fc8bd8de2359af50dd9",
+              "varLabel": "i",
+              "returnType": "Number",
+              "varGroup": "global"
+            },
+            "collapsed": false,
+            "disabled": false
+          },
+          "children": [
+            {
+              "id": "canvas-node-_kvvwzira",
+              "type": "spshowsubtitle",
+              "props": {
+                "color": "255,0,0,255",
+                "fontsize": {
+                  "type": "variable",
+                  "inputValue": "8267960496134f50a2084e028f8d493a",
+                  "varLabel": "size_changer",
+                  "returnType": "Number",
+                  "varGroup": "global"
+                },
+                "gs_pre_timeout": {
+                  "type": "number",
+                  "inputValue": 0,
+                  "returnType": "Unknown"
+                },
+                "gs_lat_timeout": {
+                  "type": "number",
+                  "inputValue": 0,
+                  "returnType": "Unknown"
+                },
+                "generalSettings": {
+                  "log": {
+                    "value": true,
+                    "disabled": true
+                  },
+                  "exit": true,
+                  "msgbox": false
+                },
+                "name": "出现字幕",
+                "desc": "屏幕下方出现字幕 <a>\"机器人正在查验第\"+str(i-1)+\"张发票……\"</a>",
+                "subtitle": {
+                  "type": "express",
+                  "inputValue": "\"机器人正在查验第\"+str(i-1)+\"张发票……\"",
+                  "varLabel": "\"机器人正在查验第\"+str(i-1)+\"张发票……\"",
+                  "returnType": "Unknown"
+                },
+                "collapsed": false,
+                "disabled": false
+              }
+            },
+            {
+              "id": "canvas-node-_p53f3drw",
+              "type": "ecgetsheetrowvalue",
+              "props": {
+                "rowindex": {
+                  "type": "variable",
+                  "inputValue": "aefbfeee5bf64fc8bd8de2359af50dd9",
+                  "varLabel": "i",
+                  "returnType": "Number",
+                  "varGroup": "global"
+                },
+                "maxcellnumber": {
+                  "type": "number",
+                  "inputValue": 1000,
+                  "returnType": "Unknown"
+                },
+                "readonlyvisible": "True",
+                "gs_pre_timeout": {
+                  "type": "number",
+                  "inputValue": 0,
+                  "returnType": "Unknown"
+                },
+                "gs_lat_timeout": {
+                  "type": "number",
+                  "inputValue": 0,
+                  "returnType": "Unknown"
+                },
+                "generalSettings": {
+                  "log": {
+                    "value": true,
+                    "disabled": true
+                  },
+                  "exit": true,
+                  "msgbox": false
+                },
+                "name": "获取Excel行的值",
+                "desc": "获取 <a>fpcy_sheet</a> Sheet页的 <a>i</a> 行的值，并将结果赋值给 <a>data</a>",
+                "output_valuelist": {
+                  "type": "variable",
+                  "inputValue": "883582bc6ba24f04a929e5721d215493",
+                  "varLabel": "data",
+                  "returnType": "List",
+                  "varGroup": "global"
+                },
+                "sheetpage": {
+                  "type": "variable",
+                  "inputValue": "f588ae9bde4c460eab7370a905449863",
+                  "varLabel": "fpcy_sheet",
+                  "returnType": "Sheet",
+                  "varGroup": "global"
+                },
+                "collapsed": false,
+                "disabled": false
+              }
+            },
+            {
+              "id": "canvas-node-_l1yj6rzk",
+              "type": "bactive",
+              "props": {
+                "gs_pre_timeout": {
+                  "type": "number",
+                  "inputValue": "1",
+                  "returnType": "Unknown"
+                },
+                "gs_lat_timeout": {
+                  "type": "number",
+                  "inputValue": 0,
+                  "returnType": "Unknown"
+                },
+                "generalSettings": {
+                  "log": {
+                    "value": true,
+                    "disabled": true
+                  },
+                  "exit": true,
+                  "msgbox": false
+                },
+                "name": "激活网页",
+                "collapsed": false,
+                "disabled": false,
+                "page": {
+                  "type": "variable",
+                  "inputValue": "3a8df54d4a664a9880fa7c77b41c5bec",
+                  "varLabel": "invoice_web",
+                  "returnType": "WebPage",
+                  "varGroup": "global"
+                },
+                "desc": "将 <a>invoice_web</a> 网页切换到窗口的最前面"
+              }
+            },
+            {
+              "id": "canvas-node-_tmtn218d",
+              "type": "buinput",
+              "props": {
+                "type": "text",
+                "mode": "cover",
+                "ctrlIndex": {
+                  "type": "number",
+                  "inputValue": 1,
+                  "returnType": "Unknown"
+                },
+                "inputOption": [
+                  "simulate"
+                ],
+                "inspect": "False",
+                "time": {
+                  "type": "number",
+                  "inputValue": 1,
+                  "returnType": "Unknown"
+                },
+                "timeout": {
+                  "type": "number",
+                  "inputValue": 10,
+                  "returnType": "Unknown"
+                },
+                "gs_pre_timeout": {
+                  "type": "number",
+                  "inputValue": "0.5",
+                  "returnType": "Unknown"
+                },
+                "gs_lat_timeout": {
+                  "type": "number",
+                  "inputValue": 0,
+                  "returnType": "Unknown"
+                },
+                "generalSettings": {
+                  "log": {
+                    "value": true,
+                    "disabled": true
+                  },
+                  "exit": true,
+                  "msgbox": false
+                },
+                "name": "填写输入框（网页）",
+                "page": {
+                  "type": "variable",
+                  "inputValue": "3a8df54d4a664a9880fa7c77b41c5bec",
+                  "varLabel": "invoice_web",
+                  "returnType": "WebPage",
+                  "varGroup": "global"
+                },
+                "ctrl": {
+                  "ctrlId": "f9dc121844e142b78ada0bfd413d5f96",
+                  "ctrlGroup": "",
+                  "ctrlName": "发票代码输入框",
+                  "imgPath": null,
+                  "type": "IE"
+                },
+                "content": {
+                  "type": "express",
+                  "inputValue": "data[2]",
+                  "varLabel": "data[2]",
+                  "returnType": "Unknown"
+                },
+                "desc": "在 <a>invoice_web</a> 网页 中，在 <a>发票代码输入框</a> 内填写 <a>data[2]</a>",
+                "inputInterval": {
+                  "type": "number",
+                  "inputValue": "20",
+                  "returnType": "Unknown"
+                },
+                "collapsed": false,
+                "disabled": false
+              }
+            },
+            {
+              "id": "canvas-node-_0n7in35w",
+              "type": "buinput",
+              "props": {
+                "type": "text",
+                "mode": "cover",
+                "ctrlIndex": {
+                  "type": "number",
+                  "inputValue": 1,
+                  "returnType": "Unknown"
+                },
+                "inputOption": [
+                  "simulate"
+                ],
+                "inspect": "False",
+                "time": {
+                  "type": "number",
+                  "inputValue": 1,
+                  "returnType": "Unknown"
+                },
+                "timeout": {
+                  "type": "number",
+                  "inputValue": 10,
+                  "returnType": "Unknown"
+                },
+                "gs_pre_timeout": {
+                  "type": "number",
+                  "inputValue": 0,
+                  "returnType": "Unknown"
+                },
+                "gs_lat_timeout": {
+                  "type": "number",
+                  "inputValue": 0,
+                  "returnType": "Unknown"
+                },
+                "generalSettings": {
+                  "log": {
+                    "value": true,
+                    "disabled": true
+                  },
+                  "exit": true,
+                  "msgbox": false
+                },
+                "name": "填写输入框（网页）",
+                "page": {
+                  "type": "variable",
+                  "inputValue": "3a8df54d4a664a9880fa7c77b41c5bec",
+                  "varLabel": "invoice_web",
+                  "returnType": "WebPage",
+                  "varGroup": "global"
+                },
+                "ctrl": {
+                  "ctrlId": "6091118e327e45e4aa6ac654dba98ef9",
+                  "ctrlGroup": "",
+                  "ctrlName": "发票号码输入框",
+                  "imgPath": null,
+                  "type": "IE"
+                },
+                "content": {
+                  "type": "express",
+                  "inputValue": "data[3]",
+                  "varLabel": "data[3]",
+                  "returnType": "Unknown"
+                },
+                "desc": "在 <a>invoice_web</a> 网页 中，在 <a>发票号码输入框</a> 内填写 <a>data[3]</a>",
+                "inputInterval": {
+                  "type": "number",
+                  "inputValue": "20",
+                  "returnType": "Unknown"
+                },
+                "collapsed": false,
+                "disabled": false
+              }
+            },
+            {
+              "id": "canvas-node-_n1hzu4yw",
+              "type": "buinput",
+              "props": {
+                "type": "text",
+                "mode": "cover",
+                "ctrlIndex": {
+                  "type": "number",
+                  "inputValue": 1,
+                  "returnType": "Unknown"
+                },
+                "inputOption": [
+                  "simulate"
+                ],
+                "inspect": "False",
+                "time": {
+                  "type": "number",
+                  "inputValue": 1,
+                  "returnType": "Unknown"
+                },
+                "timeout": {
+                  "type": "number",
+                  "inputValue": 10,
+                  "returnType": "Unknown"
+                },
+                "gs_pre_timeout": {
+                  "type": "number",
+                  "inputValue": 0,
+                  "returnType": "Unknown"
+                },
+                "gs_lat_timeout": {
+                  "type": "number",
+                  "inputValue": 0,
+                  "returnType": "Unknown"
+                },
+                "generalSettings": {
+                  "log": {
+                    "value": true,
+                    "disabled": true
+                  },
+                  "exit": true,
+                  "msgbox": false
+                },
+                "name": "填写输入框（网页）",
+                "page": {
+                  "type": "variable",
+                  "inputValue": "3a8df54d4a664a9880fa7c77b41c5bec",
+                  "varLabel": "invoice_web",
+                  "returnType": "WebPage",
+                  "varGroup": "global"
+                },
+                "ctrl": {
+                  "ctrlId": "26e99bd8032b4059a8fff008a29bc526",
+                  "ctrlGroup": "",
+                  "ctrlName": "开票日期输入框",
+                  "imgPath": null,
+                  "type": "IE"
+                },
+                "content": {
+                  "type": "express",
+                  "inputValue": "data[4]",
+                  "varLabel": "data[4]",
+                  "returnType": "Unknown"
+                },
+                "desc": "在 <a>invoice_web</a> 网页 中，在 <a>开票日期输入框</a> 内填写 <a>data[4]</a>",
+                "inputInterval": {
+                  "type": "number",
+                  "inputValue": "20",
+                  "returnType": "Unknown"
+                },
+                "collapsed": false,
+                "disabled": false
+              }
+            },
+            {
+              "id": "canvas-node-_xhz2ll7j",
+              "type": "ifelse",
+              "props": {
+                "conditions": [
+                  {
+                    "id": "flow-branch_1624869133786_1",
+                    "name": "IF"
+                  },
+                  {
+                    "id": "flow-branch_1624869133786_2",
+                    "name": "ELSE"
+                  }
+                ],
+                "name": "条件分支",
+                "collapsed": false,
+                "disabled": false,
+                "condition": {
+                  "isExpress": true,
+                  "con": "'专用' in data[1]"
+                },
+                "desc": "if-else条件分支"
+              },
+              "children": [
+                {
+                  "id": "canvas-node-_61sd9kd8",
+                  "type": "BranchRouter",
+                  "props": {
+                    "conditionId": "flow-branch_1624869133786_1",
+                    "collapsed": false,
+                    "disabled": false
+                  },
+                  "children": [
+                    {
+                      "id": "canvas-node-_oet2vait",
+                      "type": "buinput",
+                      "props": {
+                        "type": "text",
+                        "mode": "cover",
+                        "ctrlIndex": {
+                          "type": "number",
+                          "inputValue": 1,
+                          "returnType": "Unknown"
+                        },
+                        "inputOption": [
+                          "simulate"
+                        ],
+                        "inspect": "False",
+                        "time": {
+                          "type": "number",
+                          "inputValue": 1,
+                          "returnType": "Unknown"
+                        },
+                        "timeout": {
+                          "type": "number",
+                          "inputValue": 10,
+                          "returnType": "Unknown"
+                        },
+                        "gs_pre_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "gs_lat_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "generalSettings": {
+                          "log": {
+                            "value": true,
+                            "disabled": true
+                          },
+                          "exit": true,
+                          "msgbox": false
+                        },
+                        "name": "填写输入框（网页）",
+                        "page": {
+                          "type": "variable",
+                          "inputValue": "3a8df54d4a664a9880fa7c77b41c5bec",
+                          "varLabel": "invoice_web",
+                          "returnType": "WebPage",
+                          "varGroup": "global"
+                        },
+                        "ctrl": {
+                          "ctrlId": "30bbd5146cfc4bb39de27e162fed92be",
+                          "ctrlGroup": "",
+                          "ctrlName": "校验码输入框",
+                          "imgPath": null,
+                          "type": "IE"
+                        },
+                        "content": {
+                          "type": "express",
+                          "inputValue": "data[15]",
+                          "varLabel": "data[15]",
+                          "returnType": "Unknown"
+                        },
+                        "desc": "在 <a>invoice_web</a> 网页 中，在 <a>校验码输入框</a> 内填写 <a>data[15]</a>",
+                        "inputInterval": {
+                          "type": "number",
+                          "inputValue": "20",
+                          "returnType": "Unknown"
+                        },
+                        "collapsed": false,
+                        "disabled": false
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "canvas-node-_248a3t7g",
+                  "type": "BranchRouter",
+                  "props": {
+                    "conditionId": "flow-branch_1624869133786_2",
+                    "collapsed": false,
+                    "disabled": false
+                  },
+                  "children": [
+                    {
+                      "id": "canvas-node-_u565h2cz",
+                      "type": "buinput",
+                      "props": {
+                        "type": "text",
+                        "mode": "cover",
+                        "ctrlIndex": {
+                          "type": "number",
+                          "inputValue": 1,
+                          "returnType": "Unknown"
+                        },
+                        "inputOption": [
+                          "simulate"
+                        ],
+                        "inspect": "False",
+                        "time": {
+                          "type": "number",
+                          "inputValue": 1,
+                          "returnType": "Unknown"
+                        },
+                        "timeout": {
+                          "type": "number",
+                          "inputValue": 10,
+                          "returnType": "Unknown"
+                        },
+                        "gs_pre_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "gs_lat_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "generalSettings": {
+                          "log": {
+                            "value": true,
+                            "disabled": true
+                          },
+                          "exit": true,
+                          "msgbox": false
+                        },
+                        "name": "填写输入框（网页）",
+                        "page": {
+                          "type": "variable",
+                          "inputValue": "3a8df54d4a664a9880fa7c77b41c5bec",
+                          "varLabel": "invoice_web",
+                          "returnType": "WebPage",
+                          "varGroup": "global"
+                        },
+                        "ctrl": {
+                          "ctrlId": "30bbd5146cfc4bb39de27e162fed92be",
+                          "ctrlGroup": "",
+                          "ctrlName": "校验码输入框",
+                          "imgPath": null,
+                          "type": "IE"
+                        },
+                        "content": {
+                          "type": "express",
+                          "inputValue": "data[5][-6:]",
+                          "varLabel": "data[5][-6:]",
+                          "returnType": "Unknown"
+                        },
+                        "desc": "在 <a>invoice_web</a> 网页 中，在 <a>校验码输入框</a> 内填写 <a>data[5][-6:]</a>",
+                        "inputInterval": {
+                          "type": "number",
+                          "inputValue": "20",
+                          "returnType": "Unknown"
+                        },
+                        "collapsed": false,
+                        "disabled": false
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "canvas-node-_jnpx05rx",
+              "type": "loop_conditional",
+              "props": {
+                "conditions": [
+                  {
+                    "id": "loop_conditional_1629434060988_1",
+                    "name": "条件循环"
+                  }
+                ],
+                "time": 10,
+                "name": "条件循环",
+                "collapsed": false,
+                "disabled": false,
+                "condition": {
+                  "isExpress": false,
+                  "con": {
+                    "combineType": "and",
+                    "criteriaList": [
+                      {
+                        "condition": {
+                          "leftValue": {
+                            "type": "variable",
+                            "inputValue": "f22c09b49ff5424c8d3e51d05f9012f4",
+                            "varLabel": "Vcode",
+                            "returnType": "String"
+                          },
+                          "operator": "not-equals",
+                          "rightValue": {
+                            "type": "text",
+                            "inputValue": "true",
+                            "varLabel": "",
+                            "returnType": "String"
+                          },
+                          "rightType": "text"
+                        }
+                      }
+                    ]
+                  }
+                },
+                "desc": "使用 <a>while</a> 循环，注意避免发生死循环"
+              },
+              "children": [
+                {
+                  "id": "canvas-node-_bi80c5bu",
+                  "type": "bugetattr",
+                  "props": {
+                    "ctrlIndex": {
+                      "type": "number",
+                      "inputValue": 1,
+                      "returnType": "Unknown"
+                    },
+                    "timeout": {
+                      "type": "number",
+                      "inputValue": 10,
+                      "returnType": "Unknown"
+                    },
+                    "gs_pre_timeout": {
+                      "type": "number",
+                      "inputValue": 0,
+                      "returnType": "Unknown"
+                    },
+                    "gs_lat_timeout": {
+                      "type": "number",
+                      "inputValue": 0,
+                      "returnType": "Unknown"
+                    },
+                    "generalSettings": {
+                      "log": {
+                        "value": true,
+                        "disabled": true
+                      },
+                      "exit": true,
+                      "msgbox": false
+                    },
+                    "name": "获取网页元素的属性值",
+                    "desc": "在 <a>invoice_web</a> 网页中，获取 <a>验证码</a>的 <a>\"value\"</a> 属性值，将结果赋值给 <a>verification_code</a>",
+                    "output_attr": {
+                      "type": "variable",
+                      "inputValue": "f55f6310e7e743ddb04d6491ca5648c7",
+                      "varLabel": "verification_code",
+                      "returnType": "String",
+                      "varGroup": "global"
+                    },
+                    "page": {
+                      "type": "variable",
+                      "inputValue": "3a8df54d4a664a9880fa7c77b41c5bec",
+                      "varLabel": "invoice_web",
+                      "returnType": "WebPage",
+                      "varGroup": "global"
+                    },
+                    "collapsed": false,
+                    "disabled": false,
+                    "ctrl": {
+                      "ctrlId": "4a92b2f331414013a49e378451231a2c",
+                      "ctrlGroup": "",
+                      "ctrlName": "验证码",
+                      "imgPath": null,
+                      "type": "Chrome"
+                    },
+                    "attr": {
+                      "type": "text",
+                      "inputValue": "value",
+                      "returnType": "Unknown"
+                    }
+                  }
+                },
+                {
+                  "id": "canvas-node-_kzy1vt7p",
+                  "type": "buclip",
+                  "props": {
+                    "mode": "cover",
+                    "ctrlIndex": {
+                      "type": "number",
+                      "inputValue": 1,
+                      "returnType": "Unknown"
+                    },
+                    "inspect": "False",
+                    "time": 1,
+                    "timeout": {
+                      "type": "number",
+                      "inputValue": 10,
+                      "returnType": "Unknown"
+                    },
+                    "gs_pre_timeout": {
+                      "type": "number",
+                      "inputValue": 0,
+                      "returnType": "Unknown"
+                    },
+                    "gs_lat_timeout": {
+                      "type": "number",
+                      "inputValue": "0.5",
+                      "returnType": "Unknown"
+                    },
+                    "generalSettings": {
+                      "log": {
+                        "value": true,
+                        "disabled": true
+                      },
+                      "exit": true,
+                      "msgbox": false
+                    },
+                    "name": "通过剪贴方式输入（网页）",
+                    "collapsed": false,
+                    "disabled": false,
+                    "page": {
+                      "type": "variable",
+                      "inputValue": "3a8df54d4a664a9880fa7c77b41c5bec",
+                      "varLabel": "invoice_web",
+                      "returnType": "WebPage",
+                      "varGroup": "global"
+                    },
+                    "ctrl": {
+                      "ctrlId": "1b5f409b42c54592af4369e3e9d6c209",
+                      "ctrlGroup": "",
+                      "ctrlName": "验证码输入框",
+                      "imgPath": null,
+                      "type": "IE"
+                    },
+                    "content": {
+                      "type": "variable",
+                      "inputValue": "f55f6310e7e743ddb04d6491ca5648c7",
+                      "varLabel": "verification_code",
+                      "returnType": "String",
+                      "varGroup": "global"
+                    },
+                    "desc": "在 <a>invoice_web</a> 网页中，通过剪贴方式在 <a>验证码输入框</a> 内填写 <a>verification_code</a>"
+                  }
+                },
+                {
+                  "id": "canvas-node-_9m9udu3a",
+                  "type": "belementclick",
+                  "props": {
+                    "clickType": "left_once",
+                    "simulate": "True",
+                    "ctrlIndex": {
+                      "type": "number",
+                      "inputValue": 1,
+                      "returnType": "Unknown"
+                    },
+                    "timeout": {
+                      "type": "number",
+                      "inputValue": 10,
+                      "returnType": "Unknown"
+                    },
+                    "gs_pre_timeout": {
+                      "type": "number",
+                      "inputValue": 0,
+                      "returnType": "Unknown"
+                    },
+                    "gs_lat_timeout": {
+                      "type": "number",
+                      "inputValue": 0,
+                      "returnType": "Unknown"
+                    },
+                    "generalSettings": {
+                      "log": {
+                        "value": true,
+                        "disabled": true
+                      },
+                      "exit": true,
+                      "msgbox": false
+                    },
+                    "name": "点击控件（网页）",
+                    "openPage": {
+                      "type": "variable",
+                      "inputValue": "3a8df54d4a664a9880fa7c77b41c5bec",
+                      "varLabel": "invoice_web",
+                      "returnType": "WebPage",
+                      "varGroup": "global"
+                    },
+                    "element": {
+                      "ctrlId": "9b14a7e403bb4778a52618385e52a076",
+                      "ctrlGroup": "",
+                      "ctrlName": "查验",
+                      "imgPath": null,
+                      "type": "IE"
+                    },
+                    "desc": "在 <a>invoice_web</a> 网页中，鼠标 <a>左键单击</a> <a>查验</a>",
+                    "collapsed": false,
+                    "disabled": false
+                  }
+                },
+                {
+                  "id": "canvas-node-_d2c31fjz",
+                  "type": "trycatch",
+                  "props": {
+                    "needRetry": false,
+                    "tryTimes": 3,
+                    "sleepTime": 10,
+                    "name": "捕获异常和重试",
+                    "collapsed": false,
+                    "disabled": false,
+                    "desc": "执行并捕获异常 "
+                  },
+                  "children": [
+                    {
+                      "id": "canvas-node-_kq40g88n",
+                      "type": "TryNormalRouter",
+                      "props": {
+                        "collapsed": false,
+                        "disabled": false
+                      },
+                      "children": [
+                        {
+                          "id": "canvas-node-_7pw57yug",
+                          "type": "belementclick",
+                          "props": {
+                            "clickType": "left_once",
+                            "simulate": "True",
+                            "ctrlIndex": {
+                              "type": "number",
+                              "inputValue": 1,
+                              "returnType": "Unknown"
+                            },
+                            "timeout": {
+                              "type": "number",
+                              "inputValue": "2",
+                              "returnType": "Unknown"
+                            },
+                            "gs_pre_timeout": {
+                              "type": "number",
+                              "inputValue": 0,
+                              "returnType": "Unknown"
+                            },
+                            "gs_lat_timeout": {
+                              "type": "number",
+                              "inputValue": 0,
+                              "returnType": "Unknown"
+                            },
+                            "generalSettings": {
+                              "log": {
+                                "value": true,
+                                "disabled": true
+                              },
+                              "exit": true,
+                              "msgbox": false
+                            },
+                            "name": "点击控件（网页）",
+                            "collapsed": false,
+                            "disabled": false,
+                            "openPage": {
+                              "type": "variable",
+                              "inputValue": "3a8df54d4a664a9880fa7c77b41c5bec",
+                              "varLabel": "invoice_web",
+                              "returnType": "WebPage",
+                              "varGroup": "global"
+                            },
+                            "element": {
+                              "ctrlId": "168df4653624450396b50f0e6c397b5e",
+                              "ctrlGroup": "",
+                              "ctrlName": "确定",
+                              "imgPath": null,
+                              "type": "Chrome"
+                            },
+                            "desc": "在 <a>invoice_web</a> 网页中，鼠标 <a>左键单击</a> <a>确定</a>"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "canvas-node-_ivminxy9",
+                      "type": "TryCatchRouter",
+                      "props": {
+                        "collapsed": false,
+                        "disabled": false
+                      },
+                      "children": [
+                        {
+                          "id": "canvas-node-_37773a0n",
+                          "type": "psetvariable",
+                          "props": {
+                            "value_d": "{}",
+                            "value_l": "[]",
+                            "value_b": "True",
+                            "gs_pre_timeout": {
+                              "type": "number",
+                              "inputValue": 0,
+                              "returnType": "Unknown"
+                            },
+                            "gs_lat_timeout": {
+                              "type": "number",
+                              "inputValue": 0,
+                              "returnType": "Unknown"
+                            },
+                            "generalSettings": {
+                              "log": {
+                                "value": true,
+                                "disabled": true
+                              },
+                              "exit": true,
+                              "msgbox": false
+                            },
+                            "name": "设置变量值",
+                            "collapsed": false,
+                            "disabled": false,
+                            "set_variable": {
+                              "type": "variable",
+                              "inputValue": "f22c09b49ff5424c8d3e51d05f9012f4",
+                              "varLabel": "Vcode",
+                              "returnType": "String"
+                            },
+                            "value_s": {
+                              "type": "text",
+                              "inputValue": "true",
+                              "returnType": "Unknown"
+                            },
+                            "desc": "设置变量 <a>Vcode</a> 的值为 <a>\"true\"</a>"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "canvas-node-_8su5xgek",
+                      "type": "TryFinallyRouter",
+                      "props": {
+                        "collapsed": false,
+                        "disabled": false
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "canvas-node-_f4mvsbuw",
+              "type": "psetvariable",
+              "props": {
+                "value_d": "{}",
+                "value_l": "[]",
+                "value_b": "True",
+                "gs_pre_timeout": {
+                  "type": "number",
+                  "inputValue": 0,
+                  "returnType": "Unknown"
+                },
+                "gs_lat_timeout": {
+                  "type": "number",
+                  "inputValue": 0,
+                  "returnType": "Unknown"
+                },
+                "generalSettings": {
+                  "log": {
+                    "value": true,
+                    "disabled": true
+                  },
+                  "exit": true,
+                  "msgbox": false
+                },
+                "name": "设置变量值",
+                "collapsed": false,
+                "disabled": false,
+                "set_variable": {
+                  "type": "variable",
+                  "inputValue": "f22c09b49ff5424c8d3e51d05f9012f4",
+                  "varLabel": "Vcode",
+                  "returnType": "String"
+                },
+                "value_s": {
+                  "type": "text",
+                  "inputValue": "flase",
+                  "returnType": "Unknown"
+                },
+                "desc": "设置变量 <a>Vcode</a> 的值为 <a>\"flase\"</a>"
+              }
+            },
+            {
+              "id": "canvas-node-_sgmt464m",
+              "type": "trycatch",
+              "props": {
+                "needRetry": false,
+                "tryTimes": 3,
+                "sleepTime": 10,
+                "name": "捕获异常和重试",
+                "collapsed": false,
+                "disabled": false,
+                "desc": "执行并捕获异常 "
+              },
+              "children": [
+                {
+                  "id": "canvas-node-_gv7fh8d5",
+                  "type": "TryNormalRouter",
+                  "props": {
+                    "collapsed": false,
+                    "disabled": false
+                  },
+                  "children": [
+                    {
+                      "id": "canvas-node-_v2m4p8rt",
+                      "type": "bugettext",
+                      "props": {
+                        "ctrlIndex": {
+                          "type": "number",
+                          "inputValue": 1,
+                          "returnType": "Unknown"
+                        },
+                        "timeout": {
+                          "type": "number",
+                          "inputValue": "2",
+                          "returnType": "Unknown"
+                        },
+                        "gs_pre_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "gs_lat_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "generalSettings": {
+                          "log": {
+                            "value": true,
+                            "disabled": true
+                          },
+                          "exit": true,
+                          "msgbox": false
+                        },
+                        "name": "获取文本（网页）",
+                        "desc": "在 <a>invoice_web</a> 网页中，获取 <a>发票查验明细</a> 的文本，将结果赋值给 <a>web_result</a>",
+                        "output_text": {
+                          "type": "variable",
+                          "inputValue": "234762b52d6a47e7921da7296d070d50",
+                          "varLabel": "web_result",
+                          "returnType": "String"
+                        },
+                        "page": {
+                          "type": "variable",
+                          "inputValue": "3a8df54d4a664a9880fa7c77b41c5bec",
+                          "varLabel": "invoice_web",
+                          "returnType": "WebPage",
+                          "varGroup": "global"
+                        },
+                        "ctrl": {
+                          "ctrlId": "baf69c4d9a474873a9ff87fd734d9f93",
+                          "ctrlGroup": "",
+                          "ctrlName": "发票查验明细",
+                          "imgPath": null,
+                          "type": "Chrome"
+                        },
+                        "collapsed": false,
+                        "disabled": false
+                      }
+                    },
+                    {
+                      "id": "canvas-node-_kvsv7m0s",
+                      "type": "spshowsubtitle",
+                      "props": {
+                        "color": "255,0,0,255",
+                        "fontsize": {
+                          "type": "variable",
+                          "inputValue": "8267960496134f50a2084e028f8d493a",
+                          "varLabel": "size_changer",
+                          "returnType": "Number",
+                          "varGroup": "global"
+                        },
+                        "gs_pre_timeout": {
+                          "type": "number",
+                          "inputValue": "0",
+                          "returnType": "Unknown"
+                        },
+                        "gs_lat_timeout": {
+                          "type": "number",
+                          "inputValue": "0",
+                          "returnType": "Unknown"
+                        },
+                        "generalSettings": {
+                          "log": {
+                            "value": true,
+                            "disabled": true
+                          },
+                          "exit": true,
+                          "msgbox": false
+                        },
+                        "name": "出现字幕",
+                        "collapsed": false,
+                        "disabled": false,
+                        "subtitle": {
+                          "type": "express",
+                          "inputValue": "\"第\"+str(i-1)+\"张发票查验成功！\"",
+                          "varLabel": "\"第\"+str(i-1)+\"张发票查验成功！\"",
+                          "returnType": "Unknown"
+                        },
+                        "desc": "屏幕下方出现字幕 <a>\"第\"+str(i-1)+\"张发票查验成功！\"</a>"
+                      }
+                    },
+                    {
+                      "id": "canvas-node-_th76jy17",
+                      "type": "bcapture",
+                      "props": {
+                        "gs_pre_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "gs_lat_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "generalSettings": {
+                          "log": {
+                            "value": true,
+                            "disabled": true
+                          },
+                          "exit": true,
+                          "msgbox": false
+                        },
+                        "name": "网页截图",
+                        "desc": "将 <a>invoice_web</a> 网页截图，保存到 <a>\"C:\\RPADATA\"</a> 文件夹，文件路径信息会赋值给 <a>result_path</a>",
+                        "output_path": {
+                          "type": "variable",
+                          "inputValue": "9013fcaf3bbc4f3f93a9e757812f0b47",
+                          "varLabel": "result_path",
+                          "returnType": "String",
+                          "varGroup": "global"
+                        },
+                        "page": {
+                          "type": "variable",
+                          "inputValue": "3a8df54d4a664a9880fa7c77b41c5bec",
+                          "varLabel": "invoice_web",
+                          "returnType": "WebPage",
+                          "varGroup": "global"
+                        },
+                        "collapsed": false,
+                        "disabled": false,
+                        "url": {
+                          "type": "text",
+                          "inputValue": "C:\\RPADATA",
+                          "returnType": "Unknown"
+                        }
+                      }
+                    },
+                    {
+                      "id": "canvas-node-_qso1hkgz",
+                      "type": "stcurrenttime",
+                      "props": {
+                        "format": "%H%M%S",
+                        "gs_pre_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "gs_lat_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "generalSettings": {
+                          "log": {
+                            "value": true,
+                            "disabled": true
+                          },
+                          "exit": true,
+                          "msgbox": false
+                        },
+                        "name": "获取当前时间&日期",
+                        "desc": "获取当前时间，将结果赋值给 <a>v_time</a>",
+                        "output_time": {
+                          "type": "variable",
+                          "inputValue": "709ac1fe7bba4155abd7a110098efe77",
+                          "varLabel": "v_time",
+                          "returnType": "String"
+                        },
+                        "collapsed": false,
+                        "disabled": false
+                      }
+                    },
+                    {
+                      "id": "canvas-node-_9wo4g2p7",
+                      "type": "pscript",
+                      "props": {
+                        "content": {
+                          "type": "express",
+                          "inputValue": "os.rename(result_path,os.path.join(\"C:\\RPADATA\",('发票号码'+str(data[3])+'查验结果'+str(v_time)+'.png')))",
+                          "varLabel": "os.rename(result_path,os.path.join(\"C:\\RPADATA\",('发票号码'+str(data[3])+'查验结果'+str(v_time)+'.png')))",
+                          "returnType": "Unknown"
+                        },
+                        "gs_pre_timeout": {
+                          "type": "number",
+                          "inputValue": "1",
+                          "returnType": "Unknown"
+                        },
+                        "gs_lat_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "generalSettings": {
+                          "log": {
+                            "value": true,
+                            "disabled": true
+                          },
+                          "exit": true,
+                          "msgbox": false
+                        },
+                        "name": "调用自定义脚本",
+                        "collapsed": false,
+                        "disabled": false,
+                        "desc": "调用自定义脚本"
+                      }
+                    },
+                    {
+                      "id": "canvas-node-_k640mv70",
+                      "type": "bugethtml",
+                      "props": {
+                        "ctrlIndex": {
+                          "type": "number",
+                          "inputValue": 1,
+                          "returnType": "Unknown"
+                        },
+                        "timeout": {
+                          "type": "number",
+                          "inputValue": 10,
+                          "returnType": "Unknown"
+                        },
+                        "gs_pre_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "gs_lat_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "generalSettings": {
+                          "log": {
+                            "value": true,
+                            "disabled": true
+                          },
+                          "exit": true,
+                          "msgbox": false
+                        },
+                        "name": "获取网页元素的HTML代码",
+                        "desc": "在 <a>invoice_web</a> 网页中，获取 <a>获取发票查验明细页面HTML</a> 的HTML片段，将结果赋值给 <a>check_html</a>",
+                        "output_html": {
+                          "type": "variable",
+                          "inputValue": "0b64313d1e3245e5a055826014e548c4",
+                          "varLabel": "check_html",
+                          "returnType": "String"
+                        },
+                        "collapsed": false,
+                        "disabled": false,
+                        "ctrl": {
+                          "ctrlId": "b584c18be5644ea49c1f18b5fafeaeab",
+                          "ctrlGroup": "",
+                          "ctrlName": "获取发票查验明细页面HTML",
+                          "imgPath": null,
+                          "type": "Chrome"
+                        },
+                        "page": {
+                          "type": "variable",
+                          "inputValue": "3a8df54d4a664a9880fa7c77b41c5bec",
+                          "varLabel": "invoice_web",
+                          "returnType": "WebPage",
+                          "varGroup": "global"
+                        }
+                      }
+                    },
+                    {
+                      "id": "canvas-node-_ug2mqlv3",
+                      "type": "dladd",
+                      "props": {
+                        "option": "tail",
+                        "position": 0,
+                        "pfont": "True",
+                        "ffont": "True",
+                        "addType": "str",
+                        "gs_pre_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "gs_lat_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "generalSettings": {
+                          "log": {
+                            "value": true,
+                            "disabled": true
+                          },
+                          "exit": true,
+                          "msgbox": false
+                        },
+                        "name": "添加列表项",
+                        "desc": "在列表 <a>data</a> <a>在列表尾部添加</a> <a>\"已获取发票信息\"</a>",
+                        "output_returnval": {
+                          "type": "variable",
+                          "inputValue": "883582bc6ba24f04a929e5721d215493",
+                          "varLabel": "data",
+                          "returnType": "List",
+                          "varGroup": "global"
+                        },
+                        "list": {
+                          "type": "variable",
+                          "inputValue": "883582bc6ba24f04a929e5721d215493",
+                          "varLabel": "data",
+                          "returnType": "List",
+                          "varGroup": "global"
+                        },
+                        "insertStr": {
+                          "type": "text",
+                          "inputValue": "已获取发票信息",
+                          "returnType": "Unknown"
+                        },
+                        "collapsed": false,
+                        "disabled": false
+                      }
+                    },
+                    {
+                      "id": "canvas-node-_vn4mp7gh",
+                      "type": "ecwriterow",
+                      "props": {
+                        "row": {
+                          "type": "variable",
+                          "inputValue": "aefbfeee5bf64fc8bd8de2359af50dd9",
+                          "varLabel": "i",
+                          "returnType": "Number",
+                          "varGroup": "global"
+                        },
+                        "col": {
+                          "type": "text",
+                          "inputValue": "A",
+                          "returnType": "Unknown"
+                        },
+                        "setNumberFormat": "False",
+                        "numberFormat": "General",
+                        "save": "True",
+                        "gs_pre_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "gs_lat_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "generalSettings": {
+                          "log": {
+                            "value": true,
+                            "disabled": true
+                          },
+                          "exit": true,
+                          "msgbox": false
+                        },
+                        "name": "写入Excel行",
+                        "collapsed": false,
+                        "disabled": false,
+                        "sheet": {
+                          "type": "variable",
+                          "inputValue": "06337f6914984193833361f11115b2e0",
+                          "varLabel": "fpcy_cyjg_sheet",
+                          "returnType": "Sheet"
+                        },
+                        "desc": "在 <a>fpcy_cyjg_sheet</a> Sheet页中，从 <a>A i</a> 开始写入行 <a>[data[0],data[1],data[2],data[3],data[4],data[5],data[15],data[26]]</a>  并保存",
+                        "content": {
+                          "type": "express",
+                          "inputValue": "[data[0],data[1],data[2],data[3],data[4],data[5],data[15],data[26]]",
+                          "varLabel": "[data[0],data[1],data[2],data[3],data[4],data[5],data[15],data[26]]",
+                          "returnType": "Unknown"
+                        }
+                      }
+                    },
+                    {
+                      "id": "canvas-node-_vl59eiv3",
+                      "type": "pscript",
+                      "props": {
+                        "content": {
+                          "type": "express",
+                          "inputValue": "import invoice_collect\r\ndata=invoice_collect.start(check_html)\r\ndata.insert(0,i-1)",
+                          "varLabel": "import invoice_collect\r\ndata=invoice_collect.start(check_html)\r\ndata.insert(0,i-1)",
+                          "returnType": "Unknown"
+                        },
+                        "gs_pre_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "gs_lat_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "generalSettings": {
+                          "log": {
+                            "value": true,
+                            "disabled": true
+                          },
+                          "exit": true,
+                          "msgbox": false
+                        },
+                        "name": "调用自定义脚本",
+                        "collapsed": false,
+                        "disabled": false,
+                        "desc": "调用自定义脚本"
+                      }
+                    },
+                    {
+                      "id": "canvas-node-_dh3g32la",
+                      "type": "plog",
+                      "props": {
+                        "option": "info",
+                        "gs_pre_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "gs_lat_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "generalSettings": {
+                          "log": {
+                            "value": true,
+                            "disabled": true
+                          },
+                          "exit": true,
+                          "msgbox": false
+                        },
+                        "name": "记录日志",
+                        "collapsed": false,
+                        "disabled": false,
+                        "desc": "记录日志",
+                        "content": {
+                          "type": "variable",
+                          "inputValue": "883582bc6ba24f04a929e5721d215493",
+                          "varLabel": "data",
+                          "returnType": "List",
+                          "varGroup": "global"
+                        }
+                      }
+                    },
+                    {
+                      "id": "canvas-node-_xkk2r9tt",
+                      "type": "pscript",
+                      "props": {
+                        "content": {
+                          "type": "express",
+                          "inputValue": "print(data)",
+                          "varLabel": "print(data)",
+                          "returnType": "Unknown"
+                        },
+                        "gs_pre_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "gs_lat_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "generalSettings": {
+                          "log": {
+                            "value": true,
+                            "disabled": true
+                          },
+                          "exit": true,
+                          "msgbox": false
+                        },
+                        "name": "调用自定义脚本",
+                        "collapsed": false,
+                        "disabled": false,
+                        "desc": "调用自定义脚本"
+                      }
+                    },
+                    {
+                      "id": "canvas-node-_qq2332un",
+                      "type": "belementclick",
+                      "props": {
+                        "clickType": "left_once",
+                        "simulate": "True",
+                        "ctrlIndex": {
+                          "type": "number",
+                          "inputValue": 1,
+                          "returnType": "Unknown"
+                        },
+                        "timeout": {
+                          "type": "number",
+                          "inputValue": "10",
+                          "returnType": "Unknown"
+                        },
+                        "gs_pre_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "gs_lat_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "generalSettings": {
+                          "log": {
+                            "value": true,
+                            "disabled": true
+                          },
+                          "exit": true,
+                          "msgbox": false
+                        },
+                        "name": "点击控件（网页）",
+                        "collapsed": false,
+                        "disabled": false,
+                        "openPage": {
+                          "type": "variable",
+                          "inputValue": "3a8df54d4a664a9880fa7c77b41c5bec",
+                          "varLabel": "invoice_web",
+                          "returnType": "WebPage",
+                          "varGroup": "global"
+                        },
+                        "element": {
+                          "ctrlId": "6c699c31171c4d839cc2b19606e9e623",
+                          "ctrlGroup": "",
+                          "ctrlName": "“发票查验结果”窗口的关闭按钮",
+                          "imgPath": null,
+                          "type": "Chrome"
+                        },
+                        "desc": "在 <a>invoice_web</a> 网页中，鼠标 <a>左键单击</a> <a>“发票查验结果”窗口的关闭按钮</a>"
+                      }
+                    },
+                    {
+                      "id": "canvas-node-_n1tmgc0s",
+                      "type": "psetvariable",
+                      "props": {
+                        "value_d": "{}",
+                        "value_l": "[]",
+                        "value_b": "True",
+                        "gs_pre_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "gs_lat_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "generalSettings": {
+                          "log": {
+                            "value": true,
+                            "disabled": true
+                          },
+                          "exit": true,
+                          "msgbox": false
+                        },
+                        "name": "设置变量值",
+                        "collapsed": false,
+                        "disabled": false,
+                        "set_variable": {
+                          "type": "variable",
+                          "inputValue": "8cc0bb1fdba545ebaf660a7c9771526e",
+                          "varLabel": "lines_number",
+                          "returnType": "Number"
+                        },
+                        "value_n": {
+                          "type": "express",
+                          "inputValue": "lines_number+1",
+                          "varLabel": "lines_number+1",
+                          "returnType": "Unknown"
+                        },
+                        "desc": "设置变量 <a>lines_number</a> 的值为 <a>lines_number+1</a>"
+                      }
+                    },
+                    {
+                      "id": "canvas-node-_l2q171ei",
+                      "type": "esactive",
+                      "props": {
+                        "gs_pre_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "gs_lat_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "generalSettings": {
+                          "log": {
+                            "value": true,
+                            "disabled": true
+                          },
+                          "exit": true,
+                          "msgbox": false
+                        },
+                        "name": "激活Sheet页",
+                        "desc": "在 <a>fpcy_cyjg_excel</a> Excel对象中激活Sheet页 <a>fpcyxx_sheet_name</a>，将对应的Sheet页对象赋值给 <a>fpcy_cyxx_sheet</a>",
+                        "output_sheet": {
+                          "type": "variable",
+                          "inputValue": "3fe5544484ac4ab8a234cbcb2124de8c",
+                          "varLabel": "fpcy_cyxx_sheet",
+                          "returnType": "Sheet",
+                          "varGroup": "global"
+                        },
+                        "excel": {
+                          "type": "variable",
+                          "inputValue": "70987e5488074a388ab87ad7fc9bf1d2",
+                          "varLabel": "fpcy_cyjg_excel",
+                          "returnType": "Excel"
+                        },
+                        "collapsed": false,
+                        "disabled": false,
+                        "sheetName": {
+                          "type": "variable",
+                          "inputValue": "d9bd3fa6143543e99b32b78ad6de0c21",
+                          "varLabel": "fpcyxx_sheet_name",
+                          "returnType": "String",
+                          "varGroup": "declare"
+                        }
+                      }
+                    },
+                    {
+                      "id": "canvas-node-_7dic5ef8",
+                      "type": "ecwriterow",
+                      "props": {
+                        "row": {
+                          "type": "variable",
+                          "inputValue": "8cc0bb1fdba545ebaf660a7c9771526e",
+                          "varLabel": "lines_number",
+                          "returnType": "Number"
+                        },
+                        "col": {
+                          "type": "text",
+                          "inputValue": "A",
+                          "returnType": "Unknown"
+                        },
+                        "setNumberFormat": "False",
+                        "numberFormat": "General",
+                        "save": "True",
+                        "gs_pre_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "gs_lat_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "generalSettings": {
+                          "log": {
+                            "value": true,
+                            "disabled": true
+                          },
+                          "exit": true,
+                          "msgbox": false
+                        },
+                        "name": "写入Excel行",
+                        "collapsed": false,
+                        "disabled": false,
+                        "sheet": {
+                          "type": "variable",
+                          "inputValue": "3fe5544484ac4ab8a234cbcb2124de8c",
+                          "varLabel": "fpcy_cyxx_sheet",
+                          "returnType": "Sheet",
+                          "varGroup": "global"
+                        },
+                        "desc": "在 <a>fpcy_cyxx_sheet</a> Sheet页中，从 <a>A lines_number</a> 开始写入行 <a>data</a>  并保存",
+                        "content": {
+                          "type": "variable",
+                          "inputValue": "883582bc6ba24f04a929e5721d215493",
+                          "varLabel": "data",
+                          "returnType": "List",
+                          "varGroup": "global"
+                        }
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "canvas-node-_w66c4qye",
+                  "type": "TryCatchRouter",
+                  "props": {
+                    "collapsed": false,
+                    "disabled": false
+                  },
+                  "children": [
+                    {
+                      "id": "canvas-node-_kvsv7m0t",
+                      "type": "spshowsubtitle",
+                      "props": {
+                        "color": "255,255,0,0",
+                        "fontsize": {
+                          "type": "variable",
+                          "inputValue": "8267960496134f50a2084e028f8d493a",
+                          "varLabel": "size_changer",
+                          "returnType": "Number",
+                          "varGroup": "global"
+                        },
+                        "gs_pre_timeout": {
+                          "type": "number",
+                          "inputValue": "0",
+                          "returnType": "Unknown"
+                        },
+                        "gs_lat_timeout": {
+                          "type": "number",
+                          "inputValue": "0",
+                          "returnType": "Unknown"
+                        },
+                        "generalSettings": {
+                          "log": {
+                            "value": true,
+                            "disabled": true
+                          },
+                          "exit": true,
+                          "msgbox": false
+                        },
+                        "name": "出现字幕",
+                        "collapsed": false,
+                        "disabled": false,
+                        "subtitle": {
+                          "type": "express",
+                          "inputValue": "\"第\"+str(i-1)+\"张发票查验有误，请确认此张发票信息是否正确！\"",
+                          "varLabel": "\"第\"+str(i-1)+\"张发票查验有误，请确认此张发票信息是否正确！\"",
+                          "returnType": "Unknown"
+                        },
+                        "desc": "屏幕下方出现字幕 <a>\"第\"+str(i-1)+\"张发票查验有误，请确认此张发票信息是否正确！\"</a>"
+                      }
+                    },
+                    {
+                      "id": "canvas-node-_g8xfg9lk",
+                      "type": "bcapture",
+                      "props": {
+                        "gs_pre_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "gs_lat_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "generalSettings": {
+                          "log": {
+                            "value": true,
+                            "disabled": true
+                          },
+                          "exit": true,
+                          "msgbox": false
+                        },
+                        "name": "网页截图",
+                        "desc": "将 <a>invoice_web</a> 网页截图，保存到 <a>\"C:\\RPADATA\"</a> 文件夹，文件路径信息会赋值给 <a>result_path</a>",
+                        "output_path": {
+                          "type": "variable",
+                          "inputValue": "9013fcaf3bbc4f3f93a9e757812f0b47",
+                          "varLabel": "result_path",
+                          "returnType": "String",
+                          "varGroup": "global"
+                        },
+                        "page": {
+                          "type": "variable",
+                          "inputValue": "3a8df54d4a664a9880fa7c77b41c5bec",
+                          "varLabel": "invoice_web",
+                          "returnType": "WebPage",
+                          "varGroup": "global"
+                        },
+                        "collapsed": false,
+                        "disabled": false,
+                        "url": {
+                          "type": "text",
+                          "inputValue": "C:\\RPADATA",
+                          "returnType": "Unknown"
+                        }
+                      }
+                    },
+                    {
+                      "id": "canvas-node-_eqzf2m0p",
+                      "type": "stcurrenttime",
+                      "props": {
+                        "format": "%H%M%S",
+                        "gs_pre_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "gs_lat_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "generalSettings": {
+                          "log": {
+                            "value": true,
+                            "disabled": true
+                          },
+                          "exit": true,
+                          "msgbox": false
+                        },
+                        "name": "获取当前时间&日期",
+                        "desc": "获取当前时间，将结果赋值给 <a>v_time</a>",
+                        "output_time": {
+                          "type": "variable",
+                          "inputValue": "709ac1fe7bba4155abd7a110098efe77",
+                          "varLabel": "v_time",
+                          "returnType": "String"
+                        },
+                        "collapsed": false,
+                        "disabled": false
+                      }
+                    },
+                    {
+                      "id": "canvas-node-_kl8k714d",
+                      "type": "pscript",
+                      "props": {
+                        "content": {
+                          "type": "express",
+                          "inputValue": "os.rename(result_path,os.path.join(\"C:\\RPADATA\",('【查验异常】发票号码'+str(data[3])+'查验结果'+str(v_time)+'.png')))",
+                          "varLabel": "os.rename(result_path,os.path.join(\"C:\\RPADATA\",('【查验异常】发票号码'+str(data[3])+'查验结果'+str(v_time)+'.png')))",
+                          "returnType": "Unknown"
+                        },
+                        "gs_pre_timeout": {
+                          "type": "number",
+                          "inputValue": "1",
+                          "returnType": "Unknown"
+                        },
+                        "gs_lat_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "generalSettings": {
+                          "log": {
+                            "value": true,
+                            "disabled": true
+                          },
+                          "exit": true,
+                          "msgbox": false
+                        },
+                        "name": "调用自定义脚本",
+                        "collapsed": false,
+                        "disabled": false,
+                        "desc": "调用自定义脚本"
+                      }
+                    },
+                    {
+                      "id": "canvas-node-_od96k3j3",
+                      "type": "belementclick",
+                      "props": {
+                        "clickType": "left_once",
+                        "simulate": "True",
+                        "ctrlIndex": {
+                          "type": "number",
+                          "inputValue": 1,
+                          "returnType": "Unknown"
+                        },
+                        "timeout": {
+                          "type": "number",
+                          "inputValue": 10,
+                          "returnType": "Unknown"
+                        },
+                        "gs_pre_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "gs_lat_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "generalSettings": {
+                          "log": {
+                            "value": true,
+                            "disabled": true
+                          },
+                          "exit": true,
+                          "msgbox": false
+                        },
+                        "name": "点击控件（网页）",
+                        "collapsed": false,
+                        "disabled": false,
+                        "openPage": {
+                          "type": "variable",
+                          "inputValue": "3a8df54d4a664a9880fa7c77b41c5bec",
+                          "varLabel": "invoice_web",
+                          "returnType": "WebPage",
+                          "varGroup": "global"
+                        },
+                        "element": {
+                          "ctrlId": "0035b21553744ee0b9ceda900f71854f",
+                          "ctrlGroup": "",
+                          "ctrlName": "”查无此票“窗口的关闭按钮",
+                          "imgPath": null,
+                          "type": "Chrome"
+                        },
+                        "desc": "在 <a>invoice_web</a> 网页中，鼠标 <a>左键单击</a> <a>”查无此票“窗口的关闭按钮</a>"
+                      }
+                    },
+                    {
+                      "id": "canvas-node-_fuedu9s9",
+                      "type": "dladd",
+                      "props": {
+                        "option": "tail",
+                        "position": 0,
+                        "pfont": "True",
+                        "ffont": "True",
+                        "addType": "str",
+                        "gs_pre_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "gs_lat_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "generalSettings": {
+                          "log": {
+                            "value": true,
+                            "disabled": true
+                          },
+                          "exit": true,
+                          "msgbox": false
+                        },
+                        "name": "添加列表项",
+                        "desc": "在列表 <a>data</a> <a>在列表尾部添加</a> <a>\"查验有误\"</a>",
+                        "output_returnval": {
+                          "type": "variable",
+                          "inputValue": "883582bc6ba24f04a929e5721d215493",
+                          "varLabel": "data",
+                          "returnType": "List",
+                          "varGroup": "global"
+                        },
+                        "list": {
+                          "type": "variable",
+                          "inputValue": "883582bc6ba24f04a929e5721d215493",
+                          "varLabel": "data",
+                          "returnType": "List",
+                          "varGroup": "global"
+                        },
+                        "insertStr": {
+                          "type": "text",
+                          "inputValue": "查验有误",
+                          "returnType": "Unknown"
+                        },
+                        "collapsed": false,
+                        "disabled": false
+                      }
+                    },
+                    {
+                      "id": "canvas-node-_7v9v8ywl",
+                      "type": "ecwriterow",
+                      "props": {
+                        "row": {
+                          "type": "variable",
+                          "inputValue": "aefbfeee5bf64fc8bd8de2359af50dd9",
+                          "varLabel": "i",
+                          "returnType": "Number",
+                          "varGroup": "global"
+                        },
+                        "col": {
+                          "type": "text",
+                          "inputValue": "A",
+                          "returnType": "Unknown"
+                        },
+                        "setNumberFormat": "False",
+                        "numberFormat": "General",
+                        "save": "True",
+                        "gs_pre_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "gs_lat_timeout": {
+                          "type": "number",
+                          "inputValue": 0,
+                          "returnType": "Unknown"
+                        },
+                        "generalSettings": {
+                          "log": {
+                            "value": true,
+                            "disabled": true
+                          },
+                          "exit": true,
+                          "msgbox": false
+                        },
+                        "name": "写入Excel行",
+                        "collapsed": false,
+                        "disabled": false,
+                        "sheet": {
+                          "type": "variable",
+                          "inputValue": "06337f6914984193833361f11115b2e0",
+                          "varLabel": "fpcy_cyjg_sheet",
+                          "returnType": "Sheet"
+                        },
+                        "content": {
+                          "type": "express",
+                          "inputValue": "[data[0],data[1],data[2],data[3],data[4],data[5],data[15],data[26]]",
+                          "varLabel": "[data[0],data[1],data[2],data[3],data[4],data[5],data[15],data[26]]",
+                          "returnType": "Unknown"
+                        },
+                        "desc": "在 <a>fpcy_cyjg_sheet</a> Sheet页中，从 <a>A i</a> 开始写入行 <a>[data[0],data[1],data[2],data[3],data[4],data[5],data[15],data[26]]</a>  并保存"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "canvas-node-_z4ndjguj",
+                  "type": "TryFinallyRouter",
+                  "props": {
+                    "collapsed": false,
+                    "disabled": false
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "canvas-node-_kvm6yo2n",
+          "type": "spshowsubtitle",
+          "props": {
+            "color": "255,0,0,255",
+            "fontsize": {
+              "type": "variable",
+              "inputValue": "8267960496134f50a2084e028f8d493a",
+              "varLabel": "size_changer",
+              "returnType": "Number",
+              "varGroup": "global"
+            },
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": "0",
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "出现字幕",
+            "desc": "屏幕下方出现字幕 <a>\"查验完毕，机器人正在关闭打开的文件……\"</a>",
+            "subtitle": {
+              "type": "text",
+              "inputValue": "查验完毕，机器人正在关闭打开的文件……",
+              "returnType": "Unknown"
+            },
+            "collapsed": false,
+            "disabled": false
+          }
+        },
+        {
+          "id": "canvas-node-_l8q8vz40",
+          "type": "bactive",
+          "props": {
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "激活网页",
+            "collapsed": false,
+            "disabled": false,
+            "page": {
+              "type": "variable",
+              "inputValue": "3a8df54d4a664a9880fa7c77b41c5bec",
+              "varLabel": "invoice_web",
+              "returnType": "WebPage",
+              "varGroup": "global"
+            },
+            "desc": "将 <a>invoice_web</a> 网页切换到窗口的最前面"
+          }
+        },
+        {
+          "id": "canvas-node-_ckc0n3q0",
+          "type": "minputkeyboard",
+          "props": {
+            "gs_pre_timeout": {
+              "type": "number",
+              "inputValue": "2",
+              "returnType": "Unknown"
+            },
+            "gs_lat_timeout": {
+              "type": "number",
+              "inputValue": 0,
+              "returnType": "Unknown"
+            },
+            "generalSettings": {
+              "log": {
+                "value": true,
+                "disabled": true
+              },
+              "exit": true,
+              "msgbox": false
+            },
+            "name": "输入热键",
+            "collapsed": false,
+            "disabled": false,
+            "keyboard": {
+              "type": "text",
+              "inputValue": "^{w}",
+              "returnType": "Unknown"
+            },
+            "desc": "执行快捷键 <a>\"^{w}\"</a>"
+          }
+        },
+        {
+          "id": "canvas-node-_l343br0h",
+          "type": "trycatch",
+          "props": {
+            "needRetry": false,
+            "tryTimes": 3,
+            "sleepTime": 10,
+            "name": "捕获异常和重试",
+            "collapsed": false,
+            "disabled": false,
+            "desc": "执行并捕获异常 "
+          },
+          "children": [
+            {
+              "id": "canvas-node-_l343br0i",
+              "type": "TryNormalRouter",
+              "props": {
+                "collapsed": false,
+                "disabled": false
+              },
+              "children": [
+                {
+                  "id": "canvas-node-_z3g7n1bn",
+                  "type": "trycatch",
+                  "props": {
+                    "needRetry": false,
+                    "tryTimes": 3,
+                    "sleepTime": 10,
+                    "name": "捕获异常和重试",
+                    "collapsed": true,
+                    "disabled": false,
+                    "desc": "执行并捕获异常 "
+                  },
+                  "children": [
+                    {
+                      "id": "canvas-node-_vaom64sc",
+                      "type": "TryNormalRouter",
+                      "props": {
+                        "collapsed": false,
+                        "disabled": false
+                      },
+                      "children": [
+                        {
+                          "id": "canvas-node-_8ign5uc0",
+                          "type": "wcatchwin",
+                          "props": {
+                            "model": "substr",
+                            "timeout": {
+                              "type": "number",
+                              "inputValue": "5",
+                              "returnType": "Unknown"
+                            },
+                            "gs_pre_timeout": {
+                              "type": "number",
+                              "inputValue": 0,
+                              "returnType": "Unknown"
+                            },
+                            "gs_lat_timeout": {
+                              "type": "number",
+                              "inputValue": 0,
+                              "returnType": "Unknown"
+                            },
+                            "generalSettings": {
+                              "log": {
+                                "value": true,
+                                "disabled": true
+                              },
+                              "exit": true,
+                              "msgbox": false
+                            },
+                            "name": "获取窗口",
+                            "desc": "根据 <a>os.path.basename(fp_excel_path).split('.')[0]</a> 查找打开的窗口标题，将查找到的窗口对象赋值给 <a>fp_win</a>",
+                            "output_window": {
+                              "type": "variable",
+                              "inputValue": "6bb918991c674ff78307c3c2884f8645",
+                              "varLabel": "fp_win",
+                              "returnType": "Window"
+                            },
+                            "collapsed": false,
+                            "disabled": false,
+                            "title": {
+                              "type": "express",
+                              "inputValue": "os.path.basename(fp_excel_path).split('.')[0]",
+                              "varLabel": "os.path.basename(fp_excel_path).split('.')[0]",
+                              "returnType": "Unknown"
+                            }
+                          }
+                        },
+                        {
+                          "id": "canvas-node-_lmr7b4i1",
+                          "type": "wactivate",
+                          "props": {
+                            "gs_pre_timeout": {
+                              "type": "number",
+                              "inputValue": 0,
+                              "returnType": "Unknown"
+                            },
+                            "gs_lat_timeout": {
+                              "type": "number",
+                              "inputValue": 0,
+                              "returnType": "Unknown"
+                            },
+                            "generalSettings": {
+                              "log": {
+                                "value": true,
+                                "disabled": true
+                              },
+                              "exit": true,
+                              "msgbox": false
+                            },
+                            "name": "激活窗口",
+                            "collapsed": false,
+                            "disabled": false,
+                            "winObject": {
+                              "type": "variable",
+                              "inputValue": "6bb918991c674ff78307c3c2884f8645",
+                              "varLabel": "fp_win",
+                              "returnType": "Window"
+                            },
+                            "desc": "激活 <a>fp_win</a> 窗口"
+                          }
+                        },
+                        {
+                          "id": "canvas-node-_lmr7b4i2",
+                          "type": "minputkeyboard",
+                          "props": {
+                            "gs_pre_timeout": {
+                              "type": "number",
+                              "inputValue": "2",
+                              "returnType": "Unknown"
+                            },
+                            "gs_lat_timeout": {
+                              "type": "number",
+                              "inputValue": 0,
+                              "returnType": "Unknown"
+                            },
+                            "generalSettings": {
+                              "log": {
+                                "value": true,
+                                "disabled": true
+                              },
+                              "exit": true,
+                              "msgbox": false
+                            },
+                            "name": "输入热键",
+                            "collapsed": false,
+                            "disabled": false,
+                            "keyboard": {
+                              "type": "text",
+                              "inputValue": "!{F4}",
+                              "returnType": "Unknown"
+                            },
+                            "desc": "执行快捷键 <a>\"!{F4}\"</a>"
+                          }
+                        },
+                        {
+                          "id": "canvas-node-_n97qo061",
+                          "type": "trycatch",
+                          "props": {
+                            "needRetry": false,
+                            "tryTimes": 3,
+                            "sleepTime": 10,
+                            "name": "捕获异常和重试",
+                            "collapsed": false,
+                            "disabled": false,
+                            "desc": "执行并捕获异常 "
+                          },
+                          "children": [
+                            {
+                              "id": "canvas-node-_7e7a55fj",
+                              "type": "TryNormalRouter",
+                              "props": {
+                                "collapsed": false,
+                                "disabled": false
+                              },
+                              "children": [
+                                {
+                                  "id": "canvas-node-_5q6vqvm1",
+                                  "type": "wcatchwin",
+                                  "props": {
+                                    "model": "substr",
+                                    "timeout": {
+                                      "type": "number",
+                                      "inputValue": "5",
+                                      "returnType": "Unknown"
+                                    },
+                                    "gs_pre_timeout": {
+                                      "type": "number",
+                                      "inputValue": 0,
+                                      "returnType": "Unknown"
+                                    },
+                                    "gs_lat_timeout": {
+                                      "type": "number",
+                                      "inputValue": 0,
+                                      "returnType": "Unknown"
+                                    },
+                                    "generalSettings": {
+                                      "log": {
+                                        "value": true,
+                                        "disabled": true
+                                      },
+                                      "exit": true,
+                                      "msgbox": false
+                                    },
+                                    "name": "获取窗口",
+                                    "desc": "根据 <a>os.path.basename(fpcy_excel_path)[13:19]</a> 查找打开的窗口标题，将查找到的窗口对象赋值给 <a>fp_win</a>",
+                                    "output_window": {
+                                      "type": "variable",
+                                      "inputValue": "6bb918991c674ff78307c3c2884f8645",
+                                      "varLabel": "fp_win",
+                                      "returnType": "Window"
+                                    },
+                                    "collapsed": false,
+                                    "disabled": false,
+                                    "title": {
+                                      "type": "express",
+                                      "inputValue": "os.path.basename(fpcy_excel_path)[13:19]",
+                                      "varLabel": "os.path.basename(fpcy_excel_path)[13:19]",
+                                      "returnType": "Unknown"
+                                    }
+                                  }
+                                },
+                                {
+                                  "id": "canvas-node-_filys6i5",
+                                  "type": "wactivate",
+                                  "props": {
+                                    "gs_pre_timeout": {
+                                      "type": "number",
+                                      "inputValue": 0,
+                                      "returnType": "Unknown"
+                                    },
+                                    "gs_lat_timeout": {
+                                      "type": "number",
+                                      "inputValue": 0,
+                                      "returnType": "Unknown"
+                                    },
+                                    "generalSettings": {
+                                      "log": {
+                                        "value": true,
+                                        "disabled": true
+                                      },
+                                      "exit": true,
+                                      "msgbox": false
+                                    },
+                                    "name": "激活窗口",
+                                    "collapsed": false,
+                                    "disabled": false,
+                                    "winObject": {
+                                      "type": "variable",
+                                      "inputValue": "6bb918991c674ff78307c3c2884f8645",
+                                      "varLabel": "fp_win",
+                                      "returnType": "Window",
+                                      "varGroup": "declare"
+                                    },
+                                    "desc": "激活 <a>fp_win</a> 窗口"
+                                  }
+                                },
+                                {
+                                  "id": "canvas-node-_uyzu88oo",
+                                  "type": "minputkeyboard",
+                                  "props": {
+                                    "gs_pre_timeout": {
+                                      "type": "number",
+                                      "inputValue": "2",
+                                      "returnType": "Unknown"
+                                    },
+                                    "gs_lat_timeout": {
+                                      "type": "number",
+                                      "inputValue": 0,
+                                      "returnType": "Unknown"
+                                    },
+                                    "generalSettings": {
+                                      "log": {
+                                        "value": true,
+                                        "disabled": true
+                                      },
+                                      "exit": true,
+                                      "msgbox": false
+                                    },
+                                    "name": "输入热键",
+                                    "collapsed": false,
+                                    "disabled": false,
+                                    "keyboard": {
+                                      "type": "text",
+                                      "inputValue": "!{F4}",
+                                      "returnType": "Unknown"
+                                    },
+                                    "desc": "执行快捷键 <a>\"!{F4}\"</a>"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "canvas-node-_zrr75vyl",
+                              "type": "TryCatchRouter",
+                              "props": {
+                                "collapsed": false,
+                                "disabled": false
+                              },
+                              "children": [
+                                {
+                                  "id": "canvas-node-_l343br0q",
+                                  "type": "plog",
+                                  "props": {
+                                    "option": "info",
+                                    "gs_pre_timeout": {
+                                      "type": "number",
+                                      "inputValue": 0,
+                                      "returnType": "Unknown"
+                                    },
+                                    "gs_lat_timeout": {
+                                      "type": "number",
+                                      "inputValue": 0,
+                                      "returnType": "Unknown"
+                                    },
+                                    "generalSettings": {
+                                      "log": {
+                                        "value": true,
+                                        "disabled": true
+                                      },
+                                      "exit": true,
+                                      "msgbox": false
+                                    },
+                                    "name": "记录日志",
+                                    "collapsed": false,
+                                    "disabled": false,
+                                    "content": {
+                                      "type": "text",
+                                      "inputValue": " ",
+                                      "returnType": "Unknown"
+                                    },
+                                    "desc": "记录日志"
+                                  }
+                                }
+                              ]
+                            },
+                            {
+                              "id": "canvas-node-_p1fs092f",
+                              "type": "TryFinallyRouter",
+                              "props": {
+                                "collapsed": false,
+                                "disabled": false
+                              },
+                              "children": []
+                            }
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "id": "canvas-node-_2b9aklx8",
+                      "type": "TryCatchRouter",
+                      "props": {
+                        "collapsed": false,
+                        "disabled": false
+                      },
+                      "children": [
+                        {
+                          "id": "canvas-node-_76m71oyk",
+                          "type": "wcatchwin",
+                          "props": {
+                            "model": "substr",
+                            "timeout": {
+                              "type": "number",
+                              "inputValue": "5",
+                              "returnType": "Unknown"
+                            },
+                            "gs_pre_timeout": {
+                              "type": "number",
+                              "inputValue": 0,
+                              "returnType": "Unknown"
+                            },
+                            "gs_lat_timeout": {
+                              "type": "number",
+                              "inputValue": 0,
+                              "returnType": "Unknown"
+                            },
+                            "generalSettings": {
+                              "log": {
+                                "value": true,
+                                "disabled": true
+                              },
+                              "exit": true,
+                              "msgbox": false
+                            },
+                            "name": "获取窗口",
+                            "desc": "根据 <a>\"WPS\"</a> 查找打开的窗口标题，将查找到的窗口对象赋值给 <a>fp_win</a>",
+                            "output_window": {
+                              "type": "variable",
+                              "inputValue": "6bb918991c674ff78307c3c2884f8645",
+                              "varLabel": "fp_win",
+                              "returnType": "Window"
+                            },
+                            "collapsed": false,
+                            "disabled": false,
+                            "title": {
+                              "type": "text",
+                              "inputValue": "WPS",
+                              "returnType": "Unknown"
+                            }
+                          }
+                        },
+                        {
+                          "id": "canvas-node-_lmr7b4i3",
+                          "type": "wactivate",
+                          "props": {
+                            "gs_pre_timeout": {
+                              "type": "number",
+                              "inputValue": 0,
+                              "returnType": "Unknown"
+                            },
+                            "gs_lat_timeout": {
+                              "type": "number",
+                              "inputValue": 0,
+                              "returnType": "Unknown"
+                            },
+                            "generalSettings": {
+                              "log": {
+                                "value": true,
+                                "disabled": true
+                              },
+                              "exit": true,
+                              "msgbox": false
+                            },
+                            "name": "激活窗口",
+                            "collapsed": false,
+                            "disabled": false,
+                            "winObject": {
+                              "type": "variable",
+                              "inputValue": "6bb918991c674ff78307c3c2884f8645",
+                              "varLabel": "fp_win",
+                              "returnType": "Window"
+                            },
+                            "desc": "激活 <a>fp_win</a> 窗口"
+                          }
+                        },
+                        {
+                          "id": "canvas-node-_lmr7b4i4",
+                          "type": "minputkeyboard",
+                          "props": {
+                            "gs_pre_timeout": {
+                              "type": "number",
+                              "inputValue": "2",
+                              "returnType": "Unknown"
+                            },
+                            "gs_lat_timeout": {
+                              "type": "number",
+                              "inputValue": 0,
+                              "returnType": "Unknown"
+                            },
+                            "generalSettings": {
+                              "log": {
+                                "value": true,
+                                "disabled": true
+                              },
+                              "exit": true,
+                              "msgbox": false
+                            },
+                            "name": "输入热键",
+                            "collapsed": false,
+                            "disabled": false,
+                            "keyboard": {
+                              "type": "text",
+                              "inputValue": "!{F4}",
+                              "returnType": "Unknown"
+                            },
+                            "desc": "执行快捷键 <a>\"!{F4}\"</a>"
+                          }
+                        }
+                      ]
+                    },
+                    {
+                      "id": "canvas-node-_1qwj4i6t",
+                      "type": "TryFinallyRouter",
+                      "props": {
+                        "collapsed": false,
+                        "disabled": false
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "canvas-node-_l343br0j",
+              "type": "TryCatchRouter",
+              "props": {
+                "collapsed": false,
+                "disabled": false
+              },
+              "children": [
+                {
+                  "id": "canvas-node-_l343br0p",
+                  "type": "plog",
+                  "props": {
+                    "option": "info",
+                    "gs_pre_timeout": {
+                      "type": "number",
+                      "inputValue": 0,
+                      "returnType": "Unknown"
+                    },
+                    "gs_lat_timeout": {
+                      "type": "number",
+                      "inputValue": 0,
+                      "returnType": "Unknown"
+                    },
+                    "generalSettings": {
+                      "log": {
+                        "value": true,
+                        "disabled": true
+                      },
+                      "exit": true,
+                      "msgbox": false
+                    },
+                    "name": "记录日志",
+                    "collapsed": false,
+                    "disabled": false,
+                    "content": {
+                      "type": "text",
+                      "inputValue": " ",
+                      "returnType": "Unknown"
+                    },
+                    "desc": "记录日志"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "canvas-node-_l343br0k",
+              "type": "TryFinallyRouter",
+              "props": {
+                "collapsed": false,
+                "disabled": false
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "canvas-node-_kvm6yo2b",
+          "type": "EndEvent",
+          "props": {
+            "collapsed": false,
+            "disabled": false
+          }
+        }
+      ]
+    },
+    "edges": []
+  }
+}

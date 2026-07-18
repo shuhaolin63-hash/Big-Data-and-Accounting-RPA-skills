@@ -1,0 +1,33 @@
+{
+  "id": "b39d0c3cbe70458291b8d508794dbc5f",
+  "name": "P05_退出工行网",
+  "displayName": "",
+  "version": "4.2.0.0",
+  "description": "",
+  "developType": "visual",
+  "parameters": {
+    "input": [],
+    "output": []
+  },
+  "content": {
+    "id": "",
+    "root": {
+      "id": "",
+      "type": "FlowRoot",
+      "children": [
+        {
+          "id": "",
+          "type": "StartEvent",
+          "props": {
+            "debug": false
+          }
+        },
+        {
+          "id": "",
+          "type": "EndEvent",
+          "props": {}
+        }
+      ]
+    }
+  }
+}
