@@ -2,6 +2,8 @@
 
 > "你的期末考试救星 + 私人财务 RPA 指导老师 —— 仅适用于阿里云 RPA"
 
+`阿里云RPA` `RPA作业` `学生智能体` `期末救星` `框选教学` `ID风控` `有源码改作业` `无源码做作业` `AgentSkills` `技能包`
+
 🎓 MIT License · Python 3.9+ · AgentSkills · ⭐ 已就绪
 
 SOLO · Claude Code · Hermes · Codex
